@@ -21,7 +21,6 @@ There is a list of people containing strings representing the names of some peop
 * Jeff, Bill
 * Elon, Bill
 
-This question was answered in python.
 
 {% highlight ruby %}
 people = ["Tim", "Jeff", "Elon", "Bill"]
