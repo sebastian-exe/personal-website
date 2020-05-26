@@ -28,6 +28,7 @@ class Solution {
         int end = str.length() -1;
 
         while(front < end){
+          //if there is a character that is not the same, return false
             if(str.charAt(front) ! = str.charAt(end)){
                 return false;
             }
