@@ -23,14 +23,14 @@ Attempt this question [here][1]!
 class Solution {
     public boolean isPalindrome(String str) {
         int front = 0;
-        int end = str.length() -1;
+        int back = str.length() -1;
 
-        while(front < end){
-            if(str.charAt(front) ! = str.charAt(end)){
+        while(front < back){
+            if(str.charAt(front) ! = str.charAt(back)){
                 return false;
             }
             front++;
-            end--;
+            back--;
         }
         return true;
     }
