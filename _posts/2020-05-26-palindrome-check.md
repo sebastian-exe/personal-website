@@ -11,7 +11,7 @@ tags:
  - carte
  - noire
 ---
-
+Attempt this question yourself [here][5]!
 **Note** - This article is a derivative of ["See pixyll in action"][1], taken from the lovely jekyll theme [pixyll][4].
 
 All links are easy to [locate and discern](#), yet don't detract from the harmony
@@ -103,3 +103,4 @@ Happy writing.
 [2]: https://noahfrederick.com/log/lion-terminal-theme-peppermint/
 [3]: https://github.com/jacobtomlinson/carte-noire
 [4]: http://pixyll.com/
+[5]: https://leetcode.com/problems/valid-palindrome/
