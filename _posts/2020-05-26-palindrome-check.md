@@ -32,7 +32,7 @@ class Program {
 			 if(str.charAt(front) != str.charAt(end)){
 				 return false;
 			 }
-			//if the characters are the same increment until the end
+			/*if the characters are the same increment until the end*/
 			front++;
 			end--;
 		}
