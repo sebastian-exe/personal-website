@@ -23,12 +23,12 @@ Code blocks use the [peppermint][2] theme.
 
 {% highlight ruby %}
 class Solution {
-    public boolean isPalindrome(String s) {
+    public boolean isPalindrome(String str) {
         int front = 0;
-        int end = s.length() -1;
+        int end = str.length() -1;
 
         while(front < end){
-            if(s.charAt(front) ! = s.charAt(end)){
+            if(str.charAt(front) ! = str.charAt(end)){
                 return false;
             }
             front++;
