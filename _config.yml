@@ -1,0 +1,37 @@
+# Site settings
+title: "Sebastian Moreno"
+email: sebamoreno17@gmail.com
+description: "A dark blog theme for Jekyll."
+baseurl: ""
+url: "http://carte-noire.jacobtomlinson.co.uk/"
+title_description: "Computer Science student at the University of Texas at Dallas."
+title_image: "twitter.jpg"
+google_analytics: "UA-20365477-4"
+disqus_account: cartenoire
+github_repository: https://github.com/jacobtomlinson/carte-noire
+addthis_id: ra-513c6fa83da6ec67
+post_limit: 5
+
+# Social usernames/URLs
+twitter_username: TheSebaMoreno
+github_username:  sebastian-exe
+instagram_username:
+reddit_username: 
+linkedin_link: https://www.linkedin.com/in/sebastian-exe/
+stackoverflow_link: https://stackoverflow.com/users/13217172/sebastian-moreno
+xing_link:
+facebook_link:
+
+# Footer
+footer_left: "Edited with <i class=\"fa fa-heart\"></i> by <a href=\"https://twitter.com/TheSebaMoreno\">Sebastian Moreno</a>"
+footer_right: "&lt;/&gt; on <a href=\"https://github.com/jacobtomlinson/carte-noire\">Github</a> &nbsp;<i class=\"fa fa-github-alt\"></i>"
+
+# Build settings
+markdown: kramdown
+
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
+
+permalink: pretty
+exclude: [vendor]
