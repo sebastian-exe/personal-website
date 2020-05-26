@@ -17,9 +17,7 @@ Given a string __str__, the task is to find whether the string str a palindrome 
 
 Attempt this question [here][5]!
 
-### Code, with syntax highlighting
 
-Code blocks use the [peppermint][2] theme.
 
 {% highlight ruby %}
 class Solution {
@@ -28,7 +26,7 @@ class Solution {
         int end = str.length() -1;
 
         while(front < end){
-          //if there is a character that is not the same, return false
+          // if there is a character that is not the same, return false 
             if(str.charAt(front) ! = str.charAt(end)){
                 return false;
             }
@@ -103,7 +101,7 @@ or add, features.
 Happy writing.
 
 [1]: http://pixyll.com/jekyll/pixyll/2014/06/10/see-pixyll-in-action/
-[2]: https://noahfrederick.com/log/lion-terminal-theme-peppermint/
+
 [3]: https://github.com/jacobtomlinson/carte-noire
 [4]: http://pixyll.com/
 [5]: https://leetcode.com/problems/valid-palindrome/
