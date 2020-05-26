@@ -15,7 +15,7 @@ tags:
 
 Given a string __str__, the task is to find whether the string str a palindrome or not in java without using library methods. Consider only alphanumeric characters and ignore cases.
 
-Attempt this question yourself [here][5]!
+Attempt this question [here][5]!
 
 ### Code, with syntax highlighting
 
