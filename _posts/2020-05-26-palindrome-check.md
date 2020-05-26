@@ -11,30 +11,36 @@ tags:
  - carte
  - noire
 ---
-Attempt this question yourself [here][5]!
-**Note** - This article is a derivative of ["See pixyll in action"][1], taken from the lovely jekyll theme [pixyll][4].
 
-All links are easy to [locate and discern](#), yet don't detract from the harmony
-of a paragraph. The _same_ goes for italics and __bold__ elements. Even the the strikeout
-works if <del>for some reason you need to update your post</del>. For consistency's sake,
-<ins>The same goes for insertions</ins>, of course.
+
+Given a string __str__, the task is to find whether the string si a palindrome or not in java without using library methods. Consider only alphanumeric characters and ignore cases.
+
+Attempt this question yourself [here][5]!
 
 ### Code, with syntax highlighting
 
 Code blocks use the [peppermint][2] theme.
 
 {% highlight ruby %}
-class Awesome < ActiveRecord::Base
-  include EvenMoreAwesome
 
-  validates_presence_of :something
-  validates :email, email_format: true
+class Program {
+  public static boolean isPalindrome(String str) {
+    // Write your code here.
+		int front = 0;
+		int end = str.length() - 1;
+		while(front < end){
+			 if(str.charAt(front) != str.charAt(end)){
+				 return false;
+			 }
+			//if the characters are the same increment until the end
+			front++;
+			end--;
+		}
+		//if the while loop has executed all iterations return true
+    return true;
+  }
+}
 
-  def initialize(email, name = nil)
-    self.email = email
-    self.name = name
-  end
-end
 {% endhighlight %}
 
 ```html
