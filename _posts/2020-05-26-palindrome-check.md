@@ -22,25 +22,21 @@ Attempt this question [here][5]!
 Code blocks use the [peppermint][2] theme.
 
 {% highlight ruby %}
+class Solution {
+    public boolean isPalindrome(String s) {
+        int front = 0;
+        int end = s.length() -1;
 
-class Program {
-  public static boolean isPalindrome(String str) {
-    // Write your code here.
-		int front = 0;
-		int end = str.length() - 1;
-		while(front < end){
-			 if(str.charAt(front) != str.charAt(end)){
-				 return false;
-			 }
-			/*if the characters are the same increment until the end*/
-			front++;
-			end--;
-		}
-		//if the while loop has executed all iterations return true
-    return true;
-  }
+        while(front < end){
+            if(s.charAt(front) ! = s.charAt(end)){
+                return false;
+            }
+            front++;
+            end--;
+        }
+        return true;
+    }
 }
-
 {% endhighlight %}
 
 ```html
