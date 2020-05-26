@@ -31,3 +31,14 @@ for i in range(len(people)):
 
     print(people[i], people[j])
 {% endhighlight %}
+
+## Code Explanation:
+
+The array of peoples names is given so this question was solved in 3 lines of code.
+The first for loop reaches the 0th index, in this case "Tim". Next the code enters the
+second (j) for loop which starts at i + 1 index or in other words, one ahead of the i for loop,
+in this case at "Jeff". This second for loop iterates through the entire list while the first loop
+remains at the 0th index of "Tim". Once the second for loop has iterated and printed (thrid line of code)
+all the possible combinations of names that Tim can produce the first for loop now moves onto the 1st index.
+After this the process starts again with the second for loop and continues until all of the names have been
+printed with all possible combinations
