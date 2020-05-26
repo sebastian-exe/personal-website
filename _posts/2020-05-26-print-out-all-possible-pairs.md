@@ -4,7 +4,7 @@ title:      Print Out All Possible Pairs
 date:       2020-05-26 12:17:36
 summary:    This is the inaugural post of my interview coding questions.
 categories: jekyll
-thumbnail: cogs
+thumbnail: python
 tags:
  - demo
  - action
