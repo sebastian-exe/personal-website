@@ -2,6 +2,7 @@
 layout:     post
 title:      Palindrome Check
 date:       2020-05-26 11:24:19
+author:     Sebastian Moreno
 summary:    Checks to see if a string is a palindrome
 categories: jekyll
 thumbnail: java
