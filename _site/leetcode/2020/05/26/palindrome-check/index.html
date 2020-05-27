@@ -4,7 +4,7 @@
     <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Welcome to Carte Noire</title>
+<title>Palindrome Check</title>
 <meta name="description" content="Welcome to my blog.">
 
 <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
@@ -84,11 +84,11 @@
     <div itemscope itemtype="http://schema.org/Article" class="col-md-12 article">
       
       <div class="thumb">
-        <i class="fa fa-heart fa-4x"></i>
+        <img itemprop="image" src="https://cdn.freebiesupply.com/logos/large/2x/java-4-logo-black-and-white.png" alt="Thumbnail: java" />
       </div>
       
 
-      <h1 class="header" itemprop="name">Welcome to Carte Noire</h1>
+      <h1 class="header" itemprop="name">Palindrome Check</h1>
 
       <div class="author">
         <small><i>
@@ -97,13 +97,13 @@
           <span itemprop="author">
             
             <span itemprop="author" itemscope itemtype="http://schema.org/Person">
-              <span itemprop="name">Jacob Tomlinson</span>
+              <span itemprop="name">Sebastian Moreno</span>
             </span>
             
           </span>
           
-          on <span itemprop="datePublished" content="2014-08-28">March 23, 2015</span>
-           under jekyll
+          on <span itemprop="datePublished" content="2014-08-28">May 26, 2020</span>
+           under LeetCode
         </i></small>
       </div>
 
@@ -117,17 +117,28 @@
 
         
 
-        <span itemprop="articleBody"><p>Welcome to Carte Noire.</p>
+        <span itemprop="articleBody"><p>Given a string <strong>str</strong>, the task is to find whether the string str is a palindrome or not in java without using library methods. Consider only alphanumeric characters and ignore cases.</p>
 
-<p>Carte Noire began as a new theme for <a href="http://www.jacobtomlinson.co.uk/">my personal blog</a>, but has now taken
-on a life of its own as a free theme for Jekyll.</p>
+<p>Attempt this question <a href="https://leetcode.com/problems/valid-palindrome/">here</a>!</p>
 
-<p>The theme has been designed with simplicity and readability in mind. It makes
-use of third party services such as Disqus ad AddThis to ensure the blog has
-all the features you would expect from a dynamic application such as Wordpress
-but with the hosting and maintenance simplicity of Jekyll.</p>
+<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="k">class</span> <span class="nc">Solution</span> <span class="p">{</span>
+    <span class="kp">public</span> <span class="n">boolean</span> <span class="n">isPalindrome</span><span class="p">(</span><span class="no">String</span> <span class="n">str</span><span class="p">)</span> <span class="p">{</span>
+        <span class="n">int</span> <span class="n">front</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+        <span class="n">int</span> <span class="n">back</span> <span class="o">=</span> <span class="n">str</span><span class="p">.</span><span class="nf">length</span><span class="p">()</span> <span class="o">-</span><span class="mi">1</span><span class="p">;</span>
 
-<p>Please use/copy/share Carte Noire!</p>
+        <span class="k">while</span><span class="p">(</span><span class="n">front</span> <span class="o">&lt;</span> <span class="n">back</span><span class="p">){</span>
+            <span class="k">if</span><span class="p">(</span><span class="n">str</span><span class="p">.</span><span class="nf">charAt</span><span class="p">(</span><span class="n">front</span><span class="p">)</span> <span class="o">!</span> <span class="o">=</span> <span class="n">str</span><span class="p">.</span><span class="nf">charAt</span><span class="p">(</span><span class="n">back</span><span class="p">)){</span>
+                <span class="k">return</span> <span class="kp">false</span><span class="p">;</span>
+            <span class="p">}</span>
+            <span class="n">front</span><span class="o">++</span><span class="p">;</span>
+            <span class="n">back</span><span class="o">--</span><span class="p">;</span>
+        <span class="p">}</span>
+        <span class="k">return</span> <span class="kp">true</span><span class="p">;</span>
+    <span class="p">}</span>
+<span class="p">}</span></code></pre></figure>
+
+<h1 id="code-explanation">Code Explanation:</h1>
+<p>The question is asking for us to validate and return a boolean for whether or not a strings is a palindrome. The proper way to approach this is to place two “pointers” one at the beginning of the string and one at the end of the string. I do this in the code above with front and back int variables. The next step is to continue looping while these two pointers have not crossed. Within the while loop there is an if statement with the parameters comparing the string characters at certain indexes of front and back. If at any point during iteration the front or back index characters are not the same value then we know that the string is not a palindrome. If the if statement is not executed, we move each pointer, the front up one index and the back down one index to make a new comparison along the string. If the while loop terminates and the if statement is never executed the function returns true because at that point we have checked every letter in the string.</p>
 
 </span>
 
@@ -144,7 +155,7 @@ but with the hosting and maintenance simplicity of Jekyll.</p>
         <div class="tags">
           <small>
           <i class="fa fa-tags"></i>
-            welcome, to, carte, noire
+            demo, action, carte, noire
           </small>
         </div>
         

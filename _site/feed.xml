@@ -2,12 +2,239 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Sebastian Moreno</title>
-    <description>A dark blog theme for Jekyll.</description>
-    <link>http://localhost:4000/personal-website//</link>
-    <atom:link href="http://localhost:4000/personal-website//feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Tue, 26 May 2020 00:21:14 -0500</pubDate>
-    <lastBuildDate>Tue, 26 May 2020 00:21:14 -0500</lastBuildDate>
+    <description>Welcome to my blog.</description>
+    <link>http://localhost:4000/</link>
+    <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml" />
+    <pubDate>Wed, 27 May 2020 16:18:18 -0500</pubDate>
+    <lastBuildDate>Wed, 27 May 2020 16:18:18 -0500</lastBuildDate>
     <generator>Jekyll v4.0.1</generator>
+    
+      <item>
+        <title>Resume</title>
+        <description>&lt;p&gt;&lt;strong&gt;EDUCATION&lt;/strong&gt;&lt;/p&gt;
+&lt;h2 id=&quot;the-university-of-texas-at-dallas&quot;&gt;The University of Texas at Dallas&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;B.S. &lt;em&gt;Computer Science&lt;/em&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;em&gt;Aug 2018 - Dec 2021&lt;/em&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;WORK EXPERIENCE&lt;/strong&gt;&lt;/p&gt;
+&lt;h2 id=&quot;internship-at-citi---irving-texas&quot;&gt;&lt;strong&gt;Internship at Citi&lt;/strong&gt; - Irving, Texas&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;em&gt;Summer Analyst&lt;/em&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;em&gt;June 2020 - Aug 2020&lt;/em&gt;&lt;/li&gt;
+  &lt;li&gt;I will be interning at Citibank for summer 2020 and will be a part of the Enterprise Infrastructure Operations and Technology program (EIO&amp;amp;T).&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;goldman-sachs-engineering-essentials---new-york-city&quot;&gt;&lt;strong&gt;Goldman Sachs Engineering Essentials&lt;/strong&gt; - New York City&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;em&gt;Participant&lt;/em&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;em&gt;June 2020 – July 2020&lt;/em&gt;&lt;/li&gt;
+  &lt;li&gt;Highly selective undergraduate camp hosted virtually due to covid – 19. I will be receiving technical experience, industry insights, and networking opportunities.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;warby-parker---plano-texas&quot;&gt;&lt;strong&gt;Warby Parker&lt;/strong&gt; - Plano, Texas&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;em&gt;March 2018 – Jan 2020&lt;/em&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;em&gt;Sales Advisor/Optician Assistant&lt;/em&gt;&lt;/li&gt;
+  &lt;li&gt;Read optical prescription, used a pupilometer to take the customers pupillary distance. Interpreted the customer’s prescription and ensured that the frame they selected could be fulfilled.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;All links are easy to &lt;a href=&quot;#&quot;&gt;locate and discern&lt;/a&gt;, yet don’t detract from the harmony
+of a paragraph. The &lt;em&gt;same&lt;/em&gt; goes for italics and &lt;strong&gt;bold&lt;/strong&gt; elements. Even the the strikeout
+works if &lt;del&gt;for some reason you need to update your post&lt;/del&gt;. For consistency’s sake,
+&lt;ins&gt;The same goes for insertions&lt;/ins&gt;, of course.&lt;/p&gt;
+
+&lt;h3 id=&quot;code-with-syntax-highlighting&quot;&gt;Code, with syntax highlighting&lt;/h3&gt;
+
+&lt;p&gt;Code blocks use the &lt;a href=&quot;https://noahfrederick.com/log/lion-terminal-theme-peppermint/&quot;&gt;peppermint&lt;/a&gt; theme.&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span class=&quot;k&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Awesome&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;ActiveRecord&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;::&lt;/span&gt;&lt;span class=&quot;no&quot;&gt;Base&lt;/span&gt;
+  &lt;span class=&quot;kp&quot;&gt;include&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;EvenMoreAwesome&lt;/span&gt;
+
+  &lt;span class=&quot;n&quot;&gt;validates_presence_of&lt;/span&gt; &lt;span class=&quot;ss&quot;&gt;:something&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;validates&lt;/span&gt; &lt;span class=&quot;ss&quot;&gt;:email&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;ss&quot;&gt;email_format: &lt;/span&gt;&lt;span class=&quot;kp&quot;&gt;true&lt;/span&gt;
+
+  &lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;initialize&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;email&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;name&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;kp&quot;&gt;nil&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;nb&quot;&gt;self&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;email&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;email&lt;/span&gt;
+    &lt;span class=&quot;nb&quot;&gt;self&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;name&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;name&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;div class=&quot;language-html highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;cp&quot;&gt;&amp;lt;!DOCTYPE html&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;title&amp;gt;&lt;/span&gt;Title&lt;span class=&quot;nt&quot;&gt;&amp;lt;/title&amp;gt;&lt;/span&gt;
+
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;style&amp;gt;body&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;width&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;500px&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;}&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;/style&amp;gt;&lt;/span&gt;
+
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;script &lt;/span&gt;&lt;span class=&quot;na&quot;&gt;type=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;application/javascript&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+  &lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;$init&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;true&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;}&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;/script&amp;gt;&lt;/span&gt;
+
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;body&amp;gt;&lt;/span&gt;
+  &lt;span class=&quot;nt&quot;&gt;&amp;lt;p&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;checked&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;title&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;id=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'title'&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;Title&lt;span class=&quot;nt&quot;&gt;&amp;lt;/p&amp;gt;&lt;/span&gt;
+  &lt;span class=&quot;c&quot;&gt;&amp;lt;!-- here goes the rest of the page --&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;/body&amp;gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h1 id=&quot;headings&quot;&gt;Headings!&lt;/h1&gt;
+
+&lt;p&gt;They’re responsive, and well-proportioned (in &lt;code class=&quot;highlighter-rouge&quot;&gt;padding&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;line-height&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;margin&lt;/code&gt;, and &lt;code class=&quot;highlighter-rouge&quot;&gt;font-size&lt;/code&gt;).&lt;/p&gt;
+
+&lt;h5 id=&quot;they-draw-the-perfect-amount-of-attention&quot;&gt;They draw the perfect amount of attention&lt;/h5&gt;
+
+&lt;p&gt;This allows your content to have the proper informational and contextual hierarchy. Yay.&lt;/p&gt;
+
+&lt;h3 id=&quot;there-are-lists-too&quot;&gt;There are lists, too&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Apples&lt;/li&gt;
+  &lt;li&gt;Oranges&lt;/li&gt;
+  &lt;li&gt;Potatoes&lt;/li&gt;
+  &lt;li&gt;Milk&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Mow the lawn&lt;/li&gt;
+  &lt;li&gt;Feed the dog&lt;/li&gt;
+  &lt;li&gt;Dance&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h3 id=&quot;images-look-great-too&quot;&gt;Images look great, too&lt;/h3&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://i.imgur.com/DMCHDqF.jpg&quot; alt=&quot;Thumper&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;stylish-blockquotes-included&quot;&gt;Stylish blockquotes included&lt;/h3&gt;
+
+&lt;p&gt;You can use the markdown quote syntax, &lt;code class=&quot;highlighter-rouge&quot;&gt;&amp;gt;&lt;/code&gt; for simple quotes.&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse quis porta mauris.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h3 id=&quot;latex-support&quot;&gt;LaTeX support&lt;/h3&gt;
+
+&lt;p&gt;The default math delimiters are $$. Hence &lt;code class=&quot;highlighter-rouge&quot;&gt;$$ E = m \cdot c^2 $$&lt;/code&gt; yields \(E = m \cdot c^2\)&lt;/p&gt;
+
+&lt;p&gt;And here’s something more fancy:&lt;/p&gt;
+
+\[\zeta(s) = \frac{1}{\Gamma(s)} \int \limits_0^\infty x^{s-1} \sum_{n=1}^\infty e^{-nx} \mathrm{d}x = \frac{1}{\Gamma(s)} \int \limits_0^\infty \frac{x^{s-1}}{e^x - 1} \mathrm{d}x\]
+
+&lt;h3 id=&quot;theres-more-being-added-all-the-time&quot;&gt;There’s more being added all the time&lt;/h3&gt;
+
+&lt;p&gt;Checkout the &lt;a href=&quot;https://github.com/jacobtomlinson/carte-noire&quot;&gt;Github repository&lt;/a&gt; to request,
+or add, features.&lt;/p&gt;
+
+&lt;p&gt;Happy writing.&lt;/p&gt;
+
+</description>
+        <pubDate>Tue, 26 May 2020 22:00:10 -0500</pubDate>
+        <link>http://localhost:4000/resume/2020/05/26/Resume/</link>
+        <guid isPermaLink="true">http://localhost:4000/resume/2020/05/26/Resume/</guid>
+        
+        <category>demo</category>
+        
+        <category>action</category>
+        
+        <category>carte</category>
+        
+        <category>noire</category>
+        
+        
+        <category>Resume</category>
+        
+      </item>
+    
+      <item>
+        <title>Print Out All Possible Pairs</title>
+        <description>&lt;p&gt;There is a list of people containing strings representing the names of some people. Write a nested loop that prints out all possible pairs of these people that can make up a group of two. So for example, your loop should print out:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Tim, Jeff&lt;/li&gt;
+  &lt;li&gt;Tim, Elon&lt;/li&gt;
+  &lt;li&gt;Tim, Bill&lt;/li&gt;
+  &lt;li&gt;Jeff, Elon&lt;/li&gt;
+  &lt;li&gt;Jeff, Bill&lt;/li&gt;
+  &lt;li&gt;Elon, Bill&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span class=&quot;n&quot;&gt;people&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;Tim&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;Jeff&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;Elon&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;Bill&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
+
+&lt;span class=&quot;c1&quot;&gt;#write your solution below:&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;range&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;len&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;people&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)):&lt;/span&gt;
+
+  &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;j&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;range&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;len&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;people&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)):&lt;/span&gt;
+
+    &lt;span class=&quot;nb&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;people&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;],&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;people&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;j&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;])&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;h2 id=&quot;code-explanation&quot;&gt;Code Explanation:&lt;/h2&gt;
+
+&lt;p&gt;The first for loop reaches the 0th index, in this case “Tim”. Next the code enters the
+second (j) for loop which starts at i + 1 index or in other words, one ahead of the i for loop,
+in this case at “Jeff”. The second for loop iterates through the entire list while the first loop
+remains at the 0th index of “Tim”. Once the second for loop has iterated and printed (third line of code)
+all the possible combinations of names that Tim can produce the first for loop now moves onto the 1st index.
+After this the process starts again with the second for loop and continues until all of the names have been
+printed with all possible combinations.&lt;/p&gt;
+</description>
+        <pubDate>Tue, 26 May 2020 07:17:36 -0500</pubDate>
+        <link>http://localhost:4000/leetcode/2020/05/26/print-out-all-possible-pairs/</link>
+        <guid isPermaLink="true">http://localhost:4000/leetcode/2020/05/26/print-out-all-possible-pairs/</guid>
+        
+        <category>demo</category>
+        
+        <category>action</category>
+        
+        <category>carte</category>
+        
+        <category>noire</category>
+        
+        
+        <category>LeetCode</category>
+        
+      </item>
+    
+      <item>
+        <title>Palindrome Check</title>
+        <description>&lt;p&gt;Given a string &lt;strong&gt;str&lt;/strong&gt;, the task is to find whether the string str is a palindrome or not in java without using library methods. Consider only alphanumeric characters and ignore cases.&lt;/p&gt;
+
+&lt;p&gt;Attempt this question &lt;a href=&quot;https://leetcode.com/problems/valid-palindrome/&quot;&gt;here&lt;/a&gt;!&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span class=&quot;k&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Solution&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;kp&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;boolean&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;isPalindrome&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;no&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;str&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;front&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;back&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;str&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;length&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+
+        &lt;span class=&quot;k&quot;&gt;while&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;front&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;back&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;){&lt;/span&gt;
+            &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;str&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;charAt&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;front&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;!&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;str&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;charAt&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;back&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)){&lt;/span&gt;
+                &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;kp&quot;&gt;false&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+            &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+            &lt;span class=&quot;n&quot;&gt;front&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;++&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+            &lt;span class=&quot;n&quot;&gt;back&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;--&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+        &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;kp&quot;&gt;true&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;h1 id=&quot;code-explanation&quot;&gt;Code Explanation:&lt;/h1&gt;
+&lt;p&gt;The question is asking for us to validate and return a boolean for whether or not a strings is a palindrome. The proper way to approach this is to place two “pointers” one at the beginning of the string and one at the end of the string. I do this in the code above with front and back int variables. The next step is to continue looping while these two pointers have not crossed. Within the while loop there is an if statement with the parameters comparing the string characters at certain indexes of front and back. If at any point during iteration the front or back index characters are not the same value then we know that the string is not a palindrome. If the if statement is not executed, we move each pointer, the front up one index and the back down one index to make a new comparison along the string. If the while loop terminates and the if statement is never executed the function returns true because at that point we have checked every letter in the string.&lt;/p&gt;
+
+</description>
+        <pubDate>Tue, 26 May 2020 06:24:19 -0500</pubDate>
+        <link>http://localhost:4000/leetcode/2020/05/26/palindrome-check/</link>
+        <guid isPermaLink="true">http://localhost:4000/leetcode/2020/05/26/palindrome-check/</guid>
+        
+        <category>demo</category>
+        
+        <category>action</category>
+        
+        <category>carte</category>
+        
+        <category>noire</category>
+        
+        
+        <category>LeetCode</category>
+        
+      </item>
     
       <item>
         <title>Welcome to Carte Noire</title>
@@ -25,8 +252,8 @@ but with the hosting and maintenance simplicity of Jekyll.&lt;/p&gt;
 
 </description>
         <pubDate>Mon, 23 Mar 2015 10:31:19 -0500</pubDate>
-        <link>http://localhost:4000/personal-website//jekyll/2015/03/23/welcome-to-carte-noir/</link>
-        <guid isPermaLink="true">http://localhost:4000/personal-website//jekyll/2015/03/23/welcome-to-carte-noir/</guid>
+        <link>http://localhost:4000/jekyll/2015/03/23/welcome-to-carte-noir/</link>
+        <guid isPermaLink="true">http://localhost:4000/jekyll/2015/03/23/welcome-to-carte-noir/</guid>
         
         <category>welcome</category>
         
@@ -133,8 +360,8 @@ or add, features.&lt;/p&gt;
 
 </description>
         <pubDate>Tue, 10 Jun 2014 07:31:19 -0500</pubDate>
-        <link>http://localhost:4000/personal-website//jekyll/2014/06/10/carte-noire-in-action/</link>
-        <guid isPermaLink="true">http://localhost:4000/personal-website//jekyll/2014/06/10/carte-noire-in-action/</guid>
+        <link>http://localhost:4000/jekyll/2014/06/10/carte-noire-in-action/</link>
+        <guid isPermaLink="true">http://localhost:4000/jekyll/2014/06/10/carte-noire-in-action/</guid>
         
         <category>demo</category>
         
@@ -162,8 +389,8 @@ and &lt;a href=&quot;http://en.wikipedia.org/wiki/Textile_(markup_language)&quot
 &lt;p&gt;Learn more about Jekyll on their &lt;a href=&quot;http://jekyllrb.com/&quot;&gt;website&lt;/a&gt;.&lt;/p&gt;
 </description>
         <pubDate>Mon, 09 Jun 2014 07:32:18 -0500</pubDate>
-        <link>http://localhost:4000/personal-website//jekyll/2014/06/09/so-what-is-jekyll/</link>
-        <guid isPermaLink="true">http://localhost:4000/personal-website//jekyll/2014/06/09/so-what-is-jekyll/</guid>
+        <link>http://localhost:4000/jekyll/2014/06/09/so-what-is-jekyll/</link>
+        <guid isPermaLink="true">http://localhost:4000/jekyll/2014/06/09/so-what-is-jekyll/</guid>
         
         <category>about</category>
         
@@ -217,8 +444,8 @@ the android thumbnail.&lt;/p&gt;
 
 </description>
         <pubDate>Sun, 08 Jun 2014 07:32:18 -0500</pubDate>
-        <link>http://localhost:4000/personal-website//jekyll/2014/06/08/using-thumbnails/</link>
-        <guid isPermaLink="true">http://localhost:4000/personal-website//jekyll/2014/06/08/using-thumbnails/</guid>
+        <link>http://localhost:4000/jekyll/2014/06/08/using-thumbnails/</link>
+        <guid isPermaLink="true">http://localhost:4000/jekyll/2014/06/08/using-thumbnails/</guid>
         
         <category>thumbnails</category>
         
