@@ -4,7 +4,7 @@
     <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Resume</title>
+<title>Selection Sort</title>
 <meta name="description" content="Welcome to my blog.">
 
 <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
@@ -84,26 +84,17 @@
     <div itemscope itemtype="http://schema.org/Article" class="col-md-12 article">
       
       <div class="thumb">
-        <i class="fa fa-cogs fa-4x"></i>
+        <img itemprop="image" src="https://www.pngkit.com/png/full/70-701450_python-logo-black-and-white-ps4-logo-white.png" alt="Thumbnail: python" />
       </div>
       
 
-      <h1 class="header" itemprop="name">Resume</h1>
+      <h1 class="header" itemprop="name">Selection Sort</h1>
 
       <div class="author">
         <small><i>
           
-          by
-          <span itemprop="author">
-            
-            <span itemprop="author" itemscope itemtype="http://schema.org/Person">
-              <span itemprop="name">Sebastian Moreno</span>
-            </span>
-            
-          </span>
-          
-          on <span itemprop="datePublished" content="2014-08-28">May 26, 2020</span>
-           under Resume
+          on <span itemprop="datePublished" content="2014-08-28">May 28, 2020</span>
+           under LeetCode
         </i></small>
       </div>
 
@@ -117,80 +108,62 @@
 
         
 
-        <span itemprop="articleBody"><h2 id="education"><ins><strong>EDUCATION</strong></ins></h2>
-<h2 id="the-university-of-texas-at-dallas">The University of Texas at Dallas</h2>
-<ul>
-  <li>B.S. <em>Computer Science</em></li>
-  <li><em>Aug 2018 - Dec 2021</em></li>
-</ul>
+        <span itemprop="articleBody"><p>Write a function that takes in an array of integers and returns a sorted version of that array. Use the Selection Sort algorithm to sort the array.</p>
 
-<h2 id="work-experience"><ins><strong>WORK EXPERIENCE</strong></ins></h2>
-<h2 id="internship-at-citi---irving-texas"><strong>Internship at Citi</strong> - Irving, Texas</h2>
-<ul>
-  <li><em>Summer Analyst</em></li>
-  <li><em>June 2020 - Aug 2020</em></li>
-  <li>I will be interning at Citibank for summer 2020 and will be a part of the Enterprise Infrastructure Operations and Technology program (EIO&amp;T).</li>
-</ul>
+<h2 id="what-is-selection-sort">What is Selection Sort?</h2>
+<p><strong>Note</strong> If you are not familiar with <a href="https://www.geeksforgeeks.org/selection-sort/">selection sort</a> please read more about it <a href="https://www.geeksforgeeks.org/selection-sort/">here</a> before attempting the problem.
+The basic gist of the selection sorting algorithm is that it takes an unsorted array, traverses it, and then places the smallest current element at
+that at the beginning of the array. This is done repeatedly until the array is entirely sorted.</p>
 
-<h2 id="goldman-sachs-engineering-essentials---new-york-city"><strong>Goldman Sachs Engineering Essentials</strong> - New York City</h2>
-<ul>
-  <li><em>Participant</em></li>
-  <li><em>June 2020 – July 2020</em></li>
-  <li>Highly selective undergraduate camp hosted virtually due to covid – 19. I will be receiving technical experience, industry insights, and networking opportunities.</li>
-</ul>
+<h2 id="here-is-an-example">Here is an example:</h2>
+<p>Say we have a given array such as arr = [1 , 4 , 2 , 3 , 5 , 0]. First selection sort would traverse the array keeping in mind the smallest element. Once the smallest
+element has been encountered it places that element to the very front of the array.</p>
 
-<h2 id="warby-parker---plano-texas"><strong>Warby Parker</strong> - Plano, Texas</h2>
-<ul>
-  <li><em>Sales Advisor/Optician Assistant</em></li>
-  <li><em>March 2018 – January 2020</em></li>
-  <li>Read optical prescription, used a pupilometer to take the customers pupillary distance. Interpreted the customer’s prescription and ensured that the frame they selected could be fulfilled.</li>
-</ul>
+<ol>
+  <li><ins>The First pass would look like this:</ins>
+    <ul>
+      <li>[0 , 1 , 4 , 2 , 3 , 5]</li>
+    </ul>
+  </li>
+  <li><ins>The second pass would look like this:</ins>
+    <ul>
+      <li><strong>Note</strong> Since 1 is already the following smallest element, nothing is changed during this pass.</li>
+      <li>[0, 1 , 4 , 2 , 3 , 5]</li>
+    </ul>
+  </li>
+  <li><ins>The third pass would look like this:</ins>
+    <ul>
+      <li>[0 , 1 , 2 , 4 , 3 , 5]</li>
+    </ul>
+  </li>
+  <li><ins>The fourth pass would look like this:</ins>
+    <ul>
+      <li>[0 , 1 , 2 , 3 , 4 , 5]</li>
+      <li><strong>Note</strong> that this is the final pass since at this point in time all of the elements are in the proper order.</li>
+    </ul>
+  </li>
+</ol>
 
-<h2 id="leadership-and-activities"><ins><strong>LEADERSHIP AND ACTIVITIES</strong></ins></h2>
+<p>Now that we understand conceptually what is happening with selection sort, lets attempt to understand the code.</p>
 
-<h2 id="society-of-hispanic-professional-engineers-at-ut-dallas---richardson-texas"><strong>Society of Hispanic Professional Engineers at UT Dallas</strong> - Richardson, Texas</h2>
-<ul>
-  <li><em>Member</em></li>
-  <li><em>August 2018 - Present</em></li>
-  <li>Attended multiple networking and monthly events held on campus.</li>
-  <li>Bilingual, fluent in English and Spanish.</li>
-</ul>
+<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby">  <span class="k">def</span> <span class="nf">selectionSort</span><span class="p">(</span><span class="n">array</span><span class="p">):</span>
 
-<h2 id="projects"><ins><strong>PROJECTS</strong></ins></h2>
+    <span class="c1">#we must traverse through all elements in the array</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="k">in</span> <span class="n">range</span><span class="p">(</span><span class="n">len</span><span class="p">(</span><span class="n">array</span><span class="p">)):</span>
 
-<h2 id="e-commerce-system---c"><a href="https://github.com/sebastian-exe/E-commerce-System"><strong>E-commerce System</strong></a> - <em>C++</em></h2>
-<ul>
-  <li>This project reads in a CSV file with multiple products containing a 5-digit identifier, the product number, quantity, and the cost. The program features include the option for the user to become the admin of the program and unlocks the ability for the user to add/delete items completely or change the quantity of certain products. This program uses a linked list of inventory objects to store the products and create a shopping cart.</li>
-  <li>Check out my <a href="https://github.com/sebastian-exe/E-commerce-System">E-commerce System here</a></li>
-</ul>
+      <span class="c1">#find the minimum element in remaining unsorted array</span>
+      <span class="n">int</span> <span class="n">minIndex</span> <span class="o">=</span> <span class="n">i</span><span class="p">;</span>
 
-<h2 id="check-stock-price---python"><a href="https://github.com/sebastian-exe/check-stock-price"><strong>Check Stock Price</strong></a> - <em>Python</em></h2>
-<ul>
-  <li>The user can enter a ticker symbol and a target desired price. The script then checks the current market price as often as the user would like, and then notifies via email when the target price has been acquired.</li>
-  <li>Check out this project <a href="https://github.com/sebastian-exe/check-stock-price">here</a></li>
-</ul>
+      <span class="k">for</span> <span class="n">j</span> <span class="k">in</span> <span class="n">range</span><span class="p">(</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span> <span class="n">len</span><span class="p">(</span><span class="n">array</span><span class="p">)):</span>
+        <span class="c1">#if we find a new element that is smaller than our currently recorded element</span>
+        <span class="k">if</span><span class="p">[</span><span class="n">minIndex</span><span class="p">]</span> <span class="o">&gt;</span> <span class="n">array</span><span class="p">[</span><span class="n">j</span><span class="p">]:</span>
+        <span class="c1">#make that element the new smallest index</span>
+          <span class="n">minIndex</span> <span class="o">=</span> <span class="n">array</span><span class="p">[</span><span class="n">j</span><span class="p">]</span>
 
-<h2 id="smart-mirror---javascript"><a href="https://github.com/sebastian-exe/Smart-Mirror"><strong>Smart Mirror</strong></a> - <em>JavaScript</em></h2>
-<ul>
-  <li>Project for HackTX 2019, at the University of Texas at Austin.</li>
-  <li>Check out this project <a href="https://github.com/sebastian-exe/Smart-Mirror">here</a></li>
-</ul>
+        <span class="c1">#perform a swap</span>
+        <span class="n">array</span><span class="p">[</span><span class="n">i</span><span class="p">],</span> <span class="n">array</span><span class="p">[</span><span class="n">minIndex</span><span class="p">]</span> <span class="o">=</span> <span class="n">array</span><span class="p">[</span><span class="n">index</span><span class="p">],</span> <span class="n">array</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
 
-<h2 id="relevant-courses"><ins><strong>RELEVANT COURSES</strong></ins></h2>
-<h2 id="classes-taken"><ins><strong>Classes Taken</strong></ins></h2>
-<ul>
-  <li>CS 2336 Computer Science 2</li>
-  <li>CS 3340 Computer Architecture</li>
-  <li>CS 3341 Probability/Stats in CS</li>
-  <li>Calculus 1 &amp; 2</li>
-</ul>
-
-<h2 id="classes-for-spring-2020"><ins><strong>Classes for Spring 2020</strong></ins></h2>
-<ul>
-  <li>CS 3305 Discrete Math 2</li>
-  <li>CS 3345 Data Structures and Algorithms</li>
-  <li>CS 3377 C/C++ in a Unix Environment</li>
-</ul>
+<span class="p">}</span></code></pre></figure>
 
 </span>
 
