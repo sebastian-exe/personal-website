@@ -57,7 +57,6 @@ Now that we understand conceptually what is happening with selection sort, lets 
         #perform a swap
         array[i], array[minIndex] = array[index], array[i]
 
-}
 {% endhighlight %}
 
 
