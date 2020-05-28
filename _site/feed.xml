@@ -5,20 +5,20 @@
     <description>Welcome to my blog.</description>
     <link>http://localhost:4000/</link>
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Wed, 27 May 2020 16:18:18 -0500</pubDate>
-    <lastBuildDate>Wed, 27 May 2020 16:18:18 -0500</lastBuildDate>
+    <pubDate>Thu, 28 May 2020 00:08:34 -0500</pubDate>
+    <lastBuildDate>Thu, 28 May 2020 00:08:34 -0500</lastBuildDate>
     <generator>Jekyll v4.0.1</generator>
     
       <item>
         <title>Resume</title>
-        <description>&lt;p&gt;&lt;strong&gt;EDUCATION&lt;/strong&gt;&lt;/p&gt;
-&lt;h2 id=&quot;the-university-of-texas-at-dallas&quot;&gt;The University of Texas at Dallas&lt;/h2&gt;
+        <description>&lt;h2 id=&quot;education&quot;&gt;&lt;ins&gt;&lt;strong&gt;EDUCATION&lt;/strong&gt;&lt;/ins&gt;&lt;/h2&gt;
+&lt;h2 id=&quot;the-university-of-texas-at-dallas-at-austin&quot;&gt;The University of Texas at Dallas at austin&lt;/h2&gt;
 &lt;ul&gt;
   &lt;li&gt;B.S. &lt;em&gt;Computer Science&lt;/em&gt;&lt;/li&gt;
   &lt;li&gt;&lt;em&gt;Aug 2018 - Dec 2021&lt;/em&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;&lt;strong&gt;WORK EXPERIENCE&lt;/strong&gt;&lt;/p&gt;
+&lt;h2 id=&quot;work-experience&quot;&gt;&lt;ins&gt;&lt;strong&gt;WORK EXPERIENCE&lt;/strong&gt;&lt;/ins&gt;&lt;/h2&gt;
 &lt;h2 id=&quot;internship-at-citi---irving-texas&quot;&gt;&lt;strong&gt;Internship at Citi&lt;/strong&gt; - Irving, Texas&lt;/h2&gt;
 &lt;ul&gt;
   &lt;li&gt;&lt;em&gt;Summer Analyst&lt;/em&gt;&lt;/li&gt;
@@ -35,96 +35,56 @@
 
 &lt;h2 id=&quot;warby-parker---plano-texas&quot;&gt;&lt;strong&gt;Warby Parker&lt;/strong&gt; - Plano, Texas&lt;/h2&gt;
 &lt;ul&gt;
-  &lt;li&gt;&lt;em&gt;March 2018 – Jan 2020&lt;/em&gt;&lt;/li&gt;
   &lt;li&gt;&lt;em&gt;Sales Advisor/Optician Assistant&lt;/em&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;em&gt;March 2018 – January 2020&lt;/em&gt;&lt;/li&gt;
   &lt;li&gt;Read optical prescription, used a pupilometer to take the customers pupillary distance. Interpreted the customer’s prescription and ensured that the frame they selected could be fulfilled.&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;All links are easy to &lt;a href=&quot;#&quot;&gt;locate and discern&lt;/a&gt;, yet don’t detract from the harmony
-of a paragraph. The &lt;em&gt;same&lt;/em&gt; goes for italics and &lt;strong&gt;bold&lt;/strong&gt; elements. Even the the strikeout
-works if &lt;del&gt;for some reason you need to update your post&lt;/del&gt;. For consistency’s sake,
-&lt;ins&gt;The same goes for insertions&lt;/ins&gt;, of course.&lt;/p&gt;
+&lt;h2 id=&quot;leadership-and-activities&quot;&gt;&lt;ins&gt;&lt;strong&gt;LEADERSHIP AND ACTIVITIES&lt;/strong&gt;&lt;/ins&gt;&lt;/h2&gt;
 
-&lt;h3 id=&quot;code-with-syntax-highlighting&quot;&gt;Code, with syntax highlighting&lt;/h3&gt;
-
-&lt;p&gt;Code blocks use the &lt;a href=&quot;https://noahfrederick.com/log/lion-terminal-theme-peppermint/&quot;&gt;peppermint&lt;/a&gt; theme.&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span class=&quot;k&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Awesome&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;ActiveRecord&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;::&lt;/span&gt;&lt;span class=&quot;no&quot;&gt;Base&lt;/span&gt;
-  &lt;span class=&quot;kp&quot;&gt;include&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;EvenMoreAwesome&lt;/span&gt;
-
-  &lt;span class=&quot;n&quot;&gt;validates_presence_of&lt;/span&gt; &lt;span class=&quot;ss&quot;&gt;:something&lt;/span&gt;
-  &lt;span class=&quot;n&quot;&gt;validates&lt;/span&gt; &lt;span class=&quot;ss&quot;&gt;:email&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;ss&quot;&gt;email_format: &lt;/span&gt;&lt;span class=&quot;kp&quot;&gt;true&lt;/span&gt;
-
-  &lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;initialize&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;email&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;name&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;kp&quot;&gt;nil&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-    &lt;span class=&quot;nb&quot;&gt;self&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;email&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;email&lt;/span&gt;
-    &lt;span class=&quot;nb&quot;&gt;self&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;name&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;name&lt;/span&gt;
-  &lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;div class=&quot;language-html highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;cp&quot;&gt;&amp;lt;!DOCTYPE html&amp;gt;&lt;/span&gt;
-&lt;span class=&quot;nt&quot;&gt;&amp;lt;title&amp;gt;&lt;/span&gt;Title&lt;span class=&quot;nt&quot;&gt;&amp;lt;/title&amp;gt;&lt;/span&gt;
-
-&lt;span class=&quot;nt&quot;&gt;&amp;lt;style&amp;gt;body&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;width&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;500px&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;}&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;/style&amp;gt;&lt;/span&gt;
-
-&lt;span class=&quot;nt&quot;&gt;&amp;lt;script &lt;/span&gt;&lt;span class=&quot;na&quot;&gt;type=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;application/javascript&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
-  &lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;$init&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;true&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;}&lt;/span&gt;
-&lt;span class=&quot;nt&quot;&gt;&amp;lt;/script&amp;gt;&lt;/span&gt;
-
-&lt;span class=&quot;nt&quot;&gt;&amp;lt;body&amp;gt;&lt;/span&gt;
-  &lt;span class=&quot;nt&quot;&gt;&amp;lt;p&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;checked&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;title&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;id=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'title'&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;Title&lt;span class=&quot;nt&quot;&gt;&amp;lt;/p&amp;gt;&lt;/span&gt;
-  &lt;span class=&quot;c&quot;&gt;&amp;lt;!-- here goes the rest of the page --&amp;gt;&lt;/span&gt;
-&lt;span class=&quot;nt&quot;&gt;&amp;lt;/body&amp;gt;&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h1 id=&quot;headings&quot;&gt;Headings!&lt;/h1&gt;
-
-&lt;p&gt;They’re responsive, and well-proportioned (in &lt;code class=&quot;highlighter-rouge&quot;&gt;padding&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;line-height&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;margin&lt;/code&gt;, and &lt;code class=&quot;highlighter-rouge&quot;&gt;font-size&lt;/code&gt;).&lt;/p&gt;
-
-&lt;h5 id=&quot;they-draw-the-perfect-amount-of-attention&quot;&gt;They draw the perfect amount of attention&lt;/h5&gt;
-
-&lt;p&gt;This allows your content to have the proper informational and contextual hierarchy. Yay.&lt;/p&gt;
-
-&lt;h3 id=&quot;there-are-lists-too&quot;&gt;There are lists, too&lt;/h3&gt;
-
+&lt;h2 id=&quot;society-of-hispanic-professional-engineers-at-ut-dallas---richardson-texas&quot;&gt;&lt;strong&gt;Society of Hispanic Professional Engineers at UT Dallas&lt;/strong&gt; - Richardson, Texas&lt;/h2&gt;
 &lt;ul&gt;
-  &lt;li&gt;Apples&lt;/li&gt;
-  &lt;li&gt;Oranges&lt;/li&gt;
-  &lt;li&gt;Potatoes&lt;/li&gt;
-  &lt;li&gt;Milk&lt;/li&gt;
+  &lt;li&gt;&lt;em&gt;Member&lt;/em&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;em&gt;August 2018 - Present&lt;/em&gt;&lt;/li&gt;
+  &lt;li&gt;Attended multiple networking and monthly events held on campus.&lt;/li&gt;
+  &lt;li&gt;Bilingual, fluent in English and Spanish.&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;ol&gt;
-  &lt;li&gt;Mow the lawn&lt;/li&gt;
-  &lt;li&gt;Feed the dog&lt;/li&gt;
-  &lt;li&gt;Dance&lt;/li&gt;
-&lt;/ol&gt;
+&lt;h2 id=&quot;projects&quot;&gt;&lt;ins&gt;&lt;strong&gt;PROJECTS&lt;/strong&gt;&lt;/ins&gt;&lt;/h2&gt;
 
-&lt;h3 id=&quot;images-look-great-too&quot;&gt;Images look great, too&lt;/h3&gt;
+&lt;h2 id=&quot;e-commerce-system---c&quot;&gt;&lt;a href=&quot;https://github.com/sebastian-exe/E-commerce-System&quot;&gt;&lt;strong&gt;E-commerce System&lt;/strong&gt;&lt;/a&gt; - &lt;em&gt;C++&lt;/em&gt;&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;This project reads in a CSV file with multiple products containing a 5-digit identifier, the product number, quantity, and the cost. The program features include the option for the user to become the admin of the program and unlocks the ability for the user to add/delete items completely or change the quantity of certain products. This program uses a linked list of inventory objects to store the products and create a shopping cart.&lt;/li&gt;
+  &lt;li&gt;Check out my &lt;a href=&quot;https://github.com/sebastian-exe/E-commerce-System&quot;&gt;E-commerce System here&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
 
-&lt;p&gt;&lt;img src=&quot;https://i.imgur.com/DMCHDqF.jpg&quot; alt=&quot;Thumper&quot; /&gt;&lt;/p&gt;
+&lt;h2 id=&quot;check-stock-price---python&quot;&gt;&lt;a href=&quot;https://github.com/sebastian-exe/check-stock-price&quot;&gt;&lt;strong&gt;Check Stock Price&lt;/strong&gt;&lt;/a&gt; - &lt;em&gt;Python&lt;/em&gt;&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;The user can enter a ticker symbol and a target desired price. The script then checks the current market price as often as the user would like, and then notifies via email when the target price has been acquired.&lt;/li&gt;
+  &lt;li&gt;Check out this project &lt;a href=&quot;https://github.com/sebastian-exe/check-stock-price&quot;&gt;here&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
 
-&lt;h3 id=&quot;stylish-blockquotes-included&quot;&gt;Stylish blockquotes included&lt;/h3&gt;
+&lt;h2 id=&quot;smart-mirror---javascript&quot;&gt;&lt;a href=&quot;https://github.com/sebastian-exe/Smart-Mirror&quot;&gt;&lt;strong&gt;Smart Mirror&lt;/strong&gt;&lt;/a&gt; - &lt;em&gt;JavaScript&lt;/em&gt;&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;Project for HackTX 2019, at the University of Texas at Austin.&lt;/li&gt;
+  &lt;li&gt;Check out this project &lt;a href=&quot;https://github.com/sebastian-exe/Smart-Mirror&quot;&gt;here&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
 
-&lt;p&gt;You can use the markdown quote syntax, &lt;code class=&quot;highlighter-rouge&quot;&gt;&amp;gt;&lt;/code&gt; for simple quotes.&lt;/p&gt;
+&lt;h2 id=&quot;relevant-courses&quot;&gt;&lt;ins&gt;&lt;strong&gt;RELEVANT COURSES&lt;/strong&gt;&lt;/ins&gt;&lt;/h2&gt;
+&lt;p&gt;&lt;ins&gt;Classes Taken&lt;/ins&gt;&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;CS 2336 Computer Science 2&lt;/li&gt;
+  &lt;li&gt;CS 3340 Computer Architecture&lt;/li&gt;
+  &lt;li&gt;CS 3341 Probability/Stats in CS&lt;/li&gt;
+  &lt;li&gt;Calculus 1 &amp;amp; 2&lt;/li&gt;
+&lt;/ul&gt;
 
-&lt;blockquote&gt;
-  &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse quis porta mauris.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;h3 id=&quot;latex-support&quot;&gt;LaTeX support&lt;/h3&gt;
-
-&lt;p&gt;The default math delimiters are $$. Hence &lt;code class=&quot;highlighter-rouge&quot;&gt;$$ E = m \cdot c^2 $$&lt;/code&gt; yields \(E = m \cdot c^2\)&lt;/p&gt;
-
-&lt;p&gt;And here’s something more fancy:&lt;/p&gt;
-
-\[\zeta(s) = \frac{1}{\Gamma(s)} \int \limits_0^\infty x^{s-1} \sum_{n=1}^\infty e^{-nx} \mathrm{d}x = \frac{1}{\Gamma(s)} \int \limits_0^\infty \frac{x^{s-1}}{e^x - 1} \mathrm{d}x\]
-
-&lt;h3 id=&quot;theres-more-being-added-all-the-time&quot;&gt;There’s more being added all the time&lt;/h3&gt;
-
-&lt;p&gt;Checkout the &lt;a href=&quot;https://github.com/jacobtomlinson/carte-noire&quot;&gt;Github repository&lt;/a&gt; to request,
-or add, features.&lt;/p&gt;
-
-&lt;p&gt;Happy writing.&lt;/p&gt;
+&lt;h2 id=&quot;classes-for-spring-2020&quot;&gt;&lt;ins&gt;&lt;strong&gt;Classes for Spring 2020&lt;/strong&gt;&lt;/ins&gt;&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;CS 3305 Discrete Math 2&lt;/li&gt;
+  &lt;li&gt;CS 3345 Data Structures and Algorithms&lt;/li&gt;
+  &lt;li&gt;CS 3377 C/C++ in a Unix Environment&lt;/li&gt;
+&lt;/ul&gt;
 
 </description>
         <pubDate>Tue, 26 May 2020 22:00:10 -0500</pubDate>
