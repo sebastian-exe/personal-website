@@ -100,7 +100,7 @@
 
       <div class="read-time">
         <small>
-          2 minute read
+          4 minute read
         </small>
       </div>
 
@@ -146,22 +146,36 @@ element has been encountered it places that element to the very front of the arr
 
 <p>Now that we understand conceptually what is happening with selection sort, lets attempt to understand the code.</p>
 
-<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby">  <span class="k">def</span> <span class="nf">selectionSort</span><span class="p">(</span><span class="n">array</span><span class="p">):</span>
+<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="n">array</span> <span class="o">=</span> <span class="p">[</span><span class="mi">8</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">9</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">6</span><span class="p">,</span><span class="mi">3</span><span class="p">]</span>
 
-    <span class="c1">#we must traverse through all elements in the array</span>
+ <span class="c1">#Space = O(1), Time = O(N^2)</span>
+<span class="k">def</span> <span class="nf">selectionSort</span><span class="p">(</span><span class="n">array</span><span class="p">):</span>
+
+    <span class="c1">#first for loop, iterates through setting up the first value as the minVal</span>
     <span class="k">for</span> <span class="n">i</span> <span class="k">in</span> <span class="n">range</span><span class="p">(</span><span class="n">len</span><span class="p">(</span><span class="n">array</span><span class="p">)):</span>
+        <span class="n">minIndex</span> <span class="o">=</span> <span class="n">i</span>
+        <span class="c1">#second for loop traverses the rest of the array making comparisons</span>
 
-      <span class="c1">#find the minimum element in remaining unsorted array</span>
-      <span class="n">int</span> <span class="n">minIndex</span> <span class="o">=</span> <span class="n">i</span><span class="p">;</span>
+        <span class="k">for</span> <span class="n">j</span> <span class="k">in</span> <span class="n">range</span><span class="p">(</span><span class="n">i</span> <span class="o">+</span> <span class="mi">1</span><span class="p">,</span> <span class="n">len</span><span class="p">(</span><span class="n">array</span><span class="p">)):</span>
+            <span class="c1">#if there is a new value that is smaller than the currently known min value</span>
+            <span class="k">if</span> <span class="n">array</span><span class="p">[</span><span class="n">minIndex</span><span class="p">]</span> <span class="o">&gt;</span> <span class="n">array</span><span class="p">[</span><span class="n">j</span><span class="p">]:</span>
+                <span class="c1">#make that new smallest value the minVal</span>
+                <span class="n">minIndex</span> <span class="o">=</span> <span class="n">j</span>
+        <span class="c1">#swap</span>
+        <span class="n">temp</span> <span class="o">=</span> <span class="n">array</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
+        <span class="n">array</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">array</span><span class="p">[</span><span class="n">minIndex</span><span class="p">]</span>
+        <span class="n">array</span><span class="p">[</span><span class="n">minIndex</span><span class="p">]</span> <span class="o">=</span> <span class="n">temp</span>
+    <span class="c1">#once you're at the end of the first for loop, return the newly sorted array</span>
+    <span class="k">return</span> <span class="n">array</span>
 
-      <span class="k">for</span> <span class="n">j</span> <span class="k">in</span> <span class="n">range</span><span class="p">(</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span> <span class="n">len</span><span class="p">(</span><span class="n">array</span><span class="p">)):</span>
-        <span class="c1">#if we find a new element that is smaller than our currently recorded element</span>
-        <span class="k">if</span><span class="p">[</span><span class="n">minIndex</span><span class="p">]</span> <span class="o">&gt;</span> <span class="n">array</span><span class="p">[</span><span class="n">j</span><span class="p">]:</span>
-        <span class="c1">#make that element the new smallest index</span>
-          <span class="n">minIndex</span> <span class="o">=</span> <span class="n">array</span><span class="p">[</span><span class="n">j</span><span class="p">]</span>
 
-        <span class="c1">#perform a swap</span>
-        <span class="n">array</span><span class="p">[</span><span class="n">i</span><span class="p">],</span> <span class="n">array</span><span class="p">[</span><span class="n">minIndex</span><span class="p">]</span> <span class="o">=</span> <span class="n">array</span><span class="p">[</span><span class="n">index</span><span class="p">],</span> <span class="n">array</span><span class="p">[</span><span class="n">i</span><span class="p">]</span></code></pre></figure>
+<span class="nb">print</span><span class="p">(</span><span class="n">selectionSort</span><span class="p">(</span><span class="n">array</span><span class="p">))</span></code></pre></figure>
+
+<h2 id="code-explanation">Code Explanation:</h2>
+
+<p>Basically how selection sort works is that the first for loop starts at the 0th index. It then saves that index into the minIndex value. Next the code enters the second for loop. This “ j “ for loop starts at i + 1 index or in other words the first index. Within the second(j) for loop, there is a if statement. This if statement is entered if while traversing the rest of the unsorted array there is a new smaller value than that of the index of the first for loop, or in this case the element stored in the 0th index. If the if statement is entered then we must set the minIndex to be the index of that newly found smallest element. Before returning to the outer (“i”) for loop, a swap must be performed placing the smallest value at the front of the array.</p>
+
+<p><ins>How the swap works:</ins> So think of it like this. Remember how the first for loop stops at the 0th index and then enters the second for loop? Well the element within that 0th index is stored within a temporary variable. Think of it as holding you phone in one hand and a book in the other and the temporary variable as a table. If you want to put the book in the opposite hand you must first put the phone on the table, swap hands, and then pick the phone back up. So here we are putting that value on the “table”. Next we set the newly found smallest variable as the value at array[i]. What is actually happening here is that we are transferring the smallest value to the front of the list. The line of code that says array[minIndex] = temp is literary placing that bigger value into the spot where the smallest value used to be.</p>
 
 </span>
 

@@ -40,28 +40,38 @@ element has been encountered it places that element to the very front of the arr
 Now that we understand conceptually what is happening with selection sort, lets attempt to understand the code.
 {% highlight ruby %}
 
-  def selectionSort(array):
+array = [8,5,2,9,5,6,3]
 
-    #we must traverse through all elements in the array
+ #Space = O(1), Time = O(N^2)
+def selectionSort(array):
+
+    #first for loop, iterates through setting up the first value as the minVal
     for i in range(len(array)):
+        minIndex = i
+        #second for loop traverses the rest of the array making comparisons
 
-      #find the minimum element in remaining unsorted array
-      int minIndex = i;
+        for j in range(i + 1, len(array)):
+            #if there is a new value that is smaller than the currently known min value
+            if array[minIndex] > array[j]:
+                #make that new smallest value the minVal
+                minIndex = j
+        #swap
+        temp = array[i]
+        array[i] = array[minIndex]
+        array[minIndex] = temp
+    #once you're at the end of the first for loop, return the newly sorted array
+    return array
 
-      for j in range(i+1, len(array)):
-        #if we find a new element that is smaller than our currently recorded element
-        if[minIndex] > array[j]:
-        #make that element the new smallest index
-          minIndex = array[j]
 
-        #perform a swap
-        array[i], array[minIndex] = array[index], array[i]
+print(selectionSort(array))
+
 
 {% endhighlight %}
 
+## Code Explanation:
 
+Basically how selection sort works is that the first for loop starts at the 0th index. It then saves that index into the minIndex value. Next the code enters the second for loop. This " j " for loop starts at i + 1 index or in other words the first index. Within the second(j) for loop, there is a if statement. This if statement is entered if while traversing the rest of the unsorted array there is a new smaller value than that of the index of the first for loop, or in this case the element stored in the 0th index. If the if statement is entered then we must set the minIndex to be the index of that newly found smallest element. Before returning to the outer ("i") for loop, a swap must be performed placing the smallest value at the front of the array.
+
+<ins>How the swap works:</ins> So think of it like this. Remember how the first for loop stops at the 0th index and then enters the second for loop? Well the element within that 0th index is stored within a temporary variable. Think of it as holding you phone in one hand and a book in the other and the temporary variable as a table. If you want to put the book in the opposite hand you must first put the phone on the table, swap hands, and then pick the phone back up. So here we are putting that value on the "table". Next we set the newly found smallest variable as the value at array[i]. What is actually happening here is that we are transferring the smallest value to the front of the list. The line of code that says array[minIndex] = temp is literary placing that bigger value into the spot where the smallest value used to be.  
 
 [1]: https://www.geeksforgeeks.org/selection-sort/
-[2]: https://noahfrederick.com/log/lion-terminal-theme-peppermint/
-[3]: https://github.com/jacobtomlinson/carte-noire
-[4]: http://pixyll.com/
