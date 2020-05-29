@@ -1,9 +1,9 @@
 ---
 layout:     post
-title:      Selection Sort
-date:       2020-05-28 12:31:19
+title:      Insertion Sort
+date:       2020-05-29 4:32
 author:     Sebastian Moreno
-summary:    See what the different elements looks like.
+summary:    Sorting an array with insertion sort.
 categories: LeetCode
 thumbnail: python
 tags:
@@ -15,8 +15,8 @@ tags:
 
 Write a function that takes in an array of integers and returns a sorted version of that array. Use the Selection Sort algorithm to sort the array.
 
-## What is Selection Sort?
-**Note** If you are not familiar with [selection sort][1] please read more about it [here][1] before attempting the problem.
+## What is Insertion Sort?
+**Note** If you are not familiar with [insertion sort][1] please read more about it [here][1] before attempting the problem.
 The basic gist of the selection sorting algorithm is that it takes an unsorted array, traverses it, and then places the smallest current element at
 that at the beginning of the array. This is done repeatedly until the array is entirely sorted.
 
@@ -49,8 +49,8 @@ def selectionSort(array):
     #first for loop, iterates through setting up the first value as the minVal
     for i in range(len(array)):
         minIndex = i
-        
         #second for loop traverses the rest of the array making comparisons
+
         for j in range(i + 1, len(array)):
             #if there is a new value that is smaller than the currently known min value
             if array[minIndex] > array[j]:
@@ -75,4 +75,4 @@ Basically how selection sort works is that the first for loop starts at the 0th 
 
 <ins>How the swap works:</ins> So think of it like this. Remember how the first for loop stops at the 0th index and then enters the second for loop? Well the element within that 0th index is stored within a temporary variable. Think of it as holding you phone in one hand and a book in the other and the temporary variable as a table. If you want to put the book in the opposite hand you must first put the phone on the table, swap hands, and then pick the phone back up. So here we are putting that value on the "table". Next we set the newly found smallest variable as the value at array[i]. What is actually happening here is that we are transferring the smallest value to the front of the list. The line of code that says array[minIndex] = temp is literary placing that bigger value into the spot where the smallest value used to be.  
 
-[1]: https://www.geeksforgeeks.org/selection-sort/
+[1]: https://www.geeksforgeeks.org/insertion-sort/

@@ -4,7 +4,7 @@
     <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Selection Sort</title>
+<title>Insertion Sort</title>
 <meta name="description" content="Welcome to my blog.">
 
 <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
@@ -88,7 +88,7 @@
       </div>
       
 
-      <h1 class="header" itemprop="name">Selection Sort</h1>
+      <h1 class="header" itemprop="name">Insertion Sort</h1>
 
       <div class="author">
         <small><i>
@@ -102,7 +102,7 @@
             
           </span>
           
-          on <span itemprop="datePublished" content="2014-08-28">May 28, 2020</span>
+          on <span itemprop="datePublished" content="2014-08-28">May 29, 2020</span>
            under LeetCode
         </i></small>
       </div>
@@ -119,8 +119,8 @@
 
         <span itemprop="articleBody"><p>Write a function that takes in an array of integers and returns a sorted version of that array. Use the Selection Sort algorithm to sort the array.</p>
 
-<h2 id="what-is-selection-sort">What is Selection Sort?</h2>
-<p><strong>Note</strong> If you are not familiar with <a href="https://www.geeksforgeeks.org/selection-sort/">selection sort</a> please read more about it <a href="https://www.geeksforgeeks.org/selection-sort/">here</a> before attempting the problem.
+<h2 id="what-is-insertion-sort">What is Insertion Sort?</h2>
+<p><strong>Note</strong> If you are not familiar with <a href="https://www.geeksforgeeks.org/insertion-sort/">insertion sort</a> please read more about it <a href="https://www.geeksforgeeks.org/insertion-sort/">here</a> before attempting the problem.
 The basic gist of the selection sorting algorithm is that it takes an unsorted array, traverses it, and then places the smallest current element at
 that at the beginning of the array. This is done repeatedly until the array is entirely sorted.</p>
 
@@ -163,8 +163,8 @@ element has been encountered it places that element to the very front of the arr
     <span class="c1">#first for loop, iterates through setting up the first value as the minVal</span>
     <span class="k">for</span> <span class="n">i</span> <span class="k">in</span> <span class="n">range</span><span class="p">(</span><span class="n">len</span><span class="p">(</span><span class="n">array</span><span class="p">)):</span>
         <span class="n">minIndex</span> <span class="o">=</span> <span class="n">i</span>
-        
         <span class="c1">#second for loop traverses the rest of the array making comparisons</span>
+
         <span class="k">for</span> <span class="n">j</span> <span class="k">in</span> <span class="n">range</span><span class="p">(</span><span class="n">i</span> <span class="o">+</span> <span class="mi">1</span><span class="p">,</span> <span class="n">len</span><span class="p">(</span><span class="n">array</span><span class="p">)):</span>
             <span class="c1">#if there is a new value that is smaller than the currently known min value</span>
             <span class="k">if</span> <span class="n">array</span><span class="p">[</span><span class="n">minIndex</span><span class="p">]</span> <span class="o">&gt;</span> <span class="n">array</span><span class="p">[</span><span class="n">j</span><span class="p">]:</span>
