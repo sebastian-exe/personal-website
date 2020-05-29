@@ -2,6 +2,7 @@
 layout:     post
 title:      Selection Sort
 date:       2020-05-28 12:31:19
+author:     Sebastian Moreno
 summary:    See what the different elements looks like.
 categories: LeetCode
 thumbnail: python
