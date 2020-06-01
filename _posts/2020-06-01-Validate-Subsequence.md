@@ -1,6 +1,6 @@
 ---
 layout:     post
-title:      Two Number Sum
+title:      Validate Subsequence
 date:       2020-06-01 5:38:19
 author:     Sebastian Moreno
 summary:    See what the different elements looks like.
