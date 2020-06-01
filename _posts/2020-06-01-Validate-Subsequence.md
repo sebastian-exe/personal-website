@@ -1,7 +1,7 @@
 ---
 layout:     post
 title:      Two Number Sum
-date:       2020-05-29 5:38:19
+date:       2020-06-01 5:38:19
 author:     Sebastian Moreno
 summary:    See what the different elements looks like.
 categories: LeetCode
