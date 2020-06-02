@@ -19,6 +19,7 @@ The Fibonacci sequence is defined as follows: the first number of the sequence i
 
 Attempt this question [here][1]!
 If you want to read more about recursion and how it works with the fibonacci sequence you can read more about it [here][2]
+
 {% highlight ruby %}
 def  getNthFib(n):
   #write your code here.
@@ -33,7 +34,7 @@ def  getNthFib(n):
 {% endhighlight %}
 
 # Code Explanation:
-Basically what is happening is that the first for loop iterates through and sets a value to valOne. Then the second for loop does the same and sets the value of an element one index ahead of the first for loop equal to valTwo. After that I decided to sum both of these values and set them equal to a third value just for clarity. Next enters an if statement checking to see if the targetSum is equal to the summation of valOne and valTwo. If this is true, the if statement is executed and we return an array containing the values of valOne and valTwo. If this is not true, both for loops continue to execute and add matching pairs until either a pair does equal the targetSum or they reach the end of the array and no matches have been made. If no matches have been made the function return an empty array.
+The best way to approach any recursive problem is by first attacking the base cases. In this scenario they are the first two values of the fibonacci sequence. This is taken care of when we place if statements to return specific values when n is 2 and when n is 1. To generate the rest of the sequence, we must implement a recursive call. The recursive call is placed after the base statements and is an implementation of the equation that generates the fibonacci sequence. 
 
 [1]: https://www.programiz.com/python-programming/examples/fibonacci-recursion
 [2]: https://www.geeksforgeeks.org/program-for-nth-fibonacci-number/
