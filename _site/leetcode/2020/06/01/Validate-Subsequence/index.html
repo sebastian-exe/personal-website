@@ -4,7 +4,7 @@
     <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Insertion Sort</title>
+<title>Validate Subsequence</title>
 <meta name="description" content="Welcome to my blog.">
 
 <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
@@ -88,7 +88,7 @@
       </div>
       
 
-      <h1 class="header" itemprop="name">Insertion Sort</h1>
+      <h1 class="header" itemprop="name">Validate Subsequence</h1>
 
       <div class="author">
         <small><i>
@@ -102,14 +102,14 @@
             
           </span>
           
-          on <span itemprop="datePublished" content="2014-08-28">May 29, 2020</span>
+          on <span itemprop="datePublished" content="2014-08-28">June 1, 2020</span>
            under LeetCode
         </i></small>
       </div>
 
       <div class="read-time">
         <small>
-          4 minute read
+          2 minute read
         </small>
       </div>
 
@@ -117,75 +117,36 @@
 
         
 
-        <span itemprop="articleBody"><p>Write a function that takes in an array of integers and returns a sorted version of that array. Use the Selection Sort algorithm to sort the array.</p>
+        <span itemprop="articleBody"><p>Given two non-empty arrays of integers, write a function that determines whether the second array is a subsequence of the first one.</p>
 
-<h2 id="what-is-insertion-sort">What is Insertion Sort?</h2>
-<p><strong>Note</strong> If you are not familiar with <a href="https://www.geeksforgeeks.org/insertion-sort/">insertion sort</a> please read more about it <a href="https://www.geeksforgeeks.org/insertion-sort/">here</a> before attempting the problem.
-The basic gist of the selection sorting algorithm is that it takes an unsorted array, traverses it, and then places the smallest current element at
-that at the beginning of the array. This is done repeatedly until the array is entirely sorted.</p>
+<p>A subsequence of an array is a set of numbers that aren’t necessarily adjacent in the array but that are in the same order as they appear in the array. For instance the numbers <code class="highlighter-rouge">[1, 4, 6]</code> form a subsequence of the array <code class="highlighter-rouge">[1, 2, 3, 4, 5, 6]</code> and so do the numbers <code class="highlighter-rouge">[2, 4]</code>. Note that a single number in an array and the array itself are both valid subsequences of the array.</p>
 
-<h2 id="here-is-an-example">Here is an example:</h2>
-<p>Say we have a given array such as arr = [1 , 4 , 2 , 3 , 5 , 0]. First selection sort would traverse the array keeping in mind the smallest element. Once the smallest
-element has been encountered it places that element to the very front of the array.</p>
+<p>Attempt a similar question [here][1]</p>
 
-<ol>
-  <li><ins>The First pass would look like this:</ins>
-    <ul>
-      <li>[0 , 1 , 4 , 2 , 3 , 5]</li>
-    </ul>
-  </li>
-  <li><ins>The second pass would look like this:</ins>
-    <ul>
-      <li><strong>Note</strong> Since 1 is already the following smallest element, nothing is changed during this pass.</li>
-      <li>[0, 1 , 4 , 2 , 3 , 5]</li>
-    </ul>
-  </li>
-  <li><ins>The third pass would look like this:</ins>
-    <ul>
-      <li>[0 , 1 , 2 , 4 , 3 , 5]</li>
-    </ul>
-  </li>
-  <li><ins>The fourth pass would look like this:</ins>
-    <ul>
-      <li>[0 , 1 , 2 , 3 , 4 , 5]</li>
-      <li><strong>Note</strong> that this is the final pass since at this point in time all of the elements are in the proper order.</li>
-    </ul>
-  </li>
-</ol>
-
-<p>Now that we understand conceptually what is happening with selection sort, lets attempt to understand the code.</p>
-
-<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="n">array</span> <span class="o">=</span> <span class="p">[</span><span class="mi">8</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">9</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">6</span><span class="p">,</span><span class="mi">3</span><span class="p">]</span>
-
- <span class="c1">#Space = O(1), Time = O(N^2)</span>
-<span class="k">def</span> <span class="nf">selectionSort</span><span class="p">(</span><span class="n">array</span><span class="p">):</span>
-
-    <span class="c1">#first for loop, iterates through setting up the first value as the minVal</span>
-    <span class="k">for</span> <span class="n">i</span> <span class="k">in</span> <span class="n">range</span><span class="p">(</span><span class="n">len</span><span class="p">(</span><span class="n">array</span><span class="p">)):</span>
-        <span class="n">minIndex</span> <span class="o">=</span> <span class="n">i</span>
-        <span class="c1">#second for loop traverses the rest of the array making comparisons</span>
-
-        <span class="k">for</span> <span class="n">j</span> <span class="k">in</span> <span class="n">range</span><span class="p">(</span><span class="n">i</span> <span class="o">+</span> <span class="mi">1</span><span class="p">,</span> <span class="n">len</span><span class="p">(</span><span class="n">array</span><span class="p">)):</span>
-            <span class="c1">#if there is a new value that is smaller than the currently known min value</span>
-            <span class="k">if</span> <span class="n">array</span><span class="p">[</span><span class="n">minIndex</span><span class="p">]</span> <span class="o">&gt;</span> <span class="n">array</span><span class="p">[</span><span class="n">j</span><span class="p">]:</span>
-                <span class="c1">#make that new smallest value the minVal</span>
-                <span class="n">minIndex</span> <span class="o">=</span> <span class="n">j</span>
-        <span class="c1">#swap</span>
-        <span class="n">temp</span> <span class="o">=</span> <span class="n">array</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
-        <span class="n">array</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">array</span><span class="p">[</span><span class="n">minIndex</span><span class="p">]</span>
-        <span class="n">array</span><span class="p">[</span><span class="n">minIndex</span><span class="p">]</span> <span class="o">=</span> <span class="n">temp</span>
-    <span class="c1">#once you're at the end of the first for loop, return the newly sorted array</span>
-    <span class="k">return</span> <span class="n">array</span>
+<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="n">array</span> <span class="o">=</span> <span class="p">[</span><span class="mi">5</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">22</span><span class="p">,</span><span class="mi">25</span><span class="p">,</span><span class="mi">6</span><span class="p">,</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span><span class="mi">8</span><span class="p">,</span><span class="mi">10</span><span class="p">]</span>
+<span class="n">sequence</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">6</span><span class="p">,</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span><span class="mi">10</span><span class="p">]</span>
 
 
-<span class="nb">print</span><span class="p">(</span><span class="n">selectionSort</span><span class="p">(</span><span class="n">array</span><span class="p">))</span></code></pre></figure>
+<span class="k">def</span> <span class="nf">isValidSubsequence</span><span class="p">(</span><span class="n">array</span><span class="p">,</span> <span class="n">sequence</span><span class="p">):</span>
+  <span class="c1">#Write your code There</span>
+  <span class="n">seqIdx</span> <span class="o">=</span> <span class="mi">0</span>
 
-<h2 id="code-explanation">Code Explanation:</h2>
+  <span class="k">for</span> <span class="n">num</span> <span class="k">in</span> <span class="ss">array:
+    </span><span class="c1">#restrict so that the seqIdx doesn't go out of bounds</span>
+    <span class="k">if</span> <span class="n">seqIdx</span> <span class="o">&lt;</span> <span class="n">len</span><span class="p">(</span><span class="n">sequence</span><span class="p">):</span>
+    <span class="c1">#check if the array element matches the sequence element</span>
+      <span class="k">if</span> <span class="n">num</span> <span class="o">==</span> <span class="n">sequence</span><span class="p">[</span><span class="n">seqIdx</span><span class="p">]:</span>
+          <span class="c1">#increment sequence index</span>
+          <span class="n">seqIdx</span> <span class="o">=</span> <span class="n">seqIdx</span> <span class="o">+</span> <span class="mi">1</span>
 
-<p>Basically how selection sort works is that the first for loop starts at the 0th index. It then saves that index into the minIndex value. Next the code enters the second for loop. This “ j “ for loop starts at i + 1 index or in other words the first index. Within the second(j) for loop, there is a if statement. This if statement is entered if while traversing the rest of the unsorted array there is a new smaller value than that of the index of the first for loop, or in this case the element stored in the 0th index. If the if statement is entered then we must set the minIndex to be the index of that newly found smallest element. Before returning to the outer (“i”) for loop, a swap must be performed placing the smallest value at the front of the array.</p>
+   <span class="k">if</span> <span class="n">seqIdx</span> <span class="o">==</span> <span class="n">len</span><span class="p">(</span><span class="n">sequence</span><span class="p">):</span>
+      <span class="k">return</span> <span class="no">True</span>
+  <span class="ss">else:
+      </span><span class="k">return</span> <span class="no">False</span></code></pre></figure>
 
-<p><ins>How the swap works:</ins> So think of it like this. Remember how the first for loop stops at the 0th index and then enters the second for loop? Well the element within that 0th index is stored within a temporary variable. Think of it as holding you phone in one hand and a book in the other and the temporary variable as a table. If you want to put the book in the opposite hand you must first put the phone on the table, swap hands, and then pick the phone back up. So here we are putting that value on the “table”. Next we set the newly found smallest variable as the value at array[i]. What is actually happening here is that we are transferring the smallest value to the front of the list. The line of code that says array[minIndex] = temp is literary placing that bigger value into the spot where the smallest value used to be.</p>
-
+<h1 id="code-explanation">Code Explanation:</h1>
+<p>So the best way to approach this is to create a sequence counter variable. In my case I called it seqIdx. The reason you want to do this is so that you can later validate that the second array is a subsequence of the first. After that I created a for loop that traverses the first array. While traversing, there are two nested if statements that test that the seqIdx variable isn’t greater than the length of the sequence, and then that if the number that the first array is currently at matches a number within the second array. The purpose of the first if statement is so that we don’t get an out of bounds error and then are unable to return a boolean. Lastly, the code tests if the seqIdx is the same length as the sequence and then returns true if they are and false if they aren’t. 
+[1]: https://leetcode.com/problems/is-subsequence/</p>
 </span>
 
         

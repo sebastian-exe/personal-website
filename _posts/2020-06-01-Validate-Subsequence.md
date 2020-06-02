@@ -13,41 +13,37 @@ tags:
  - noire
 ---
 
-Write a function that takes in a non-empty array of distinct integers and an integer representing a target sum. If any two numbers in the input array sum up to the target sum, the function should return them in array, in any order. If no two numbers sum up to the target sum, the function should return an empty array.
+Given two non-empty arrays of integers, write a function that determines whether the second array is a subsequence of the first one.
 
-**Note** that the target sum has to be obtained by summing two different integers in the array; you can't add a single integer to itself in order to obtain the target sum
+A subsequence of an array is a set of numbers that aren't necessarily adjacent in the array but that are in the same order as they appear in the array. For instance the numbers `[1, 4, 6]` form a subsequence of the array `[1, 2, 3, 4, 5, 6]` and so do the numbers `[2, 4]`. Note that a single number in an array and the array itself are both valid subsequences of the array.
 
-Attempt this question [here][1]!
+Attempt a similar question [here][1]
+
 
 {% highlight ruby %}
 
-array = [3,5,-4,8,11,1,-1,6]
-targetSum = 10
+array = [5,1,22,25,6,-1,8,10]
+sequence = [1,6,-1,10]
 
-#Space = O(1) Time = O(N)
-def TwoNumSum(array, targetSum):
 
-    #first for loop, iterates through setting up the first value as valOne
-    for i in range(len(array)):
-        valOne = array[i]
+def isValidSubsequence(array, sequence):
+  #Write your code There
+  seqIdx = 0
 
-        #second for loop iterates through setting up the second value as valTwo
-        for j in range(i + 1, len(array)):
-            valTwo = array[j]
+  for num in array:
+    #restrict so that the seqIdx doesn't go out of bounds
+    if seqIdx < len(sequence):
+    #check if the array element matches the sequence element
+      if num == sequence[seqIdx]:
+          #increment sequence index
+          seqIdx = seqIdx + 1
 
-            #add both valOne and valTwo and set them to a third variable
-            valThree = valOne + valTwo
-
-            #if both of the values add up to the targetSum, return them
-            if valThree == targetSum:
-                return[valOne, valTwo]
-
-      #if no pairs are found, return an empty array
-      return[]
-
+   if seqIdx == len(sequence):
+      return True
+  else:
+      return False
 {% endhighlight %}
 
 # Code Explanation:
-Basically what is happening is that the first for loop iterates through and sets a value to valOne. Then the second for loop does the same and sets the value of an element one index ahead of the first for loop equal to valTwo. After that I decided to sum both of these values and set them equal to a third value just for clarity. Next enters an if statement checking to see if the targetSum is equal to the summation of valOne and valTwo. If this is true, the if statement is executed and we return an array containing the values of valOne and valTwo. If this is not true, both for loops continue to execute and add matching pairs until either a pair does equal the targetSum or they reach the end of the array and no matches have been made. If no matches have been made the function return an empty array.
-
-[1]: https://leetcode.com/problems/two-sum/
+So the best way to approach this is to create a sequence counter variable. In my case I called it seqIdx. The reason you want to do this is so that you can later validate that the second array is a subsequence of the first. After that I created a for loop that traverses the first array. While traversing, there are two nested if statements that test that the seqIdx variable isn't greater than the length of the sequence, and then that if the number that the first array is currently at matches a number within the second array. The purpose of the first if statement is so that we don't get an out of bounds error and then are unable to return a boolean. Lastly, the code tests if the seqIdx is the same length as the sequence and then returns true if they are and false if they aren't. 
+[1]: https://leetcode.com/problems/is-subsequence/
