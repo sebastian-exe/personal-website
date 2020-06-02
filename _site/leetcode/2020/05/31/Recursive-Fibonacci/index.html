@@ -109,7 +109,7 @@
 
       <div class="read-time">
         <small>
-          2 minute read
+          1 minute read
         </small>
       </div>
 
@@ -117,35 +117,23 @@
 
         
 
-        <span itemprop="articleBody"><p>Write a function that takes in a non-empty array of distinct integers and an integer representing a target sum. If any two numbers in the input array sum up to the target sum, the function should return them in array, in any order. If no two numbers sum up to the target sum, the function should return an empty array.</p>
+        <span itemprop="articleBody"><p>The Fibonacci sequence is defined as follows: the first number of the sequence is <code class="highlighter-rouge">0</code>, the second number is <code class="highlighter-rouge">1</code>, and the nth number is the sum of the (n-1)th and (n-2)th numbers. Write a function that takes in an integer <code class="highlighter-rouge">n</code> and returns the nth fibonacci number.</p>
 
-<p><strong>Note</strong> that the target sum has to be obtained by summing two different integers in the array; you can’t add a single integer to itself in order to obtain the target sum</p>
+<p><strong>Note</strong> The fibonacci sequence is often defined with its first two numbers as <code class="highlighter-rouge">F0 = 0</code> and <code class="highlighter-rouge">F1 =  1</code>. For the purpose of this question, the first fibonacci number is <code class="highlighter-rouge">F0</code>; therefore, <code class="highlighter-rouge">getNthFib(1)</code> is equal to <code class="highlighter-rouge">F0</code>, <code class="highlighter-rouge">getNthFib(2)</code> is equal to <code class="highlighter-rouge">F1</code></p>
 
-<p>Attempt this question <a href="https://www.programiz.com/python-programming/examples/fibonacci-recursion">here</a>!</p>
+<p>Attempt this question <a href="https://www.programiz.com/python-programming/examples/fibonacci-recursion">here</a>!
+If you want to read more about recursion and how it works with the fibonacci sequence you can read more about it <a href="https://www.geeksforgeeks.org/program-for-nth-fibonacci-number/">here</a></p>
 
-<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="n">array</span> <span class="o">=</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="o">-</span><span class="mi">4</span><span class="p">,</span><span class="mi">8</span><span class="p">,</span><span class="mi">11</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span><span class="mi">6</span><span class="p">]</span>
-<span class="n">targetSum</span> <span class="o">=</span> <span class="mi">10</span>
+<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="k">def</span>  <span class="nf">getNthFib</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+  <span class="c1">#write your code here.</span>
+  <span class="c1">#O(2^N) time, O(N) Space</span>
 
-<span class="c1">#Space = O(1) Time = O(N)</span>
-<span class="k">def</span> <span class="nf">TwoNumSum</span><span class="p">(</span><span class="n">array</span><span class="p">,</span> <span class="n">targetSum</span><span class="p">):</span>
+  <span class="k">if</span> <span class="n">n</span> <span class="o">==</span> <span class="mi">2</span><span class="p">:</span>
+    <span class="k">return</span> <span class="mi">1</span>
+  <span class="k">if</span> <span class="n">n</span> <span class="o">==</span> <span class="mi">1</span>
+    <span class="k">return</span> <span class="mi">0</span>
 
-    <span class="c1">#first for loop, iterates through setting up the first value as valOne</span>
-    <span class="k">for</span> <span class="n">i</span> <span class="k">in</span> <span class="n">range</span><span class="p">(</span><span class="n">len</span><span class="p">(</span><span class="n">array</span><span class="p">)):</span>
-        <span class="n">valOne</span> <span class="o">=</span> <span class="n">array</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
-
-        <span class="c1">#second for loop iterates through setting up the second value as valTwo</span>
-        <span class="k">for</span> <span class="n">j</span> <span class="k">in</span> <span class="n">range</span><span class="p">(</span><span class="n">i</span> <span class="o">+</span> <span class="mi">1</span><span class="p">,</span> <span class="n">len</span><span class="p">(</span><span class="n">array</span><span class="p">)):</span>
-            <span class="n">valTwo</span> <span class="o">=</span> <span class="n">array</span><span class="p">[</span><span class="n">j</span><span class="p">]</span>
-
-            <span class="c1">#add both valOne and valTwo and set them to a third variable</span>
-            <span class="n">valThree</span> <span class="o">=</span> <span class="n">valOne</span> <span class="o">+</span> <span class="n">valTwo</span>
-
-            <span class="c1">#if both of the values add up to the targetSum, return them</span>
-            <span class="k">if</span> <span class="n">valThree</span> <span class="o">==</span> <span class="ss">targetSum:
-                </span><span class="k">return</span><span class="p">[</span><span class="n">valOne</span><span class="p">,</span> <span class="n">valTwo</span><span class="p">]</span>
-
-      <span class="c1">#if no pairs are found, return an empty array</span>
-      <span class="k">return</span><span class="p">[]</span></code></pre></figure>
+  <span class="k">return</span> <span class="n">getNthFib</span><span class="p">(</span><span class="n">n</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span> <span class="o">+</span> <span class="n">getNthFib</span><span class="p">(</span><span class="n">n</span><span class="o">-</span><span class="mi">2</span><span class="p">)</span></code></pre></figure>
 
 <h1 id="code-explanation">Code Explanation:</h1>
 <p>Basically what is happening is that the first for loop iterates through and sets a value to valOne. Then the second for loop does the same and sets the value of an element one index ahead of the first for loop equal to valTwo. After that I decided to sum both of these values and set them equal to a third value just for clarity. Next enters an if statement checking to see if the targetSum is equal to the summation of valOne and valTwo. If this is true, the if statement is executed and we return an array containing the values of valOne and valTwo. If this is not true, both for loops continue to execute and add matching pairs until either a pair does equal the targetSum or they reach the end of the array and no matches have been made. If no matches have been made the function return an empty array.</p>

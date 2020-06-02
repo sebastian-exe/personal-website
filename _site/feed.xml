@@ -5,8 +5,8 @@
     <description>Welcome to my blog.</description>
     <link>http://localhost:4000/</link>
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Mon, 01 Jun 2020 21:43:26 -0500</pubDate>
-    <lastBuildDate>Mon, 01 Jun 2020 21:43:26 -0500</lastBuildDate>
+    <pubDate>Mon, 01 Jun 2020 22:38:32 -0500</pubDate>
+    <lastBuildDate>Mon, 01 Jun 2020 22:38:32 -0500</lastBuildDate>
     <generator>Jekyll v4.0.1</generator>
     
       <item>
@@ -61,35 +61,23 @@
     
       <item>
         <title>Recursive Fibonacci</title>
-        <description>&lt;p&gt;Write a function that takes in a non-empty array of distinct integers and an integer representing a target sum. If any two numbers in the input array sum up to the target sum, the function should return them in array, in any order. If no two numbers sum up to the target sum, the function should return an empty array.&lt;/p&gt;
+        <description>&lt;p&gt;The Fibonacci sequence is defined as follows: the first number of the sequence is &lt;code class=&quot;highlighter-rouge&quot;&gt;0&lt;/code&gt;, the second number is &lt;code class=&quot;highlighter-rouge&quot;&gt;1&lt;/code&gt;, and the nth number is the sum of the (n-1)th and (n-2)th numbers. Write a function that takes in an integer &lt;code class=&quot;highlighter-rouge&quot;&gt;n&lt;/code&gt; and returns the nth fibonacci number.&lt;/p&gt;
 
-&lt;p&gt;&lt;strong&gt;Note&lt;/strong&gt; that the target sum has to be obtained by summing two different integers in the array; you can’t add a single integer to itself in order to obtain the target sum&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Note&lt;/strong&gt; The fibonacci sequence is often defined with its first two numbers as &lt;code class=&quot;highlighter-rouge&quot;&gt;F0 = 0&lt;/code&gt; and &lt;code class=&quot;highlighter-rouge&quot;&gt;F1 =  1&lt;/code&gt;. For the purpose of this question, the first fibonacci number is &lt;code class=&quot;highlighter-rouge&quot;&gt;F0&lt;/code&gt;; therefore, &lt;code class=&quot;highlighter-rouge&quot;&gt;getNthFib(1)&lt;/code&gt; is equal to &lt;code class=&quot;highlighter-rouge&quot;&gt;F0&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;getNthFib(2)&lt;/code&gt; is equal to &lt;code class=&quot;highlighter-rouge&quot;&gt;F1&lt;/code&gt;&lt;/p&gt;
 
-&lt;p&gt;Attempt this question &lt;a href=&quot;https://www.programiz.com/python-programming/examples/fibonacci-recursion&quot;&gt;here&lt;/a&gt;!&lt;/p&gt;
+&lt;p&gt;Attempt this question &lt;a href=&quot;https://www.programiz.com/python-programming/examples/fibonacci-recursion&quot;&gt;here&lt;/a&gt;!
+If you want to read more about recursion and how it works with the fibonacci sequence you can read more about it &lt;a href=&quot;https://www.geeksforgeeks.org/program-for-nth-fibonacci-number/&quot;&gt;here&lt;/a&gt;&lt;/p&gt;
 
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span class=&quot;n&quot;&gt;array&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;5&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;4&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;8&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;11&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;6&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;targetSum&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;10&lt;/span&gt;
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt;  &lt;span class=&quot;nf&quot;&gt;getNthFib&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;n&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;
+  &lt;span class=&quot;c1&quot;&gt;#write your code here.&lt;/span&gt;
+  &lt;span class=&quot;c1&quot;&gt;#O(2^N) time, O(N) Space&lt;/span&gt;
 
-&lt;span class=&quot;c1&quot;&gt;#Space = O(1) Time = O(N)&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;TwoNumSum&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;array&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;targetSum&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;n&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;n&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;
 
-    &lt;span class=&quot;c1&quot;&gt;#first for loop, iterates through setting up the first value as valOne&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;range&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;len&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;array&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)):&lt;/span&gt;
-        &lt;span class=&quot;n&quot;&gt;valOne&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;array&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
-
-        &lt;span class=&quot;c1&quot;&gt;#second for loop iterates through setting up the second value as valTwo&lt;/span&gt;
-        &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;j&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;range&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;len&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;array&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)):&lt;/span&gt;
-            &lt;span class=&quot;n&quot;&gt;valTwo&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;array&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;j&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
-
-            &lt;span class=&quot;c1&quot;&gt;#add both valOne and valTwo and set them to a third variable&lt;/span&gt;
-            &lt;span class=&quot;n&quot;&gt;valThree&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;valOne&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;valTwo&lt;/span&gt;
-
-            &lt;span class=&quot;c1&quot;&gt;#if both of the values add up to the targetSum, return them&lt;/span&gt;
-            &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;valThree&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;ss&quot;&gt;targetSum:
-                &lt;/span&gt;&lt;span class=&quot;k&quot;&gt;return&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;valOne&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;valTwo&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
-
-      &lt;span class=&quot;c1&quot;&gt;#if no pairs are found, return an empty array&lt;/span&gt;
-      &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[]&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+  &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;getNthFib&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;n&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;getNthFib&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;n&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
 &lt;h1 id=&quot;code-explanation&quot;&gt;Code Explanation:&lt;/h1&gt;
 &lt;p&gt;Basically what is happening is that the first for loop iterates through and sets a value to valOne. Then the second for loop does the same and sets the value of an element one index ahead of the first for loop equal to valTwo. After that I decided to sum both of these values and set them equal to a third value just for clarity. Next enters an if statement checking to see if the targetSum is equal to the summation of valOne and valTwo. If this is true, the if statement is executed and we return an array containing the values of valOne and valTwo. If this is not true, both for loops continue to execute and add matching pairs until either a pair does equal the targetSum or they reach the end of the array and no matches have been made. If no matches have been made the function return an empty array.&lt;/p&gt;
