@@ -1,7 +1,7 @@
 ---
 layout:     post
 title:      Recursive Fibonacci
-date:       2020-05-29 5:38:19
+date:       2020-06-01 3:45:30
 author:     Sebastian Moreno
 summary:    Generate the Fibonacci Numbers recursively
 categories: LeetCode
