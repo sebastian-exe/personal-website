@@ -1,6 +1,30 @@
 [
   
   {
+    "title"    : "Contains Duplicates",
+    "category" : "",
+    "tags"     : "demo, action, carte, noire",
+    "url"      : "/leetcode/2020/06/02/Contains-Duplicates/",
+    "date"     : "2020-06-02 03:31:19 -0500"
+    } ,
+    
+  {
+    "title"    : "Single Number",
+    "category" : "",
+    "tags"     : "demo, action, carte, noire",
+    "url"      : "/leetcode/2020/06/01/Single-Number/",
+    "date"     : "2020-06-01 00:38:19 -0500"
+    } ,
+    
+  {
+    "title"    : "Product Sum",
+    "category" : "",
+    "tags"     : "demo, action, carte, noire",
+    "url"      : "/leetcode/2020/06/01/Product-Sum/",
+    "date"     : "2020-06-01 00:38:19 -0500"
+    } ,
+    
+  {
     "title"    : "Validate Subsequence",
     "category" : "",
     "tags"     : "demo, action, carte, noire",

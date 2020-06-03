@@ -4,7 +4,7 @@
     <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Recursive Fibonacci</title>
+<title>Contains Duplicates</title>
 <meta name="description" content="Welcome to my blog.">
 
 <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
@@ -88,7 +88,7 @@
       </div>
       
 
-      <h1 class="header" itemprop="name">Recursive Fibonacci</h1>
+      <h1 class="header" itemprop="name">Contains Duplicates</h1>
 
       <div class="author">
         <small><i>
@@ -102,14 +102,14 @@
             
           </span>
           
-          on <span itemprop="datePublished" content="2014-08-28">May 31, 2020</span>
+          on <span itemprop="datePublished" content="2014-08-28">June 2, 2020</span>
            under LeetCode
         </i></small>
       </div>
 
       <div class="read-time">
         <small>
-          1 minute read
+          2 minute read
         </small>
       </div>
 
@@ -117,26 +117,41 @@
 
         
 
-        <span itemprop="articleBody"><p>The Fibonacci sequence is defined as follows: the first number of the sequence is <code class="highlighter-rouge">0</code>, the second number is <code class="highlighter-rouge">1</code>, and the nth number is the sum of the (n-1)th and (n-2)th numbers. Write a function that takes in an integer <code class="highlighter-rouge">n</code> and returns the nth fibonacci number.</p>
+        <span itemprop="articleBody"><p>Given an array of integers, find if the array contains any duplicates.
+Your function should return true if any value appears at least twice in the array, and it should return false if every element is distinct.</p>
 
-<p><strong>Note</strong> The fibonacci sequence is often defined with its first two numbers as <code class="highlighter-rouge">F0 = 0</code> and <code class="highlighter-rouge">F1 =  1</code>. For the purpose of this question, the first fibonacci number is <code class="highlighter-rouge">F0</code>; therefore, <code class="highlighter-rouge">getNthFib(1)</code> is equal to <code class="highlighter-rouge">F0</code>, <code class="highlighter-rouge">getNthFib(2)</code> is equal to <code class="highlighter-rouge">F1</code></p>
+<p>Attempt this question <a href="https://leetcode.com/explore/interview/card/top-interview-questions-easy/92/array/578/">here</a></p>
 
-<p>Attempt this question <a href="https://www.programiz.com/python-programming/examples/fibonacci-recursion">here</a>!
-If you want to read more about recursion and how it works with the fibonacci sequence you can read more about it <a href="https://www.geeksforgeeks.org/program-for-nth-fibonacci-number/">here</a></p>
+<p><ins> First Attempt Is Below</ins></p>
+<ul>
+  <li>this attempt passed 17 of 18 test cases on LeetCode but eventually threw a time limit exceeded error.</li>
+</ul>
 
-<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="k">def</span>  <span class="nf">getNthFib</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
-  <span class="c1">#write your code here.</span>
-  <span class="c1">#O(2^N) time, O(N) Space</span>
+<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="k">class</span> <span class="nc">Solution</span><span class="p">:</span>
+    <span class="k">def</span> <span class="nf">containsDuplicate</span><span class="p">(</span><span class="nb">self</span><span class="p">,</span> <span class="ss">nums: </span><span class="no">List</span><span class="p">[</span><span class="n">int</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="ss">bool:
 
-  <span class="k">if</span> <span class="n">n</span> <span class="o">==</span> <span class="mi">2</span><span class="p">:</span>
-    <span class="k">return</span> <span class="mi">1</span>
-  <span class="k">if</span> <span class="n">n</span> <span class="o">==</span> <span class="mi">1</span>
-    <span class="k">return</span> <span class="mi">0</span>
+        </span><span class="k">for</span> <span class="n">i</span> <span class="k">in</span> <span class="n">range</span><span class="p">(</span><span class="n">len</span><span class="p">(</span><span class="n">nums</span><span class="p">)):</span>
+            <span class="k">for</span> <span class="n">j</span> <span class="k">in</span> <span class="n">range</span><span class="p">(</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span> <span class="n">len</span><span class="p">(</span><span class="n">nums</span><span class="p">)):</span>
+                <span class="c1">#print("i: ", nums[i], "j: ", nums[j])</span>
+                <span class="k">if</span> <span class="n">nums</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">==</span> <span class="n">nums</span><span class="p">[</span><span class="n">j</span><span class="p">]:</span>
+                    <span class="k">return</span> <span class="no">True</span>
+        <span class="k">return</span> <span class="no">False</span></code></pre></figure>
 
-  <span class="k">return</span> <span class="n">getNthFib</span><span class="p">(</span><span class="n">n</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span> <span class="o">+</span> <span class="n">getNthFib</span><span class="p">(</span><span class="n">n</span><span class="o">-</span><span class="mi">2</span><span class="p">)</span></code></pre></figure>
+<p><ins> Second Successful Attempt </ins></p>
+
+<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="k">class</span> <span class="nc">Solution</span><span class="p">:</span>
+    <span class="k">def</span> <span class="nf">containsDuplicate</span><span class="p">(</span><span class="nb">self</span><span class="p">,</span> <span class="ss">nums: </span><span class="no">List</span><span class="p">[</span><span class="n">int</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="ss">bool:
+        </span><span class="n">nums</span><span class="p">.</span><span class="nf">sort</span><span class="p">()</span>
+
+        <span class="k">for</span> <span class="n">i</span> <span class="k">in</span> <span class="n">range</span><span class="p">(</span><span class="n">len</span><span class="p">(</span><span class="n">nums</span><span class="p">)</span><span class="o">-</span><span class="mi">1</span><span class="p">):</span>
+            <span class="k">if</span> <span class="n">nums</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">==</span> <span class="n">nums</span><span class="p">[</span><span class="n">i</span> <span class="o">+</span><span class="mi">1</span><span class="p">]:</span>
+                <span class="k">return</span> <span class="no">True</span>
+        <span class="k">return</span> <span class="no">False</span></code></pre></figure>
 
 <h1 id="code-explanation">Code Explanation:</h1>
-<p>The best way to approach any recursive problem is by first attacking the base cases. In this scenario they are the first two values of the fibonacci sequence. This is taken care of when we place if statements to return specific values when n is 2 and when n is 1. To generate the rest of the sequence, we must implement a recursive call. The recursive call is placed after the base statements and is an implementation of the equation that generates the fibonacci sequence.</p>
+<p>There are multiple solutions to this type of problem. My first attempt takes an iterative approach to the question and uses a nested for loop to search the indexes. I like to call this approach a “two pointer solution” since I have the j variable in front of the i variable while the comparisons are being made.</p>
+
+<p>The second attempt is more of something that you want to do during an interview scenario. This approach is also more efficient that the first solution. Basically the first step is to sort the numbers array. This allows us to have just one for loop that can index the now sorted array. Notice that the for loop goes to range(len(num))  - 1, this protects you from an out of bounds error within the if statement when it starts to make comparisons. Next comes the if statement. The if statement will be</p>
 
 </span>
 

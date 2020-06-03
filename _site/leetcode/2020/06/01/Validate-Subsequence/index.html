@@ -121,7 +121,7 @@
 
 <p>A subsequence of an array is a set of numbers that aren’t necessarily adjacent in the array but that are in the same order as they appear in the array. For instance the numbers <code class="highlighter-rouge">[1, 4, 6]</code> form a subsequence of the array <code class="highlighter-rouge">[1, 2, 3, 4, 5, 6]</code> and so do the numbers <code class="highlighter-rouge">[2, 4]</code>. Note that a single number in an array and the array itself are both valid subsequences of the array.</p>
 
-<p>Attempt a similar question [here][1]</p>
+<p>Attempt a similar question <a href="https://leetcode.com/problems/is-subsequence/">here</a></p>
 
 <figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="n">array</span> <span class="o">=</span> <span class="p">[</span><span class="mi">5</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">22</span><span class="p">,</span><span class="mi">25</span><span class="p">,</span><span class="mi">6</span><span class="p">,</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span><span class="mi">8</span><span class="p">,</span><span class="mi">10</span><span class="p">]</span>
 <span class="n">sequence</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">6</span><span class="p">,</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span><span class="mi">10</span><span class="p">]</span>
@@ -145,8 +145,8 @@
       </span><span class="k">return</span> <span class="no">False</span></code></pre></figure>
 
 <h1 id="code-explanation">Code Explanation:</h1>
-<p>So the best way to approach this is to create a sequence counter variable. In my case I called it seqIdx. The reason you want to do this is so that you can later validate that the second array is a subsequence of the first. After that I created a for loop that traverses the first array. While traversing, there are two nested if statements that test that the seqIdx variable isn’t greater than the length of the sequence, and then that if the number that the first array is currently at matches a number within the second array. The purpose of the first if statement is so that we don’t get an out of bounds error and then are unable to return a boolean. Lastly, the code tests if the seqIdx is the same length as the sequence and then returns true if they are and false if they aren’t. 
-[1]: https://leetcode.com/problems/is-subsequence/</p>
+<p>So the best way to approach this is to create a sequence counter variable. In my case I called it seqIdx. The reason you want to do this is so that you can later validate that the second array is a subsequence of the first. After that I created a for loop that traverses the first array. While traversing, there are two nested if statements that test that the seqIdx variable isn’t greater than the length of the sequence, and then that if the number that the first array is currently at matches a number within the second array. The purpose of the first if statement is so that we don’t get an out of bounds error and then are unable to return a boolean. Lastly, the code tests if the seqIdx is the same length as the sequence and then returns true if they are and false if they aren’t.</p>
+
 </span>
 
         
