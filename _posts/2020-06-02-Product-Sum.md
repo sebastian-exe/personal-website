@@ -1,7 +1,7 @@
 ---
 layout:     post
 title:      Product Sum
-date:       2020-06-01 5:38:19
+date:       2020-06-02 5:38:19
 author:     Sebastian Moreno
 summary:    See what the different elements looks like.
 categories: LeetCode

@@ -1,7 +1,7 @@
 ---
 layout:     post
-title:      Single Number
-date:       2020-06-01 5:38:19
+title:      Rotate Array
+date:       2020-06-03 5:38:19
 author:     Sebastian Moreno
 summary:    See what the different elements looks like.
 categories: LeetCode
