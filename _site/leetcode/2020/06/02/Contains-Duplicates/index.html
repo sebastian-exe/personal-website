@@ -151,7 +151,7 @@ Your function should return true if any value appears at least twice in the arra
 <h1 id="code-explanation">Code Explanation:</h1>
 <p>There are multiple solutions to this type of problem. My first attempt takes an iterative approach to the question and uses a nested for loop to search the indexes. I like to call this approach a “two pointer solution” since I have the j variable in front of the i variable while the comparisons are being made.</p>
 
-<p>The second attempt is more of something that you want to do during an interview scenario. This approach is also more efficient that the first solution. Basically the first step is to sort the numbers array. This allows us to have just one for loop that can index the now sorted array. Notice that the for loop goes to range(len(num))  - 1, this protects you from an out of bounds error within the if statement when it starts to make comparisons. Next comes the if statement. The if statement will be</p>
+<p>The second attempt is more of something that you want to do during an interview scenario. This approach is also more efficient that the first solution. Basically the first step is to sort the numbers array. This allows us to have just one for loop that can index the now sorted array. Notice that the for loop goes to range(len(num))  - 1, this protects you from an out of bounds error within the if statement when it starts to make comparisons. Next comes the if statement. The if statement will be comparing two indexes at once, one in front of the other while traversing the array. If the two elements at i and i + 1 indexes are the same then return true. If after we have traversed all the indexes and found that none of the numbers are the same then return false.</p>
 
 </span>
 

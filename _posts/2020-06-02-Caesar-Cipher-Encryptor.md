@@ -13,41 +13,31 @@ tags:
  - noire
 ---
 
-Given an array of integers, find if the array contains any duplicates.
-Your function should return true if any value appears at least twice in the array, and it should return false if every element is distinct.
+Given a non-empty string of lowercase letters and a non-negative integer representing a key write a function that returns a new string obtained by shifting every letter in the inout string by k positions in the alphabet, where k is the key.
 
-Attempt this question [here][1]
+Note that letters should "wrap" around the alphabet; in other words, the letter `z` shifted by one returns the letter `a`.
 
-<ins> First Attempt Is Below</ins>
-* this attempt passed 17 of 18 test cases on LeetCode but eventually threw a time limit exceeded error.
+If you are unfamiliar with the [asciitable][1] please check it out [here][1].
+
 {% highlight ruby %}
-class Solution:
-    def containsDuplicate(self, nums: List[int]) -> bool:
+def caesarCipherEncryptor(string, key):
+    # Write your code here
+	#time O(n) space = o(n)
+	key = key % 26
+	newString = ""
+	for char in string:
+		x = key + ord(char)
 
-        for i in range(len(nums)):
-            for j in range(i+1, len(nums)):
-                #print("i: ", nums[i], "j: ", nums[j])
-                if nums[i] == nums[j]:
-                    return True
-        return False
+		if x > ord("z"):
+			x =  (x - 26)
 
-{% endhighlight %}
+		newString += chr(x)
 
-<ins> Second Successful Attempt </ins>
-{% highlight ruby %}
-class Solution:
-    def containsDuplicate(self, nums: List[int]) -> bool:
-        nums.sort()
+	return newString
 
-        for i in range(len(nums)-1):
-            if nums[i] == nums[i +1]:
-                return True
-        return False
 {% endhighlight %}
 
 # Code Explanation:
-There are multiple solutions to this type of problem. My first attempt takes an iterative approach to the question and uses a nested for loop to search the indexes. I like to call this approach a "two pointer solution" since I have the j variable in front of the i variable while the comparisons are being made.
+The easiest way that I found to complete this question is by making a method that passes in a string and a key. The first thing I do is mod the key by 26, which is the length of total letters in the alphabet. The reason I decided to do this was to help in wrapping the letters across the alphabet if the number for the key given was greater than 26. Next I created a new string that will hold the encrypted string and will be returned. After that I wrote a for loop which traverses each character in the string. a variable named X is set to the key + the ASCII value of the letter that is currently being indexed of the string. The reason we take the ASCII value is so that we can just loop to the front later if we have to pass `z`. The if statement under the assignment of the variable x actually takes care of that for us. For example, say the word is "wall" and the key is 15. The lower case letter `w` has an ASCII value of 120. 15 % 26 is just 15, so 120 + 15 = 135. 135 is greater than the ASCII value of `z` which is 122. This is when the if statement is executed and then subtracts 26 from the value of X to reposition it back within  the range of ASCII values of the alphabet. 135 - 26 = 110. The letter with the ASCII value of 110 is n. This is how the "wrapping" happens. Lastly, we then read in the character value of the ASCII number that X contains and then return the string back to the main.
 
-The second attempt is more of something that you want to do during an interview scenario. This approach is also more efficient that the first solution. Basically the first step is to sort the numbers array. This allows us to have just one for loop that can index the now sorted array. Notice that the for loop goes to range(len(num))  - 1, this protects you from an out of bounds error within the if statement when it starts to make comparisons. Next comes the if statement. The if statement will be
-
-[1]: https://leetcode.com/explore/interview/card/top-interview-questions-easy/92/array/578/
+[1]: [http://www.asciitable.com]
