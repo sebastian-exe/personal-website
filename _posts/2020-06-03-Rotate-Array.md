@@ -15,9 +15,11 @@ tags:
 
 Given an array, rotate the array to the right by k steps, where k is non-negative.
 
-Follow up:
+<ins>Follow up:</ins>
 * Try to come up as many solutions as you can, there are at least 3 different ways to solve this problem.
 * Could you do it in-place with O(1) extra space?
+
+Attempt this question [here][1]
 
 <ins> Example 1: </ins>
 {% highlight ruby %}
@@ -73,6 +75,6 @@ class Solution:
 
 
 # Code Explanation:
-I will explain the code to the second solution since it not only is 3 lines code but on average performs better than the first solution. Basically what is happening is that we copy the passed in nums array to another array called rotate. Then we loop through the rotate array. While we are looping through the rotate array we are calculating the new index of the values from the rotate array and overriding them in the nums array since the values must be changed in place. The new index is found by taking the i index from the for loop and adding that with the key k that is passed in from the main. We then mod it by the size of the array to take care of when the value of i + k happens to be bigger than the size of the array. After this has been done for every value in the rotate array the nums array will be completely shifted. 
+I will explain the code to the second solution since it not only is 3 lines code but on average performs better than the first solution. Basically what is happening is that we copy the passed in nums array to another array called rotate. Then we loop through the rotate array. While we are looping through the rotate array we are calculating the new index of the values from the rotate array and overriding them in the nums array since the values must be changed in place. The new index is found by taking the i index from the for loop and adding that with the key k that is passed in from the main. We then mod it by the size of the array to take care of when the value of i + k happens to be bigger than the size of the array. After this has been done for every value in the rotate array the nums array will be completely shifted.
 
 [1]: https://leetcode.com/explore/interview/card/top-interview-questions-easy/92/array/646/
