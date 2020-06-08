@@ -5,8 +5,8 @@
     <description>Welcome to my blog.</description>
     <link>http://localhost:4000/</link>
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Sun, 07 Jun 2020 22:08:56 -0500</pubDate>
-    <lastBuildDate>Sun, 07 Jun 2020 22:08:56 -0500</lastBuildDate>
+    <pubDate>Sun, 07 Jun 2020 22:11:02 -0500</pubDate>
+    <lastBuildDate>Sun, 07 Jun 2020 22:11:02 -0500</lastBuildDate>
     <generator>Jekyll v4.0.1</generator>
     
       <item>
@@ -392,7 +392,7 @@ def isValidSubsequence(array, sequence):
     
       <item>
         <title>Single Number</title>
-        <description>&lt;p&gt;Give a &lt;strong&gt;non-empty&lt;/strong&gt; array of integers, every element appears &lt;em&gt;twice&lt;/em&gt; except for one. Find that single one.&lt;/p&gt;
+        <description>&lt;p&gt;Given a &lt;strong&gt;non-empty&lt;/strong&gt; array of integers, every element appears &lt;em&gt;twice&lt;/em&gt; except for one. Find that single one.&lt;/p&gt;
 
 &lt;p&gt;Attempt this question &lt;a href=&quot;https://leetcode.com/explore/interview/card/top-interview-questions-easy/92/array/549/&quot;&gt;here&lt;/a&gt;&lt;/p&gt;
 

@@ -13,7 +13,7 @@ tags:
  - noire
 ---
 
-Give a **non-empty** array of integers, every element appears _twice_ except for one. Find that single one.
+Given a **non-empty** array of integers, every element appears _twice_ except for one. Find that single one.
 
 Attempt this question [here][1]
 
