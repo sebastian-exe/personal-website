@@ -13,38 +13,66 @@ tags:
  - noire
 ---
 
-Given two non-empty arrays of integers, write a function that determines whether the second array is a subsequence of the first one.
+Given an array, rotate the array to the right by k steps, where k is non-negative.
 
-A subsequence of an array is a set of numbers that aren't necessarily adjacent in the array but that are in the same order as they appear in the array. For instance the numbers `[1, 4, 6]` form a subsequence of the array `[1, 2, 3, 4, 5, 6]` and so do the numbers `[2, 4]`. Note that a single number in an array and the array itself are both valid subsequences of the array.
+Follow up:
+* Try to come up as many solutions as you can, there are at least 3 different ways to solve this problem.
+* Could you do it in-place with O(1) extra space?
 
-Attempt a similar question [here][1]
-
-
+<ins> Example 1: </ins>
 {% highlight ruby %}
-
-array = [5,1,22,25,6,-1,8,10]
-sequence = [1,6,-1,10]
-
-
-def isValidSubsequence(array, sequence):
-  #Write your code There
-  seqIdx = 0
-
-  for num in array:
-    #restrict so that the seqIdx doesn't go out of bounds
-    if seqIdx < len(sequence):
-    #check if the array element matches the sequence element
-      if num == sequence[seqIdx]:
-          #increment sequence index
-          seqIdx = seqIdx + 1
-
-   if seqIdx == len(sequence):
-      return True
-  else:
-      return False
+Input: nums = [1,2,3,4,5,6,7], k = 3
+Output: [5,6,7,1,2,3,4]
+Explanation:
+rotate 1 steps to the right: [7,1,2,3,4,5,6]
+rotate 2 steps to the right: [6,7,1,2,3,4,5]
+rotate 3 steps to the right: [5,6,7,1,2,3,4]
 {% endhighlight %}
 
-# Code Explanation:
-So the best way to approach this is to create a sequence counter variable. In my case I called it seqIdx. The reason you want to do this is so that you can later validate that the second array is a subsequence of the first. After that I created a for loop that traverses the first array. While traversing, there are two nested if statements that test that the seqIdx variable isn't greater than the length of the sequence, and then that if the number that the first array is currently at matches a number within the second array. The purpose of the first if statement is so that we don't get an out of bounds error and then are unable to return a boolean. Lastly, the code tests if the seqIdx is the same length as the sequence and then returns true if they are and false if they aren't.
+<ins> Example 2: </ins>
+{% highlight ruby %}
+Input: nums = [-1,-100,3,99], k = 2
+Output: [3,99,-1,-100]
+Explanation:
+rotate 1 steps to the right: [99,-1,-100,3]
+rotate 2 steps to the right: [3,99,-1,-100]
+{% endhighlight %}
 
-[1]: https://leetcode.com/problems/is-subsequence/
+Attempt this question [here][1]
+
+<ins> Solution 1: </ins>
+{% highlight ruby %}
+class Solution:
+    def rotate(self, nums: List[int], k: int) -> None:
+        """
+        Do not return anything, modify nums in-place instead.
+        """
+        rotate = [0] * len(nums)
+
+        for i in range(len(nums)):
+            rotate[(i+k) % len(nums)] = nums[i]
+
+
+        for i in range(len(nums)):
+            nums[i] = rotate[i]
+
+{% endhighlight %}
+
+<ins> Solution 2: </ins>
+{% highlight ruby %}
+class Solution:
+    def rotate(self, nums: List[int], k: int) -> None:
+        """
+        Do not return anything, modify nums in-place instead.
+        """
+        rotate = nums.copy()
+
+        for i in range(len(rotate)):
+            nums[(i+k) % len(nums)] = rotate[i]
+{% endhighlight %}
+
+
+# Code Explanation:
+I will explain the code to the second solution since it not only is 3 lines code but on average performs better than the first solution. Basically what is happening is that we copy the passed in nums array to another array called rotate. Then we loop through the rotate array. While we are looping through the rotate array we are calculating the new index of the values from the rotate array and overriding them in the nums array since the values must be changed in place. The new index is found by taking the i index from the for loop and adding that with the key k that is passed in from the main. We then mod it by the size of the array to take care of when the value of i + k happens to be bigger than the size of the array. After this has been done for every value in the rotate array the nums array will be completely shifted. 
+
+[1]: https://leetcode.com/explore/interview/card/top-interview-questions-easy/92/array/646/

@@ -109,7 +109,7 @@
 
       <div class="read-time">
         <small>
-          2 minute read
+          3 minute read
         </small>
       </div>
 
@@ -117,35 +117,63 @@
 
         
 
-        <span itemprop="articleBody"><p>Given two non-empty arrays of integers, write a function that determines whether the second array is a subsequence of the first one.</p>
+        <span itemprop="articleBody"><p>Given an array, rotate the array to the right by k steps, where k is non-negative.</p>
 
-<p>A subsequence of an array is a set of numbers that aren’t necessarily adjacent in the array but that are in the same order as they appear in the array. For instance the numbers <code class="highlighter-rouge">[1, 4, 6]</code> form a subsequence of the array <code class="highlighter-rouge">[1, 2, 3, 4, 5, 6]</code> and so do the numbers <code class="highlighter-rouge">[2, 4]</code>. Note that a single number in an array and the array itself are both valid subsequences of the array.</p>
+<p>Follow up:</p>
+<ul>
+  <li>Try to come up as many solutions as you can, there are at least 3 different ways to solve this problem.</li>
+  <li>Could you do it in-place with O(1) extra space?</li>
+</ul>
 
-<p>Attempt a similar question <a href="https://leetcode.com/problems/is-subsequence/">here</a></p>
+<p><ins> Example 1: </ins></p>
 
-<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="n">array</span> <span class="o">=</span> <span class="p">[</span><span class="mi">5</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">22</span><span class="p">,</span><span class="mi">25</span><span class="p">,</span><span class="mi">6</span><span class="p">,</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span><span class="mi">8</span><span class="p">,</span><span class="mi">10</span><span class="p">]</span>
-<span class="n">sequence</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">6</span><span class="p">,</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span><span class="mi">10</span><span class="p">]</span>
+<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="no">Input</span><span class="p">:</span> <span class="n">nums</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">6</span><span class="p">,</span><span class="mi">7</span><span class="p">],</span> <span class="n">k</span> <span class="o">=</span> <span class="mi">3</span>
+<span class="no">Output</span><span class="p">:</span> <span class="p">[</span><span class="mi">5</span><span class="p">,</span><span class="mi">6</span><span class="p">,</span><span class="mi">7</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">]</span>
+<span class="no">Explanation</span><span class="p">:</span>
+<span class="n">rotate</span> <span class="mi">1</span> <span class="n">steps</span> <span class="n">to</span> <span class="n">the</span> <span class="ss">right: </span><span class="p">[</span><span class="mi">7</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">6</span><span class="p">]</span>
+<span class="n">rotate</span> <span class="mi">2</span> <span class="n">steps</span> <span class="n">to</span> <span class="n">the</span> <span class="ss">right: </span><span class="p">[</span><span class="mi">6</span><span class="p">,</span><span class="mi">7</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">]</span>
+<span class="n">rotate</span> <span class="mi">3</span> <span class="n">steps</span> <span class="n">to</span> <span class="n">the</span> <span class="ss">right: </span><span class="p">[</span><span class="mi">5</span><span class="p">,</span><span class="mi">6</span><span class="p">,</span><span class="mi">7</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">]</span></code></pre></figure>
+
+<p><ins> Example 2: </ins></p>
+
+<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="no">Input</span><span class="p">:</span> <span class="n">nums</span> <span class="o">=</span> <span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span><span class="o">-</span><span class="mi">100</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">99</span><span class="p">],</span> <span class="n">k</span> <span class="o">=</span> <span class="mi">2</span>
+<span class="no">Output</span><span class="p">:</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span><span class="mi">99</span><span class="p">,</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span><span class="o">-</span><span class="mi">100</span><span class="p">]</span>
+<span class="no">Explanation</span><span class="p">:</span>
+<span class="n">rotate</span> <span class="mi">1</span> <span class="n">steps</span> <span class="n">to</span> <span class="n">the</span> <span class="ss">right: </span><span class="p">[</span><span class="mi">99</span><span class="p">,</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span><span class="o">-</span><span class="mi">100</span><span class="p">,</span><span class="mi">3</span><span class="p">]</span>
+<span class="n">rotate</span> <span class="mi">2</span> <span class="n">steps</span> <span class="n">to</span> <span class="n">the</span> <span class="ss">right: </span><span class="p">[</span><span class="mi">3</span><span class="p">,</span><span class="mi">99</span><span class="p">,</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span><span class="o">-</span><span class="mi">100</span><span class="p">]</span></code></pre></figure>
+
+<p>Attempt this question <a href="https://leetcode.com/explore/interview/card/top-interview-questions-easy/92/array/646/">here</a></p>
+
+<p><ins> Solution 1: </ins></p>
+
+<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="k">class</span> <span class="nc">Solution</span><span class="p">:</span>
+    <span class="k">def</span> <span class="nf">rotate</span><span class="p">(</span><span class="nb">self</span><span class="p">,</span> <span class="ss">nums: </span><span class="no">List</span><span class="p">[</span><span class="n">int</span><span class="p">],</span> <span class="ss">k: </span><span class="n">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="no">None</span><span class="p">:</span>
+        <span class="s2">"""
+        Do not return anything, modify nums in-place instead.
+        """</span>
+        <span class="n">rotate</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">*</span> <span class="n">len</span><span class="p">(</span><span class="n">nums</span><span class="p">)</span>
+
+        <span class="k">for</span> <span class="n">i</span> <span class="k">in</span> <span class="n">range</span><span class="p">(</span><span class="n">len</span><span class="p">(</span><span class="n">nums</span><span class="p">)):</span>
+            <span class="n">rotate</span><span class="p">[(</span><span class="n">i</span><span class="o">+</span><span class="n">k</span><span class="p">)</span> <span class="o">%</span> <span class="n">len</span><span class="p">(</span><span class="n">nums</span><span class="p">)]</span> <span class="o">=</span> <span class="n">nums</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
 
 
-<span class="k">def</span> <span class="nf">isValidSubsequence</span><span class="p">(</span><span class="n">array</span><span class="p">,</span> <span class="n">sequence</span><span class="p">):</span>
-  <span class="c1">#Write your code There</span>
-  <span class="n">seqIdx</span> <span class="o">=</span> <span class="mi">0</span>
+        <span class="k">for</span> <span class="n">i</span> <span class="k">in</span> <span class="n">range</span><span class="p">(</span><span class="n">len</span><span class="p">(</span><span class="n">nums</span><span class="p">)):</span>
+            <span class="n">nums</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">rotate</span><span class="p">[</span><span class="n">i</span><span class="p">]</span></code></pre></figure>
 
-  <span class="k">for</span> <span class="n">num</span> <span class="k">in</span> <span class="ss">array:
-    </span><span class="c1">#restrict so that the seqIdx doesn't go out of bounds</span>
-    <span class="k">if</span> <span class="n">seqIdx</span> <span class="o">&lt;</span> <span class="n">len</span><span class="p">(</span><span class="n">sequence</span><span class="p">):</span>
-    <span class="c1">#check if the array element matches the sequence element</span>
-      <span class="k">if</span> <span class="n">num</span> <span class="o">==</span> <span class="n">sequence</span><span class="p">[</span><span class="n">seqIdx</span><span class="p">]:</span>
-          <span class="c1">#increment sequence index</span>
-          <span class="n">seqIdx</span> <span class="o">=</span> <span class="n">seqIdx</span> <span class="o">+</span> <span class="mi">1</span>
+<p><ins> Solution 2: </ins></p>
 
-   <span class="k">if</span> <span class="n">seqIdx</span> <span class="o">==</span> <span class="n">len</span><span class="p">(</span><span class="n">sequence</span><span class="p">):</span>
-      <span class="k">return</span> <span class="no">True</span>
-  <span class="ss">else:
-      </span><span class="k">return</span> <span class="no">False</span></code></pre></figure>
+<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="k">class</span> <span class="nc">Solution</span><span class="p">:</span>
+    <span class="k">def</span> <span class="nf">rotate</span><span class="p">(</span><span class="nb">self</span><span class="p">,</span> <span class="ss">nums: </span><span class="no">List</span><span class="p">[</span><span class="n">int</span><span class="p">],</span> <span class="ss">k: </span><span class="n">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="no">None</span><span class="p">:</span>
+        <span class="s2">"""
+        Do not return anything, modify nums in-place instead.
+        """</span>
+        <span class="n">rotate</span> <span class="o">=</span> <span class="n">nums</span><span class="p">.</span><span class="nf">copy</span><span class="p">()</span>
+
+        <span class="k">for</span> <span class="n">i</span> <span class="k">in</span> <span class="n">range</span><span class="p">(</span><span class="n">len</span><span class="p">(</span><span class="n">rotate</span><span class="p">)):</span>
+            <span class="n">nums</span><span class="p">[(</span><span class="n">i</span><span class="o">+</span><span class="n">k</span><span class="p">)</span> <span class="o">%</span> <span class="n">len</span><span class="p">(</span><span class="n">nums</span><span class="p">)]</span> <span class="o">=</span> <span class="n">rotate</span><span class="p">[</span><span class="n">i</span><span class="p">]</span></code></pre></figure>
 
 <h1 id="code-explanation">Code Explanation:</h1>
-<p>So the best way to approach this is to create a sequence counter variable. In my case I called it seqIdx. The reason you want to do this is so that you can later validate that the second array is a subsequence of the first. After that I created a for loop that traverses the first array. While traversing, there are two nested if statements that test that the seqIdx variable isn’t greater than the length of the sequence, and then that if the number that the first array is currently at matches a number within the second array. The purpose of the first if statement is so that we don’t get an out of bounds error and then are unable to return a boolean. Lastly, the code tests if the seqIdx is the same length as the sequence and then returns true if they are and false if they aren’t.</p>
+<p>I will explain the code to the second solution since it not only is 3 lines code but on average performs better than the first solution. Basically what is happening is that we copy the passed in nums array to another array called rotate. Then we loop through the rotate array. While we are looping through the rotate array we are calculating the new index of the values from the rotate array and overriding them in the nums array since the values must be changed in place. The new index is found by taking the i index from the for loop and adding that with the key k that is passed in from the main. We then mod it by the size of the array to take care of when the value of i + k happens to be bigger than the size of the array. After this has been done for every value in the rotate array the nums array will be completely shifted.</p>
 
 </span>
 
