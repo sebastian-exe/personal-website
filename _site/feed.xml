@@ -5,12 +5,108 @@
     <description>Welcome to my blog.</description>
     <link>http://localhost:4000/</link>
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Thu, 04 Jun 2020 09:09:34 -0500</pubDate>
-    <lastBuildDate>Thu, 04 Jun 2020 09:09:34 -0500</lastBuildDate>
+    <pubDate>Fri, 05 Jun 2020 17:01:07 -0500</pubDate>
+    <lastBuildDate>Fri, 05 Jun 2020 17:01:07 -0500</lastBuildDate>
     <generator>Jekyll v4.0.1</generator>
     
       <item>
-        <title>Rotate Array</title>
+        <title>Move Zeros (incomplete)</title>
+        <description>&lt;p&gt;Given two non-empty arrays of integers, write a function that determines whether the second array is a subsequence of the first one.&lt;/p&gt;
+
+&lt;p&gt;A subsequence of an array is a set of numbers that aren’t necessarily adjacent in the array but that are in the same order as they appear in the array. For instance the numbers &lt;code class=&quot;highlighter-rouge&quot;&gt;[1, 4, 6]&lt;/code&gt; form a subsequence of the array &lt;code class=&quot;highlighter-rouge&quot;&gt;[1, 2, 3, 4, 5, 6]&lt;/code&gt; and so do the numbers &lt;code class=&quot;highlighter-rouge&quot;&gt;[2, 4]&lt;/code&gt;. Note that a single number in an array and the array itself are both valid subsequences of the array.&lt;/p&gt;
+
+&lt;p&gt;Attempt a similar question &lt;a href=&quot;https://leetcode.com/explore/interview/card/top-interview-questions-easy/92/array/567/&quot;&gt;here&lt;/a&gt;&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span class=&quot;n&quot;&gt;nums&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;12&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;#nums = [0,0,1]&lt;/span&gt;
+
+&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;moveZeros&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;nums&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;
+
+    &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;range&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;len&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;nums&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;nums&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
+            &lt;span class=&quot;n&quot;&gt;shiftZero&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;nums&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
+            &lt;span class=&quot;n&quot;&gt;nums&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;pop&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+            &lt;span class=&quot;n&quot;&gt;nums&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;append&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;shiftZero&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+
+
+
+&lt;span class=&quot;n&quot;&gt;moveZeros&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;nums&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;nb&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;nums&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;h1 id=&quot;code-explanation&quot;&gt;Code Explanation:&lt;/h1&gt;
+&lt;p&gt;So the best way to approach this is to create a sequence counter variable. In my case I called it seqIdx. The reason you want to do this is so that you can later validate that the second array is a subsequence of the first. After that I created a for loop that traverses the first array. While traversing, there are two nested if statements that test that the seqIdx variable isn’t greater than the length of the sequence, and then that if the number that the first array is currently at matches a number within the second array. The purpose of the first if statement is so that we don’t get an out of bounds error and then are unable to return a boolean. Lastly, the code tests if the seqIdx is the same length as the sequence and then returns true if they are and false if they aren’t.&lt;/p&gt;
+
+</description>
+        <pubDate>Thu, 04 Jun 2020 21:17:19 -0500</pubDate>
+        <link>http://localhost:4000/leetcode/2020/06/04/Move-Zeros/</link>
+        <guid isPermaLink="true">http://localhost:4000/leetcode/2020/06/04/Move-Zeros/</guid>
+        
+        <category>demo</category>
+        
+        <category>action</category>
+        
+        <category>carte</category>
+        
+        <category>noire</category>
+        
+        
+        <category>LeetCode</category>
+        
+      </item>
+    
+      <item>
+        <title>Intersection of Two Arrays II (incomplete)</title>
+        <description>&lt;p&gt;Given two non-empty arrays of integers, write a function that determines whether the second array is a subsequence of the first one.&lt;/p&gt;
+
+&lt;p&gt;A subsequence of an array is a set of numbers that aren’t necessarily adjacent in the array but that are in the same order as they appear in the array. For instance the numbers &lt;code class=&quot;highlighter-rouge&quot;&gt;[1, 4, 6]&lt;/code&gt; form a subsequence of the array &lt;code class=&quot;highlighter-rouge&quot;&gt;[1, 2, 3, 4, 5, 6]&lt;/code&gt; and so do the numbers &lt;code class=&quot;highlighter-rouge&quot;&gt;[2, 4]&lt;/code&gt;. Note that a single number in an array and the array itself are both valid subsequences of the array.&lt;/p&gt;
+
+&lt;p&gt;Attempt this question &lt;a href=&quot;https://leetcode.com/explore/interview/card/top-interview-questions-easy/92/array/674/&quot;&gt;here&lt;/a&gt;&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span class=&quot;n&quot;&gt;array&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;5&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;22&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;25&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;6&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;8&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;10&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;sequence&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;6&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;10&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
+
+
+&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;isValidSubsequence&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;array&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;sequence&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;
+  &lt;span class=&quot;c1&quot;&gt;#Write your code There&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;seqIdx&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;
+
+  &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;num&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;ss&quot;&gt;array:
+    &lt;/span&gt;&lt;span class=&quot;c1&quot;&gt;#restrict so that the seqIdx doesn't go out of bounds&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;seqIdx&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;len&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;sequence&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;
+    &lt;span class=&quot;c1&quot;&gt;#check if the array element matches the sequence element&lt;/span&gt;
+      &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;num&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;sequence&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;seqIdx&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]:&lt;/span&gt;
+          &lt;span class=&quot;c1&quot;&gt;#increment sequence index&lt;/span&gt;
+          &lt;span class=&quot;n&quot;&gt;seqIdx&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;seqIdx&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;
+
+   &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;seqIdx&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;len&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;sequence&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;
+      &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;True&lt;/span&gt;
+  &lt;span class=&quot;ss&quot;&gt;else:
+      &lt;/span&gt;&lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;False&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;h1 id=&quot;code-explanation&quot;&gt;Code Explanation:&lt;/h1&gt;
+&lt;p&gt;So the best way to approach this is to create a sequence counter variable. In my case I called it seqIdx. The reason you want to do this is so that you can later validate that the second array is a subsequence of the first. After that I created a for loop that traverses the first array. While traversing, there are two nested if statements that test that the seqIdx variable isn’t greater than the length of the sequence, and then that if the number that the first array is currently at matches a number within the second array. The purpose of the first if statement is so that we don’t get an out of bounds error and then are unable to return a boolean. Lastly, the code tests if the seqIdx is the same length as the sequence and then returns true if they are and false if they aren’t.&lt;/p&gt;
+
+</description>
+        <pubDate>Thu, 04 Jun 2020 21:17:19 -0500</pubDate>
+        <link>http://localhost:4000/leetcode/2020/06/04/Intersection-of-Two-Arrays-II/</link>
+        <guid isPermaLink="true">http://localhost:4000/leetcode/2020/06/04/Intersection-of-Two-Arrays-II/</guid>
+        
+        <category>demo</category>
+        
+        <category>action</category>
+        
+        <category>carte</category>
+        
+        <category>noire</category>
+        
+        
+        <category>LeetCode</category>
+        
+      </item>
+    
+      <item>
+        <title>Rotate Array (icomplete)</title>
         <description>&lt;p&gt;Given two non-empty arrays of integers, write a function that determines whether the second array is a subsequence of the first one.&lt;/p&gt;
 
 &lt;p&gt;A subsequence of an array is a set of numbers that aren’t necessarily adjacent in the array but that are in the same order as they appear in the array. For instance the numbers &lt;code class=&quot;highlighter-rouge&quot;&gt;[1, 4, 6]&lt;/code&gt; form a subsequence of the array &lt;code class=&quot;highlighter-rouge&quot;&gt;[1, 2, 3, 4, 5, 6]&lt;/code&gt; and so do the numbers &lt;code class=&quot;highlighter-rouge&quot;&gt;[2, 4]&lt;/code&gt;. Note that a single number in an array and the array itself are both valid subsequences of the array.&lt;/p&gt;
@@ -216,33 +312,29 @@ Your function should return true if any value appears at least twice in the arra
       </item>
     
       <item>
-        <title>Product Sum</title>
-        <description>&lt;p&gt;Given two non-empty arrays of integers, write a function that determines whether the second array is a subsequence of the first one.&lt;/p&gt;
+        <title>Product Sum (incomplete)</title>
+        <description>&lt;p&gt;Write a function that takes in a “special” array and returns its product sum. A “special” array is a non-empty array that contains either integers or other “special” arrays. The product sum of a “special” array is the sum of its elements,  where “special” arrays inside it are summed themselves and then multiplied by their level of depth&lt;/p&gt;
 
-&lt;p&gt;A subsequence of an array is a set of numbers that aren’t necessarily adjacent in the array but that are in the same order as they appear in the array. For instance the numbers &lt;code class=&quot;highlighter-rouge&quot;&gt;[1, 4, 6]&lt;/code&gt; form a subsequence of the array &lt;code class=&quot;highlighter-rouge&quot;&gt;[1, 2, 3, 4, 5, 6]&lt;/code&gt; and so do the numbers &lt;code class=&quot;highlighter-rouge&quot;&gt;[2, 4]&lt;/code&gt;. Note that a single number in an array and the array itself are both valid subsequences of the array.&lt;/p&gt;
+&lt;p&gt;&lt;ins&gt;For Example&lt;/ins&gt; the product sum of &lt;code class=&quot;highlighter-rouge&quot;&gt;[x,y]&lt;/code&gt; is &lt;code class=&quot;highlighter-rouge&quot;&gt;x + y&lt;/code&gt;; the product sum of &lt;code class=&quot;highlighter-rouge&quot;&gt;[x, [y,z]]&lt;/code&gt; is &lt;code class=&quot;highlighter-rouge&quot;&gt;x + 2y + 2z&lt;/code&gt;.&lt;/p&gt;
 
-&lt;p&gt;Attempt a similar question &lt;a href=&quot;https://leetcode.com/problems/is-subsequence/&quot;&gt;here&lt;/a&gt;&lt;/p&gt;
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span class=&quot;c1&quot;&gt;# Tip: You can use the type(element) function to check whether an item&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;# is a list or an integer.&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;productSum&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;array&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;bm&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;
+    &lt;span class=&quot;c1&quot;&gt;# Write your code here.&lt;/span&gt;
+	&lt;span class=&quot;n&quot;&gt;prodSum&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;
 
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span class=&quot;n&quot;&gt;array&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;5&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;22&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;25&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;6&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;8&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;10&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;sequence&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;6&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;10&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
+	&lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;ss&quot;&gt;array:
+		&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;			
+		&lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;type&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;is&lt;/span&gt; &lt;span class=&quot;ss&quot;&gt;list:
+			&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;successfully entered list&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+			&lt;span class=&quot;n&quot;&gt;prodSum&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;productSum&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;bm&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
 
+		&lt;span class=&quot;n&quot;&gt;elif&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;type&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;is&lt;/span&gt; &lt;span class=&quot;ss&quot;&gt;int:
+			&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;prodSum&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;
+			&lt;span class=&quot;nb&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;prodSum: &quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;prodSum&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
 
-&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;isValidSubsequence&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;array&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;sequence&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;
-  &lt;span class=&quot;c1&quot;&gt;#Write your code There&lt;/span&gt;
-  &lt;span class=&quot;n&quot;&gt;seqIdx&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;
-
-  &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;num&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;ss&quot;&gt;array:
-    &lt;/span&gt;&lt;span class=&quot;c1&quot;&gt;#restrict so that the seqIdx doesn't go out of bounds&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;seqIdx&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;len&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;sequence&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;
-    &lt;span class=&quot;c1&quot;&gt;#check if the array element matches the sequence element&lt;/span&gt;
-      &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;num&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;sequence&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;seqIdx&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]:&lt;/span&gt;
-          &lt;span class=&quot;c1&quot;&gt;#increment sequence index&lt;/span&gt;
-          &lt;span class=&quot;n&quot;&gt;seqIdx&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;seqIdx&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;
-
-   &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;seqIdx&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;len&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;sequence&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;
-      &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;True&lt;/span&gt;
-  &lt;span class=&quot;ss&quot;&gt;else:
-      &lt;/span&gt;&lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;False&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+	&lt;span class=&quot;nb&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;prodSum: &quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;prodSum&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+	&lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;prodSum&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;bm&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
 &lt;h1 id=&quot;code-explanation&quot;&gt;Code Explanation:&lt;/h1&gt;
 &lt;p&gt;So the best way to approach this is to create a sequence counter variable. In my case I called it seqIdx. The reason you want to do this is so that you can later validate that the second array is a subsequence of the first. After that I created a for loop that traverses the first array. While traversing, there are two nested if statements that test that the seqIdx variable isn’t greater than the length of the sequence, and then that if the number that the first array is currently at matches a number within the second array. The purpose of the first if statement is so that we don’t get an out of bounds error and then are unable to return a boolean. Lastly, the code tests if the seqIdx is the same length as the sequence and then returns true if they are and false if they aren’t.&lt;/p&gt;
@@ -406,190 +498,6 @@ If you want to read more about recursion and how it works with the fibonacci seq
         
         
         <category>LeetCode</category>
-        
-      </item>
-    
-      <item>
-        <title>Selection Sort</title>
-        <description>&lt;p&gt;Write a function that takes in an array of integers and returns a sorted version of that array. Use the Selection Sort algorithm to sort the array.&lt;/p&gt;
-
-&lt;h2 id=&quot;what-is-selection-sort&quot;&gt;What is Selection Sort?&lt;/h2&gt;
-&lt;p&gt;&lt;strong&gt;Note&lt;/strong&gt; If you are not familiar with &lt;a href=&quot;https://www.geeksforgeeks.org/selection-sort/&quot;&gt;selection sort&lt;/a&gt; please read more about it &lt;a href=&quot;https://www.geeksforgeeks.org/selection-sort/&quot;&gt;here&lt;/a&gt; before attempting the problem.
-The basic gist of the selection sorting algorithm is that it takes an unsorted array, traverses it, and then places the smallest current element at
-that at the beginning of the array. This is done repeatedly until the array is entirely sorted.&lt;/p&gt;
-
-&lt;h2 id=&quot;here-is-an-example&quot;&gt;Here is an example:&lt;/h2&gt;
-&lt;p&gt;Say we have a given array such as arr = [1 , 4 , 2 , 3 , 5 , 0]. First selection sort would traverse the array keeping in mind the smallest element. Once the smallest
-element has been encountered it places that element to the very front of the array.&lt;/p&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;&lt;ins&gt;The First pass would look like this:&lt;/ins&gt;
-    &lt;ul&gt;
-      &lt;li&gt;[0 , 1 , 4 , 2 , 3 , 5]&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;&lt;ins&gt;The second pass would look like this:&lt;/ins&gt;
-    &lt;ul&gt;
-      &lt;li&gt;&lt;strong&gt;Note&lt;/strong&gt; Since 1 is already the following smallest element, nothing is changed during this pass.&lt;/li&gt;
-      &lt;li&gt;[0, 1 , 4 , 2 , 3 , 5]&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;&lt;ins&gt;The third pass would look like this:&lt;/ins&gt;
-    &lt;ul&gt;
-      &lt;li&gt;[0 , 1 , 2 , 4 , 3 , 5]&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;&lt;ins&gt;The fourth pass would look like this:&lt;/ins&gt;
-    &lt;ul&gt;
-      &lt;li&gt;[0 , 1 , 2 , 3 , 4 , 5]&lt;/li&gt;
-      &lt;li&gt;&lt;strong&gt;Note&lt;/strong&gt; that this is the final pass since at this point in time all of the elements are in the proper order.&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;Now that we understand conceptually what is happening with selection sort, lets attempt to understand the code.&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span class=&quot;n&quot;&gt;array&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;8&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;5&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;9&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;5&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;6&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
-
- &lt;span class=&quot;c1&quot;&gt;#Space = O(1), Time = O(N^2)&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;selectionSort&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;array&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;
-
-    &lt;span class=&quot;c1&quot;&gt;#first for loop, iterates through setting up the first value as the minVal&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;range&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;len&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;array&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)):&lt;/span&gt;
-        &lt;span class=&quot;n&quot;&gt;minIndex&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;
-        
-        &lt;span class=&quot;c1&quot;&gt;#second for loop traverses the rest of the array making comparisons&lt;/span&gt;
-        &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;j&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;range&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;len&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;array&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)):&lt;/span&gt;
-            &lt;span class=&quot;c1&quot;&gt;#if there is a new value that is smaller than the currently known min value&lt;/span&gt;
-            &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;array&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;minIndex&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;array&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;j&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]:&lt;/span&gt;
-                &lt;span class=&quot;c1&quot;&gt;#make that new smallest value the minVal&lt;/span&gt;
-                &lt;span class=&quot;n&quot;&gt;minIndex&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;j&lt;/span&gt;
-        &lt;span class=&quot;c1&quot;&gt;#swap&lt;/span&gt;
-        &lt;span class=&quot;n&quot;&gt;temp&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;array&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
-        &lt;span class=&quot;n&quot;&gt;array&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;array&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;minIndex&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
-        &lt;span class=&quot;n&quot;&gt;array&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;minIndex&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;temp&lt;/span&gt;
-    &lt;span class=&quot;c1&quot;&gt;#once you're at the end of the first for loop, return the newly sorted array&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;array&lt;/span&gt;
-
-
-&lt;span class=&quot;nb&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;selectionSort&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;array&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;h2 id=&quot;code-explanation&quot;&gt;Code Explanation:&lt;/h2&gt;
-
-&lt;p&gt;Basically how selection sort works is that the first for loop starts at the 0th index. It then saves that index into the minIndex value. Next the code enters the second for loop. This “ j “ for loop starts at i + 1 index or in other words the first index. Within the second(j) for loop, there is a if statement. This if statement is entered if while traversing the rest of the unsorted array there is a new smaller value than that of the index of the first for loop, or in this case the element stored in the 0th index. If the if statement is entered then we must set the minIndex to be the index of that newly found smallest element. Before returning to the outer (“i”) for loop, a swap must be performed placing the smallest value at the front of the array.&lt;/p&gt;
-
-&lt;p&gt;&lt;ins&gt;How the swap works:&lt;/ins&gt; So think of it like this. Remember how the first for loop stops at the 0th index and then enters the second for loop? Well the element within that 0th index is stored within a temporary variable. Think of it as holding you phone in one hand and a book in the other and the temporary variable as a table. If you want to put the book in the opposite hand you must first put the phone on the table, swap hands, and then pick the phone back up. So here we are putting that value on the “table”. Next we set the newly found smallest variable as the value at array[i]. What is actually happening here is that we are transferring the smallest value to the front of the list. The line of code that says array[minIndex] = temp is literary placing that bigger value into the spot where the smallest value used to be.&lt;/p&gt;
-
-</description>
-        <pubDate>Thu, 28 May 2020 07:31:19 -0500</pubDate>
-        <link>http://localhost:4000/leetcode/2020/05/28/Selection-Sort/</link>
-        <guid isPermaLink="true">http://localhost:4000/leetcode/2020/05/28/Selection-Sort/</guid>
-        
-        <category>demo</category>
-        
-        <category>action</category>
-        
-        <category>carte</category>
-        
-        <category>noire</category>
-        
-        
-        <category>LeetCode</category>
-        
-      </item>
-    
-      <item>
-        <title>Resume</title>
-        <description>&lt;h2 id=&quot;education&quot;&gt;&lt;ins&gt;&lt;strong&gt;EDUCATION&lt;/strong&gt;&lt;/ins&gt;&lt;/h2&gt;
-&lt;h2 id=&quot;the-university-of-texas-at-dallas&quot;&gt;The University of Texas at Dallas&lt;/h2&gt;
-&lt;ul&gt;
-  &lt;li&gt;B.S. &lt;em&gt;Computer Science&lt;/em&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;em&gt;Aug 2018 - Dec 2021&lt;/em&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;work-experience&quot;&gt;&lt;ins&gt;&lt;strong&gt;WORK EXPERIENCE&lt;/strong&gt;&lt;/ins&gt;&lt;/h2&gt;
-&lt;h2 id=&quot;internship-at-citi---irving-texas&quot;&gt;&lt;strong&gt;Internship at Citi&lt;/strong&gt; - Irving, Texas&lt;/h2&gt;
-&lt;ul&gt;
-  &lt;li&gt;&lt;em&gt;Summer Analyst&lt;/em&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;em&gt;June 2020 - Aug 2020&lt;/em&gt;&lt;/li&gt;
-  &lt;li&gt;I will be interning at Citibank for summer 2020 and will be a part of the Enterprise Infrastructure Operations and Technology program (EIO&amp;amp;T).&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;goldman-sachs-engineering-essentials---new-york-city&quot;&gt;&lt;strong&gt;Goldman Sachs Engineering Essentials&lt;/strong&gt; - New York City&lt;/h2&gt;
-&lt;ul&gt;
-  &lt;li&gt;&lt;em&gt;Participant&lt;/em&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;em&gt;June 2020 – July 2020&lt;/em&gt;&lt;/li&gt;
-  &lt;li&gt;Highly selective undergraduate camp hosted virtually due to covid – 19. I will be receiving technical experience, industry insights, and networking opportunities.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;warby-parker---plano-texas&quot;&gt;&lt;strong&gt;Warby Parker&lt;/strong&gt; - Plano, Texas&lt;/h2&gt;
-&lt;ul&gt;
-  &lt;li&gt;&lt;em&gt;Sales Advisor/Optician Assistant&lt;/em&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;em&gt;March 2018 – January 2020&lt;/em&gt;&lt;/li&gt;
-  &lt;li&gt;Read optical prescription, used a pupilometer to take the customers pupillary distance. Interpreted the customer’s prescription and ensured that the frame they selected could be fulfilled.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;leadership-and-activities&quot;&gt;&lt;ins&gt;&lt;strong&gt;LEADERSHIP AND ACTIVITIES&lt;/strong&gt;&lt;/ins&gt;&lt;/h2&gt;
-
-&lt;h2 id=&quot;society-of-hispanic-professional-engineers-at-ut-dallas---richardson-texas&quot;&gt;&lt;strong&gt;Society of Hispanic Professional Engineers at UT Dallas&lt;/strong&gt; - Richardson, Texas&lt;/h2&gt;
-&lt;ul&gt;
-  &lt;li&gt;&lt;em&gt;Member&lt;/em&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;em&gt;August 2018 - Present&lt;/em&gt;&lt;/li&gt;
-  &lt;li&gt;Attended multiple networking and monthly events held on campus.&lt;/li&gt;
-  &lt;li&gt;Bilingual, fluent in English and Spanish.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;projects&quot;&gt;&lt;ins&gt;&lt;strong&gt;PROJECTS&lt;/strong&gt;&lt;/ins&gt;&lt;/h2&gt;
-
-&lt;h2 id=&quot;e-commerce-system---c&quot;&gt;&lt;a href=&quot;https://github.com/sebastian-exe/E-commerce-System&quot;&gt;&lt;strong&gt;E-commerce System&lt;/strong&gt;&lt;/a&gt; - &lt;em&gt;C++&lt;/em&gt;&lt;/h2&gt;
-&lt;ul&gt;
-  &lt;li&gt;This project reads in a CSV file with multiple products containing a 5-digit identifier, the product number, quantity, and the cost. The program features include the option for the user to become the admin of the program and unlocks the ability for the user to add/delete items completely or change the quantity of certain products. This program uses a linked list of inventory objects to store the products and create a shopping cart.&lt;/li&gt;
-  &lt;li&gt;Check out my &lt;a href=&quot;https://github.com/sebastian-exe/E-commerce-System&quot;&gt;E-commerce System here&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;check-stock-price---python&quot;&gt;&lt;a href=&quot;https://github.com/sebastian-exe/check-stock-price&quot;&gt;&lt;strong&gt;Check Stock Price&lt;/strong&gt;&lt;/a&gt; - &lt;em&gt;Python&lt;/em&gt;&lt;/h2&gt;
-&lt;ul&gt;
-  &lt;li&gt;The user can enter a ticker symbol and a target desired price. The script then checks the current market price as often as the user would like, and then notifies via email when the target price has been acquired.&lt;/li&gt;
-  &lt;li&gt;Check out this project &lt;a href=&quot;https://github.com/sebastian-exe/check-stock-price&quot;&gt;here&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;smart-mirror---javascript&quot;&gt;&lt;a href=&quot;https://github.com/sebastian-exe/Smart-Mirror&quot;&gt;&lt;strong&gt;Smart Mirror&lt;/strong&gt;&lt;/a&gt; - &lt;em&gt;JavaScript&lt;/em&gt;&lt;/h2&gt;
-&lt;ul&gt;
-  &lt;li&gt;Project for HackTX 2019, at the University of Texas at Austin.&lt;/li&gt;
-  &lt;li&gt;Check out this project &lt;a href=&quot;https://github.com/sebastian-exe/Smart-Mirror&quot;&gt;here&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;relevant-courses&quot;&gt;&lt;ins&gt;&lt;strong&gt;RELEVANT COURSES&lt;/strong&gt;&lt;/ins&gt;&lt;/h2&gt;
-&lt;h2 id=&quot;classes-taken&quot;&gt;&lt;ins&gt;&lt;strong&gt;Classes Taken&lt;/strong&gt;&lt;/ins&gt;&lt;/h2&gt;
-&lt;ul&gt;
-  &lt;li&gt;CS 2336 Computer Science 2&lt;/li&gt;
-  &lt;li&gt;CS 3340 Computer Architecture&lt;/li&gt;
-  &lt;li&gt;CS 3341 Probability/Stats in CS&lt;/li&gt;
-  &lt;li&gt;Calculus 1 &amp;amp; 2&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;classes-for-spring-2020&quot;&gt;&lt;ins&gt;&lt;strong&gt;Classes for Spring 2020&lt;/strong&gt;&lt;/ins&gt;&lt;/h2&gt;
-&lt;ul&gt;
-  &lt;li&gt;CS 3305 Discrete Math 2&lt;/li&gt;
-  &lt;li&gt;CS 3345 Data Structures and Algorithms&lt;/li&gt;
-  &lt;li&gt;CS 3377 C/C++ in a Unix Environment&lt;/li&gt;
-&lt;/ul&gt;
-
-</description>
-        <pubDate>Tue, 26 May 2020 22:00:10 -0500</pubDate>
-        <link>http://localhost:4000/resume/2020/05/26/Resume/</link>
-        <guid isPermaLink="true">http://localhost:4000/resume/2020/05/26/Resume/</guid>
-        
-        <category>demo</category>
-        
-        <category>action</category>
-        
-        <category>carte</category>
-        
-        <category>noire</category>
-        
-        
-        <category>Resume</category>
         
       </item>
     

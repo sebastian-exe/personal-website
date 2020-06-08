@@ -1,7 +1,23 @@
 [
   
   {
-    "title"    : "Rotate Array",
+    "title"    : "Move Zeros (incomplete)",
+    "category" : "",
+    "tags"     : "demo, action, carte, noire",
+    "url"      : "/leetcode/2020/06/04/Move-Zeros/",
+    "date"     : "2020-06-04 21:17:19 -0500"
+    } ,
+    
+  {
+    "title"    : "Intersection of Two Arrays II (incomplete)",
+    "category" : "",
+    "tags"     : "demo, action, carte, noire",
+    "url"      : "/leetcode/2020/06/04/Intersection-of-Two-Arrays-II/",
+    "date"     : "2020-06-04 21:17:19 -0500"
+    } ,
+    
+  {
+    "title"    : "Rotate Array (icomplete)",
     "category" : "",
     "tags"     : "demo, action, carte, noire",
     "url"      : "/leetcode/2020/06/03/Rotate-Array/",
@@ -33,7 +49,7 @@
     } ,
     
   {
-    "title"    : "Product Sum",
+    "title"    : "Product Sum (incomplete)",
     "category" : "",
     "tags"     : "demo, action, carte, noire",
     "url"      : "/leetcode/2020/06/02/Product-Sum/",
