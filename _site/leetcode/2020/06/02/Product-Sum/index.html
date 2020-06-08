@@ -4,7 +4,7 @@
     <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Product Sum (incomplete)</title>
+<title>Product Sum</title>
 <meta name="description" content="Welcome to my blog.">
 
 <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
@@ -88,7 +88,7 @@
       </div>
       
 
-      <h1 class="header" itemprop="name">Product Sum (incomplete)</h1>
+      <h1 class="header" itemprop="name">Product Sum</h1>
 
       <div class="author">
         <small><i>
@@ -109,7 +109,7 @@
 
       <div class="read-time">
         <small>
-          2 minute read
+          4 minute read
         </small>
       </div>
 
@@ -141,8 +141,9 @@
 	<span class="k">return</span> <span class="n">prodSum</span> <span class="o">*</span> <span class="n">bm</span></code></pre></figure>
 
 <h1 id="code-explanation">Code Explanation:</h1>
-<p>So the best way to approach this is to create a sequence counter variable. In my case I called it seqIdx. The reason you want to do this is so that you can later validate that the second array is a subsequence of the first. After that I created a for loop that traverses the first array. While traversing, there are two nested if statements that test that the seqIdx variable isn’t greater than the length of the sequence, and then that if the number that the first array is currently at matches a number within the second array. The purpose of the first if statement is so that we don’t get an out of bounds error and then are unable to return a boolean. Lastly, the code tests if the seqIdx is the same length as the sequence and then returns true if they are and false if they aren’t.</p>
+<p>First you want to initialize a variable to contain the sum. After this you want to loop through the array checking the type of element in the array with the built in type function in python. If the type of the element matches to list this means that we’ve entered a bracket. Think of entering a bracket as entering a new array where you must add the numbers within that array, take care of the multiplication factor, and then return that and add that new number to the prodSum before entering the bracket. The way we take care of this is through recursion.</p>
 
+<p><ins>For Example: </ins> lets take this example array of [5, 2 [7, -1]]. According to the attributes of the special array the result of this would be 19. Heres how the code handles this. As the code is looping through the array and we see that the type of 5 is an integer the code will enter the elif statement. Here we will add 5 to the prodSum which is currently 0 incrementing the value to of prodSum to 5. After that we move onto the next character in the array. The next character is 2. Again, within the for loop we enter the elif statement adding 2 to the existing value of prodSum, making prodSum have a total of 7 now. Next a bracket is encountered while looping through the array. Here instead of entering the elif statement we enter the if statement because a bracket is of type list and not of type integer. Within the if statement you will see that the value of prodSum is set to be added to the result of a recursive call of the productSum method. Remember, that the characteristics of the special array is that when a bracket is encountered you must multiply the result of adding the numbers within the bracket by the number of level deep the bracket is. In this case, the bracket in front of the 7 is 2 levels deep (notice the first bracket in front of the 5. ) To take care of this factor we add one to the variable called bm which is short for base multiplier. Now we must enter the recursive call. The function is passes a 7 which adds that to the now reinitialized variable of prodsum to 0 (only during this recursive call, once we exit we will add it back to the existing value of prodsum). The same happens for the -1. The value of prodsum at the end of this is 6. If you see, the return statement multiplies the value of prodSum by the base multiplier value, thus returning a value of 12 from the recursive call and ending the recursive call. The value of 12 is then added to the existing value of prodSum before the recursive call was made which was 7. Now prodSum is equal to 19. The for loop reaches the end of the array and returns 12 multiplied by the base multiplier of one (since all other brackets have been exited).</p>
 </span>
 
         

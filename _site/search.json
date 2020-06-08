@@ -4,7 +4,47 @@
     "title"    : "Move Zeros (incomplete)",
     "category" : "",
     "tags"     : "demo, action, carte, noire",
+    "url"      : "/leetcode/2020/06/04/Reverse-Stringmd/",
+    "date"     : "2020-06-04 21:17:19 -0500"
+    } ,
+    
+  {
+    "title"    : "Remove Duplicates from Sorted Array",
+    "category" : "",
+    "tags"     : "demo, action, carte, noire",
+    "url"      : "/leetcode/2020/06/04/Remove-Duplicates-From-Sorted-Array/",
+    "date"     : "2020-06-04 21:17:19 -0500"
+    } ,
+    
+  {
+    "title"    : "Move Zeros (incomplete)",
+    "category" : "",
+    "tags"     : "demo, action, carte, noire",
+    "url"      : "/leetcode/2020/06/04/Plus-One/",
+    "date"     : "2020-06-04 21:17:19 -0500"
+    } ,
+    
+  {
+    "title"    : "Move Zeros (incomplete)",
+    "category" : "",
+    "tags"     : "demo, action, carte, noire",
+    "url"      : "/leetcode/2020/06/04/FizzBuzz/",
+    "date"     : "2020-06-04 21:17:19 -0500"
+    } ,
+    
+  {
+    "title"    : "Move Zeros (incomplete)",
+    "category" : "",
+    "tags"     : "demo, action, carte, noire",
     "url"      : "/leetcode/2020/06/04/Move-Zeros/",
+    "date"     : "2020-06-04 21:17:19 -0500"
+    } ,
+    
+  {
+    "title"    : "Move Element To End",
+    "category" : "",
+    "tags"     : "demo, action, carte, noire",
+    "url"      : "/leetcode/2020/06/04/Move-Element-To-End/",
     "date"     : "2020-06-04 21:17:19 -0500"
     } ,
     
@@ -49,7 +89,7 @@
     } ,
     
   {
-    "title"    : "Product Sum (incomplete)",
+    "title"    : "Product Sum",
     "category" : "",
     "tags"     : "demo, action, carte, noire",
     "url"      : "/leetcode/2020/06/02/Product-Sum/",

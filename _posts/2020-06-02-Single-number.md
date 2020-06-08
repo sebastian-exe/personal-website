@@ -13,41 +13,36 @@ tags:
  - noire
 ---
 
-Given an array of integers, find if the array contains any duplicates.
-Your function should return true if any value appears at least twice in the array, and it should return false if every element is distinct.
+Give a **non-empty** array of integers, every element appears _twice_ except for one. Find that single one.
 
 Attempt this question [here][1]
 
-<ins> First Attempt Is Below</ins>
-* this attempt passed 17 of 18 test cases on LeetCode but eventually threw a time limit exceeded error.
+**Example 1:**
 {% highlight ruby %}
-class Solution:
-    def containsDuplicate(self, nums: List[int]) -> bool:
-
-        for i in range(len(nums)):
-            for j in range(i+1, len(nums)):
-                #print("i: ", nums[i], "j: ", nums[j])
-                if nums[i] == nums[j]:
-                    return True
-        return False
-
+Input: [2,2,1]
+Output: [1]
 {% endhighlight %}
 
-<ins> Second Successful Attempt </ins>
+**Example 2:**
+{% highlight ruby %}
+Input: [4,9,5], nums2 = [9,4,9,8,4]
+Output: [4,9]
+{% endhighlight %}
+
 {% highlight ruby %}
 class Solution:
-    def containsDuplicate(self, nums: List[int]) -> bool:
-        nums.sort()
+    def singleNumber(self, nums: List[int]) -> int:
+        noDuplicates = []
 
-        for i in range(len(nums)-1):
-            if nums[i] == nums[i +1]:
-                return True
-        return False
+        for i in nums:
+            if i not in noDuplicates:
+                noDuplicates.append(i)
+            else:
+                noDuplicates.remove(i)
+        return noDuplicates.pop()
 {% endhighlight %}
 
 # Code Explanation:
-There are multiple solutions to this type of problem. My first attempt takes an iterative approach to the question and uses a nested for loop to search the indexes. I like to call this approach a "two pointer solution" since I have the j variable in front of the i variable while the comparisons are being made.
+This solution does not contain a hash map. I will re-attempt this question soon with a hash map solution. Basically what is happening in this solution is that we create a new array empty array that doesn't contain duplicates. We then traverse the nums list and check the elements. While we traverse it we add the elements to the noDuplicates list the first time they are encountered. If a number is passed to noDuplicates that already exists then we execute noDuplicates.remove(i) since that number does appear twice within the nums list.
 
-The second attempt is more of something that you want to do during an interview scenario. This approach is also more efficient that the first solution. Basically the first step is to sort the numbers array. This allows us to have just one for loop that can index the now sorted array. Notice that the for loop goes to range(len(num))  - 1, this protects you from an out of bounds error within the if statement when it starts to make comparisons. Next comes the if statement. The if statement will be
-
-[1]: https://leetcode.com/explore/interview/card/top-interview-questions-easy/92/array/578/
+[1]: https://leetcode.com/explore/interview/card/top-interview-questions-easy/92/array/549/

@@ -4,7 +4,7 @@
     <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Single Number</title>
+<title>Move Zeros (incomplete)</title>
 <meta name="description" content="Welcome to my blog.">
 
 <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
@@ -88,7 +88,7 @@
       </div>
       
 
-      <h1 class="header" itemprop="name">Single Number</h1>
+      <h1 class="header" itemprop="name">Move Zeros (incomplete)</h1>
 
       <div class="author">
         <small><i>
@@ -102,14 +102,14 @@
             
           </span>
           
-          on <span itemprop="datePublished" content="2014-08-28">June 2, 2020</span>
+          on <span itemprop="datePublished" content="2014-08-28">June 4, 2020</span>
            under LeetCode
         </i></small>
       </div>
 
       <div class="read-time">
         <small>
-          1 minute read
+          2 minute read
         </small>
       </div>
 
@@ -117,33 +117,31 @@
 
         
 
-        <span itemprop="articleBody"><p>Give a <strong>non-empty</strong> array of integers, every element appears <em>twice</em> except for one. Find that single one.</p>
+        <span itemprop="articleBody"><p>Given two non-empty arrays of integers, write a function that determines whether the second array is a subsequence of the first one.</p>
 
-<p>Attempt this question <a href="https://leetcode.com/explore/interview/card/top-interview-questions-easy/92/array/549/">here</a></p>
+<p>A subsequence of an array is a set of numbers that aren’t necessarily adjacent in the array but that are in the same order as they appear in the array. For instance the numbers <code class="highlighter-rouge">[1, 4, 6]</code> form a subsequence of the array <code class="highlighter-rouge">[1, 2, 3, 4, 5, 6]</code> and so do the numbers <code class="highlighter-rouge">[2, 4]</code>. Note that a single number in an array and the array itself are both valid subsequences of the array.</p>
 
-<p><strong>Example 1:</strong></p>
+<p>Attempt a similar question <a href="https://leetcode.com/explore/interview/card/top-interview-questions-easy/92/array/567/">here</a></p>
 
-<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="no">Input</span><span class="p">:</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">1</span><span class="p">]</span>
-<span class="no">Output</span><span class="p">:</span> <span class="p">[</span><span class="mi">1</span><span class="p">]</span></code></pre></figure>
+<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="n">nums</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span> <span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">12</span><span class="p">]</span>
+<span class="c1">#nums = [0,0,1]</span>
 
-<p><strong>Example 2:</strong></p>
+<span class="k">def</span> <span class="nf">moveZeros</span><span class="p">(</span><span class="n">nums</span><span class="p">):</span>
 
-<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="no">Input</span><span class="p">:</span> <span class="p">[</span><span class="mi">4</span><span class="p">,</span><span class="mi">9</span><span class="p">,</span><span class="mi">5</span><span class="p">],</span> <span class="n">nums2</span> <span class="o">=</span> <span class="p">[</span><span class="mi">9</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">9</span><span class="p">,</span><span class="mi">8</span><span class="p">,</span><span class="mi">4</span><span class="p">]</span>
-<span class="no">Output</span><span class="p">:</span> <span class="p">[</span><span class="mi">4</span><span class="p">,</span><span class="mi">9</span><span class="p">]</span></code></pre></figure>
+    <span class="k">for</span> <span class="n">i</span> <span class="k">in</span> <span class="n">range</span><span class="p">(</span><span class="n">len</span><span class="p">(</span><span class="n">nums</span><span class="p">),</span> <span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">):</span>
+        <span class="n">i</span> <span class="o">-=</span> <span class="mi">1</span>
+        <span class="k">if</span> <span class="n">nums</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="n">shiftZero</span> <span class="o">=</span> <span class="n">nums</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
+            <span class="n">nums</span><span class="p">.</span><span class="nf">pop</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
+            <span class="n">nums</span><span class="p">.</span><span class="nf">append</span><span class="p">(</span><span class="n">shiftZero</span><span class="p">)</span>
 
-<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="k">class</span> <span class="nc">Solution</span><span class="p">:</span>
-    <span class="k">def</span> <span class="nf">singleNumber</span><span class="p">(</span><span class="nb">self</span><span class="p">,</span> <span class="ss">nums: </span><span class="no">List</span><span class="p">[</span><span class="n">int</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="ss">int:
-        </span><span class="n">noDuplicates</span> <span class="o">=</span> <span class="p">[]</span>
 
-        <span class="k">for</span> <span class="n">i</span> <span class="k">in</span> <span class="ss">nums:
-            </span><span class="k">if</span> <span class="n">i</span> <span class="n">not</span> <span class="k">in</span> <span class="ss">noDuplicates:
-                </span><span class="n">noDuplicates</span><span class="p">.</span><span class="nf">append</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
-            <span class="ss">else:
-                </span><span class="n">noDuplicates</span><span class="p">.</span><span class="nf">remove</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
-        <span class="k">return</span> <span class="n">noDuplicates</span><span class="p">.</span><span class="nf">pop</span><span class="p">()</span></code></pre></figure>
+
+<span class="n">moveZeros</span><span class="p">(</span><span class="n">nums</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">nums</span><span class="p">)</span></code></pre></figure>
 
 <h1 id="code-explanation">Code Explanation:</h1>
-<p>This solution does not contain a hash map. I will re-attempt this question soon with a hash map solution. Basically what is happening in this solution is that we create a new array empty array that doesn’t contain duplicates. We then traverse the nums list and check the elements. While we traverse it we add the elements to the noDuplicates list the first time they are encountered. If a number is passed to noDuplicates that already exists then we execute noDuplicates.remove(i) since that number does appear twice within the nums list.</p>
+<p>So the best way to approach this is to create a sequence counter variable. In my case I called it seqIdx. The reason you want to do this is so that you can later validate that the second array is a subsequence of the first. After that I created a for loop that traverses the first array. While traversing, there are two nested if statements that test that the seqIdx variable isn’t greater than the length of the sequence, and then that if the number that the first array is currently at matches a number within the second array. The purpose of the first if statement is so that we don’t get an out of bounds error and then are unable to return a boolean. Lastly, the code tests if the seqIdx is the same length as the sequence and then returns true if they are and false if they aren’t.</p>
 
 </span>
 
