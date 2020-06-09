@@ -1,7 +1,7 @@
 ---
 layout:     post
 title:      Remove Duplicates from Sorted Array
-date:       2020-06-05 2:17:19
+date:       2020-06-07 2:17:19
 author:     Sebastian Moreno
 summary:    See what the different elements looks like.
 categories: LeetCode
