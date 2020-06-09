@@ -1,6 +1,6 @@
 ---
 layout:     post
-title:      Rotate Array
+title:      Rotate Array 
 date:       2020-06-03 5:38:19
 author:     Sebastian Moreno
 summary:    See what the different elements looks like.
