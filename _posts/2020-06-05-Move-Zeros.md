@@ -1,6 +1,6 @@
 ---
 layout:     post
-title:      Move Zeros (incomplete) 
+title:      Move Zeros
 date:       2020-06-05 2:17:19
 author:     Sebastian Moreno
 summary:    See what the different elements looks like.
@@ -13,12 +13,7 @@ tags:
  - noire
 ---
 
-Given two non-empty arrays of integers, write a function that determines whether the second array is a subsequence of the first one.
-
-A subsequence of an array is a set of numbers that aren't necessarily adjacent in the array but that are in the same order as they appear in the array. For instance the numbers `[1, 4, 6]` form a subsequence of the array `[1, 2, 3, 4, 5, 6]` and so do the numbers `[2, 4]`. Note that a single number in an array and the array itself are both valid subsequences of the array.
-
-Attempt a similar question [here][1]
-
+I will be blogging this question soon.
 
 {% highlight ruby %}
 nums = [0 ,1,0,3,12]

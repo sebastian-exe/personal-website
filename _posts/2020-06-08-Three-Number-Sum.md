@@ -1,24 +1,19 @@
 ---
 layout:     post
-title:      Reverse String
+title:      Three Number Sum
 date:       2020-06-07 8:30:00
 author:     Sebastian Moreno
-summary:    Reverse String in place
+summary:    Medium Ranked Question
 categories: LeetCode
 thumbnail: python
 tags:
- - demo 
+ - demo
  - action
  - carte
  - noire
 ---
 
-Write a function that reverses a string. The input string is given as an array of characters char[].
-
-Do not allocate extra space for another array, you must do this by modifying the input array in-place with O(1) extra memory.
-You may assume all the characters consist of printable ascii characters.
-
-Attempt this question [here][1]
+I will be blogging this question soon.
 
 **Example 1:**
 {% highlight ruby %}
