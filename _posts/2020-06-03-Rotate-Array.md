@@ -1,9 +1,9 @@
 ---
 layout:     post
-title:      Rotate Array 
+title:      Rotate Array
 date:       2020-06-03 5:38:19
 author:     Sebastian Moreno
-summary:    See what the different elements looks like.
+summary:    Shift all the elements of an array based on a key value
 categories: LeetCode
 thumbnail: python
 tags:
