@@ -7,7 +7,7 @@ summary:    Reverse String in place
 categories: LeetCode
 thumbnail: python
 tags:
- - demo 
+ - demo
  - action
  - carte
  - noire

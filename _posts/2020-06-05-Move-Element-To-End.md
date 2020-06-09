@@ -1,6 +1,6 @@
 ---
 layout:     post
-title:      Move Element To End
+title:      Move Element To End 
 date:       2020-06-05 2:17:19
 author:     Sebastian Moreno
 summary:    Very Similar question to move zeros to end.

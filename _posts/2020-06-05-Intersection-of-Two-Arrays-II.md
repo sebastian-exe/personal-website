@@ -1,6 +1,6 @@
 ---
 layout:     post
-title:      Intersection of Two Arrays II (incomplete)
+title:      Intersection of Two Arrays II (incomplete) 
 date:       2020-06-05 2:17:19
 author:     Sebastian Moreno
 summary:    See what the different elements looks like.
@@ -15,10 +15,6 @@ tags:
 
 Given two non-empty arrays of integers, write a function that determines whether the second array is a subsequence of the first one.
 
-<ins> Example 1: </ins
-{% highlight ruby %}
-Input: [2,2,1]
-Output: [1]
 
 Attempt this question [here][1]
 
