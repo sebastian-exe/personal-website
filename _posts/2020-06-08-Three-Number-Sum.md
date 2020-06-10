@@ -26,7 +26,7 @@ def threeNumberSum(array, targetSum):
 	threeNumSums = []
 
 	for i in range(len(array)-2):
-		left = i + 1
+	  left = i + 1
 		right = len(array) -1
 		while left < right:
 			if (array[i] + array[left] + array[right]) == targetSum:
@@ -49,4 +49,4 @@ def threeNumberSum(array, targetSum):
 {% endhighlight %}
 
 # Code Explanation:
-Alright lets keep this short.  SO whats happening is that the best way to see if we have a triplet that matches the target sum is to first sort the array. That way we can establish three pointer. An i, left pointer that starts at i + 1 and a right pointer that starts at the very last element. The pointer are named in the direction that they are going to move in. We then trigger the while loop and this engages until the pointers meet up at the same element in the array meaning that all possible types of combination have been attempted with the current i element. If the three pointers sum up to less than the target sum we know to move the left pointer. If the three pointers sum up to move than the target sum we know to move the right pointer to decrease the value of the summation of the three pointers. And if the three pointers add up the the target sum, we append them in a 2D array and then move both the left and right pointers in their respective directions to see if that i pointer still has any other potential matches in the array. 
+Alright lets keep this short.  SO whats happening is that the best way to see if we have a triplet that matches the target sum is to first sort the array. That way we can establish three pointer. An i, left pointer that starts at i + 1 and a right pointer that starts at the very last element. The pointer are named in the direction that they are going to move in. We then trigger the while loop and this engages until the pointers meet up at the same element in the array meaning that all possible types of combination have been attempted with the current i element. If the three pointers sum up to less than the target sum we know to move the left pointer. If the three pointers sum up to move than the target sum we know to move the right pointer to decrease the value of the summation of the three pointers. And if the three pointers add up the the target sum, we append them in a 2D array and then move both the left and right pointers in their respective directions to see if that i pointer still has any other potential matches in the array. Note! Something that is important to realize is that the for loop loops until len(array)-2. The reason it loops until -2 is because you need to loop the i and still make sure that you're leaving room for the left and right pointers in the for loop while looping. If you don't do this you may get an out of bounds error.
