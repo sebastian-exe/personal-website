@@ -1,6 +1,6 @@
 ---
 layout:     post
-title:      Three Number Sum
+title:      Three Number Sum 
 date:       2020-06-08 8:30:00
 author:     Sebastian Moreno
 summary:    Medium Ranked Question

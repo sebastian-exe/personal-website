@@ -4,7 +4,7 @@
     <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Move Element To End</title>
+<title>Remove Duplicates from Sorted Array</title>
 <meta name="description" content="Welcome to my blog.">
 
 <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
@@ -88,7 +88,7 @@
       </div>
       
 
-      <h1 class="header" itemprop="name">Move Element To End</h1>
+      <h1 class="header" itemprop="name">Remove Duplicates from Sorted Array</h1>
 
       <div class="author">
         <small><i>
@@ -102,14 +102,14 @@
             
           </span>
           
-          on <span itemprop="datePublished" content="2014-08-28">June 4, 2020</span>
+          on <span itemprop="datePublished" content="2014-08-28">June 6, 2020</span>
            under LeetCode
         </i></small>
       </div>
 
       <div class="read-time">
         <small>
-          1 minute read
+          2 minute read
         </small>
       </div>
 
@@ -117,23 +117,44 @@
 
         
 
-        <span itemprop="articleBody"><p>You’re given an array of integers and an integer. Write a function that moves all instances of that integer in the array to the end of the array and returns the array. The function should perform this in place.</p>
+        <span itemprop="articleBody"><p>Given a sorted array <em>nums</em>, remove the duplicates in-place such that each element appear only once and return the new length.</p>
 
-<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="k">def</span> <span class="nf">moveElementToEnd</span><span class="p">(</span><span class="n">array</span><span class="p">,</span> <span class="n">toMove</span><span class="p">):</span>
-    <span class="k">if</span> <span class="n">not</span> <span class="ss">array:
-      </span><span class="k">return</span><span class="p">[]</span>
-    <span class="ss">else:
-      </span><span class="k">for</span> <span class="n">i</span> <span class="k">in</span> <span class="n">range</span><span class="p">(</span><span class="n">len</span><span class="p">(</span><span class="n">array</span><span class="p">),</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span><span class="o">-</span><span class="mi">1</span><span class="p">):</span>
-        <span class="n">i</span> <span class="o">-=</span> <span class="mi">1</span>
-        <span class="k">if</span> <span class="n">array</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">==</span> <span class="ss">toMove:
-          </span><span class="n">shift</span> <span class="o">=</span> <span class="n">array</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
-          <span class="n">array</span><span class="p">.</span><span class="nf">pop</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
-          <span class="n">array</span><span class="p">.</span><span class="nf">append</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
+<p>Do not allocate extra space for another array, you must do this by modifying the input array in-place with O(1) extra memory.</p>
 
-      <span class="k">return</span> <span class="n">array</span></code></pre></figure>
+<p>Attempt this question <a href="https://leetcode.com/explore/interview/card/top-interview-questions-easy/92/array/727/">here</a></p>
+
+<p><ins>Example 1:</ins></p>
+
+<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="no">Given</span> <span class="n">nums</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">]</span>
+
+<span class="no">Your</span> <span class="n">function</span> <span class="n">should</span> <span class="k">return</span> <span class="n">length</span> <span class="o">=</span> <span class="mi">2</span><span class="p">,</span> <span class="n">with</span> <span class="n">the</span> <span class="n">first</span> <span class="n">two</span> <span class="n">elements</span> <span class="n">of</span> <span class="n">nums</span> <span class="n">being</span> <span class="mi">1</span> <span class="n">and</span> <span class="mi">2</span> <span class="n">respectively</span><span class="o">.</span>
+
+<span class="no">It</span> <span class="n">doesn</span><span class="err">'</span><span class="n">t</span> <span class="n">matter</span> <span class="n">what</span> <span class="n">you</span> <span class="n">leave</span> <span class="n">beyond</span> <span class="n">the</span> <span class="n">returned</span> <span class="n">length</span><span class="o">.</span></code></pre></figure>
+
+<p><ins>Example 2:</ins></p>
+
+<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="no">Given</span> <span class="n">nums</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">]</span>
+
+<span class="no">Your</span> <span class="n">function</span> <span class="n">should</span> <span class="k">return</span> <span class="n">length</span> <span class="o">=</span> <span class="mi">5</span><span class="p">,</span> <span class="n">with</span> <span class="n">the</span> <span class="n">first</span> <span class="n">five</span> <span class="n">elements</span> <span class="n">of</span> <span class="n">nums</span> <span class="n">being</span> <span class="n">modified</span> <span class="n">to</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="n">and</span> <span class="mi">4</span> <span class="n">respectively</span><span class="o">.</span>
+
+<span class="no">It</span> <span class="n">doesn</span><span class="err">'</span><span class="n">t</span> <span class="n">matter</span> <span class="n">what</span> <span class="n">values</span> <span class="n">are</span> <span class="n">set</span> <span class="n">beyond</span> <span class="n">the</span> <span class="n">returned</span> <span class="n">length</span><span class="o">.</span></code></pre></figure>
+
+<p><ins>Solution:</ins></p>
+
+<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="k">class</span> <span class="nc">Solution</span><span class="p">:</span>
+    <span class="k">def</span> <span class="nf">removeDuplicates</span><span class="p">(</span><span class="nb">self</span><span class="p">,</span> <span class="ss">nums: </span><span class="no">List</span><span class="p">[</span><span class="n">int</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="ss">int:
+
+        </span><span class="n">i</span> <span class="o">=</span> <span class="mi">0</span>
+        <span class="k">for</span> <span class="n">j</span> <span class="k">in</span> <span class="n">range</span><span class="p">(</span><span class="n">len</span><span class="p">(</span><span class="n">nums</span><span class="p">)):</span>
+            <span class="k">if</span> <span class="n">nums</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">!=</span> <span class="n">nums</span><span class="p">[</span><span class="n">j</span><span class="p">]:</span>
+                <span class="n">i</span> <span class="o">+=</span> <span class="mi">1</span>
+                <span class="n">nums</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">nums</span><span class="p">[</span><span class="n">j</span><span class="p">]</span>
+
+        <span class="k">return</span> <span class="n">i</span> <span class="o">+</span> <span class="mi">1</span></code></pre></figure>
 
 <h1 id="code-explanation">Code Explanation:</h1>
-<p>This is a pretty simple question. The first if statement just checks to see if the array is empty in which it would return an empty array back as well. The else statement traverses the array backwards!!! This is important to know that it is traversing the array backwards because we decrement the value of i after the for loop starts to do its thing. While it is traversing backwards if the number that an element in the array contains is equal to toMove we start to perform a shift popping and appending the number back to the end of the array. Doing this also keeps the other elements in place while shifting the others.</p>
+<p>Basically what is going on is that we are using i = 0 as a counter. We then traverse the array using a for loop with another variable, in this case j. If the first number is not equal to the second number, we increment the counter i, and we set nums[i] to nums[j] to update the position of the position of the counter to be after the duplicate. Then the process starts all over again.</p>
+
 </span>
 
         

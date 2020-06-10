@@ -4,7 +4,7 @@
     <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Move Zeros (incomplete)</title>
+<title>Move Zeros</title>
 <meta name="description" content="Welcome to my blog.">
 
 <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
@@ -88,7 +88,7 @@
       </div>
       
 
-      <h1 class="header" itemprop="name">Move Zeros (incomplete)</h1>
+      <h1 class="header" itemprop="name">Move Zeros</h1>
 
       <div class="author">
         <small><i>
@@ -109,7 +109,7 @@
 
       <div class="read-time">
         <small>
-          2 minute read
+          1 minute read
         </small>
       </div>
 
@@ -117,11 +117,14 @@
 
         
 
-        <span itemprop="articleBody"><p>Given two non-empty arrays of integers, write a function that determines whether the second array is a subsequence of the first one.</p>
+        <span itemprop="articleBody"><p>Given an array nums, write a function to move all 0’s to the end of it while maintaining the relative order of the non-zero elements.</p>
 
-<p>A subsequence of an array is a set of numbers that aren’t necessarily adjacent in the array but that are in the same order as they appear in the array. For instance the numbers <code class="highlighter-rouge">[1, 4, 6]</code> form a subsequence of the array <code class="highlighter-rouge">[1, 2, 3, 4, 5, 6]</code> and so do the numbers <code class="highlighter-rouge">[2, 4]</code>. Note that a single number in an array and the array itself are both valid subsequences of the array.</p>
+<p>Attempt this question <a href="https://leetcode.com/explore/interview/card/top-interview-questions-easy/92/array/567/">here</a></p>
 
-<p>Attempt a similar question <a href="https://leetcode.com/explore/interview/card/top-interview-questions-easy/92/array/567/">here</a></p>
+<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="no">Input</span><span class="p">:</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">12</span><span class="p">]</span>
+<span class="no">Output</span><span class="p">:</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">12</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">]</span></code></pre></figure>
+
+<p><ins>Solution:</ins></p>
 
 <figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="n">nums</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span> <span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">12</span><span class="p">]</span>
 <span class="c1">#nums = [0,0,1]</span>
@@ -141,7 +144,7 @@
 <span class="nb">print</span><span class="p">(</span><span class="n">nums</span><span class="p">)</span></code></pre></figure>
 
 <h1 id="code-explanation">Code Explanation:</h1>
-<p>So the best way to approach this is to create a sequence counter variable. In my case I called it seqIdx. The reason you want to do this is so that you can later validate that the second array is a subsequence of the first. After that I created a for loop that traverses the first array. While traversing, there are two nested if statements that test that the seqIdx variable isn’t greater than the length of the sequence, and then that if the number that the first array is currently at matches a number within the second array. The purpose of the first if statement is so that we don’t get an out of bounds error and then are unable to return a boolean. Lastly, the code tests if the seqIdx is the same length as the sequence and then returns true if they are and false if they aren’t.</p>
+<p>This question is very similar to move element to end. The main difference between these two questions is that we are performing the shifting of pop and appending just to elements that have the value of zero and not a specified value as in move elements to end</p>
 
 </span>
 

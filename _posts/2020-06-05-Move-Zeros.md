@@ -13,8 +13,17 @@ tags:
  - noire
 ---
 
-I will be blogging this question soon.
+Given an array nums, write a function to move all 0's to the end of it while maintaining the relative order of the non-zero elements.
 
+Attempt this question [here][1]
+
+{% highlight ruby %}
+Input: [0,1,0,3,12]
+Output: [1,3,12,0,0]
+
+{% endhighlight %}
+
+<ins>Solution:</ins>
 {% highlight ruby %}
 nums = [0 ,1,0,3,12]
 #nums = [0,0,1]
@@ -35,7 +44,6 @@ print(nums)
 {% endhighlight %}
 
 # Code Explanation:
-So the best way to approach this is to create a sequence counter variable. In my case I called it seqIdx. The reason you want to do this is so that you can later validate that the second array is a subsequence of the first. After that I created a for loop that traverses the first array. While traversing, there are two nested if statements that test that the seqIdx variable isn't greater than the length of the sequence, and then that if the number that the first array is currently at matches a number within the second array. The purpose of the first if statement is so that we don't get an out of bounds error and then are unable to return a boolean. Lastly, the code tests if the seqIdx is the same length as the sequence and then returns true if they are and false if they aren't.
+This question is very similar to move element to end. The main difference between these two questions is that we are performing the shifting of pop and appending just to elements that have the value of zero and not a specified value as in move elements to end
 
 [1]: https://leetcode.com/explore/interview/card/top-interview-questions-easy/92/array/567/
-[2]: https://www.geeksforgeeks.org/backward-iteration-in-python/

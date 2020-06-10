@@ -4,7 +4,7 @@
     <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Move Element To End</title>
+<title>FizzBuzz</title>
 <meta name="description" content="Welcome to my blog.">
 
 <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
@@ -88,7 +88,7 @@
       </div>
       
 
-      <h1 class="header" itemprop="name">Move Element To End</h1>
+      <h1 class="header" itemprop="name">FizzBuzz</h1>
 
       <div class="author">
         <small><i>
@@ -102,7 +102,7 @@
             
           </span>
           
-          on <span itemprop="datePublished" content="2014-08-28">June 4, 2020</span>
+          on <span itemprop="datePublished" content="2014-08-28">June 6, 2020</span>
            under LeetCode
         </i></small>
       </div>
@@ -117,23 +117,56 @@
 
         
 
-        <span itemprop="articleBody"><p>You’re given an array of integers and an integer. Write a function that moves all instances of that integer in the array to the end of the array and returns the array. The function should perform this in place.</p>
+        <span itemprop="articleBody"><p>Write a program that outputs the string representation of numbers from 1 to n.</p>
 
-<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="k">def</span> <span class="nf">moveElementToEnd</span><span class="p">(</span><span class="n">array</span><span class="p">,</span> <span class="n">toMove</span><span class="p">):</span>
-    <span class="k">if</span> <span class="n">not</span> <span class="ss">array:
-      </span><span class="k">return</span><span class="p">[]</span>
-    <span class="ss">else:
-      </span><span class="k">for</span> <span class="n">i</span> <span class="k">in</span> <span class="n">range</span><span class="p">(</span><span class="n">len</span><span class="p">(</span><span class="n">array</span><span class="p">),</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span><span class="o">-</span><span class="mi">1</span><span class="p">):</span>
-        <span class="n">i</span> <span class="o">-=</span> <span class="mi">1</span>
-        <span class="k">if</span> <span class="n">array</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">==</span> <span class="ss">toMove:
-          </span><span class="n">shift</span> <span class="o">=</span> <span class="n">array</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
-          <span class="n">array</span><span class="p">.</span><span class="nf">pop</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
-          <span class="n">array</span><span class="p">.</span><span class="nf">append</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
+<p>But for multiples of three it should output “Fizz” instead of the number and for the multiples of five output “Buzz”. For numbers which are multiples of both three and five output “FizzBuzz”.</p>
 
-      <span class="k">return</span> <span class="n">array</span></code></pre></figure>
+<p>Attempt this question <a href="https://leetcode.com/explore/interview/card/top-interview-questions-easy/102/math/743/">here</a></p>
+
+<p><ins>Example:</ins></p>
+
+<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="n">n</span> <span class="o">=</span> <span class="mi">15</span><span class="p">,</span>
+
+<span class="no">Return</span><span class="p">:</span>
+<span class="p">[</span>
+    <span class="s2">"1"</span><span class="p">,</span>
+    <span class="s2">"2"</span><span class="p">,</span>
+    <span class="s2">"Fizz"</span><span class="p">,</span>
+    <span class="s2">"4"</span><span class="p">,</span>
+    <span class="s2">"Buzz"</span><span class="p">,</span>
+    <span class="s2">"Fizz"</span><span class="p">,</span>
+    <span class="s2">"7"</span><span class="p">,</span>
+    <span class="s2">"8"</span><span class="p">,</span>
+    <span class="s2">"Fizz"</span><span class="p">,</span>
+    <span class="s2">"Buzz"</span><span class="p">,</span>
+    <span class="s2">"11"</span><span class="p">,</span>
+    <span class="s2">"Fizz"</span><span class="p">,</span>
+    <span class="s2">"13"</span><span class="p">,</span>
+    <span class="s2">"14"</span><span class="p">,</span>
+    <span class="s2">"FizzBuzz"</span>
+<span class="p">]</span></code></pre></figure>
+
+<p><ins>Solution:</ins></p>
+
+<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="k">class</span> <span class="nc">Solution</span><span class="p">:</span>
+    <span class="k">def</span> <span class="nf">fizzBuzz</span><span class="p">(</span><span class="nb">self</span><span class="p">,</span> <span class="ss">n: </span><span class="n">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="no">List</span><span class="p">[</span><span class="n">str</span><span class="p">]:</span>
+        <span class="n">answer</span> <span class="o">=</span> <span class="p">[]</span>
+
+        <span class="k">for</span> <span class="n">i</span> <span class="k">in</span> <span class="n">range</span><span class="p">(</span> <span class="mi">1</span><span class="p">,</span> <span class="n">n</span><span class="o">+</span> <span class="mi">1</span><span class="p">):</span>
+            <span class="k">if</span> <span class="n">i</span> <span class="o">%</span> <span class="mi">3</span> <span class="o">==</span> <span class="mi">0</span> <span class="n">and</span> <span class="n">i</span> <span class="o">%</span> <span class="mi">5</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+                <span class="n">answer</span><span class="p">.</span><span class="nf">append</span><span class="p">(</span><span class="s2">"FizzBuzz"</span><span class="p">)</span>
+
+            <span class="n">elif</span> <span class="n">i</span> <span class="o">%</span> <span class="mi">3</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+                <span class="n">answer</span><span class="p">.</span><span class="nf">append</span><span class="p">(</span><span class="s2">"Fizz"</span><span class="p">)</span>
+            <span class="n">elif</span> <span class="n">i</span> <span class="o">%</span> <span class="mi">5</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+                <span class="n">answer</span><span class="p">.</span><span class="nf">append</span><span class="p">(</span><span class="s2">"Buzz"</span><span class="p">)</span>
+            <span class="ss">else:
+                </span><span class="n">answer</span><span class="p">.</span><span class="nf">append</span><span class="p">(</span><span class="n">str</span><span class="p">(</span><span class="n">i</span><span class="p">))</span>
+        <span class="k">return</span> <span class="n">answer</span></code></pre></figure>
 
 <h1 id="code-explanation">Code Explanation:</h1>
-<p>This is a pretty simple question. The first if statement just checks to see if the array is empty in which it would return an empty array back as well. The else statement traverses the array backwards!!! This is important to know that it is traversing the array backwards because we decrement the value of i after the for loop starts to do its thing. While it is traversing backwards if the number that an element in the array contains is equal to toMove we start to perform a shift popping and appending the number back to the end of the array. Doing this also keeps the other elements in place while shifting the others.</p>
+<p>Classic FizzBuzz. We first check if the number is divisible by both 5 and 3 using the modulus operator and checking if the remainder is 0. If doesn’t pass the first if statement we check if it is divisible by just 3 and then by just 5 before simply just appending the number to the answer string.</p>
+
 </span>
 
         

@@ -4,7 +4,7 @@
     <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Intersection of Two Arrays II (incomplete)</title>
+<title>Intersection of Two Arrays II</title>
 <meta name="description" content="Welcome to my blog.">
 
 <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
@@ -88,7 +88,7 @@
       </div>
       
 
-      <h1 class="header" itemprop="name">Intersection of Two Arrays II (incomplete)</h1>
+      <h1 class="header" itemprop="name">Intersection of Two Arrays II</h1>
 
       <div class="author">
         <small><i>
@@ -109,7 +109,7 @@
 
       <div class="read-time">
         <small>
-          2 minute read
+          1 minute read
         </small>
       </div>
 
@@ -117,37 +117,23 @@
 
         
 
-        <span itemprop="articleBody"><p>Given two non-empty arrays of integers, write a function that determines whether the second array is a subsequence of the first one.</p>
+        <span itemprop="articleBody"><p>Given two arrays, write a function to compute their intersection.</p>
 
-<p><ins> Example 1: &lt;/ins</ins></p>
+<p>Attempt this question <a href="https://leetcode.com/explore/interview/card/top-interview-questions-easy/92/array/674/">here</a></p>
 
-<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="no">Input</span><span class="p">:</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">1</span><span class="p">]</span>
-<span class="no">Output</span><span class="p">:</span> <span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+<p><ins>Solution 1:</ins></p>
 
-<span class="no">Attempt</span> <span class="n">this</span> <span class="n">question</span> <span class="p">[</span><span class="n">here</span><span class="p">][</span><span class="mi">1</span><span class="p">]</span>
+<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="k">class</span> <span class="nc">Solution</span><span class="p">:</span>
+    <span class="k">def</span> <span class="nf">intersect</span><span class="p">(</span><span class="nb">self</span><span class="p">,</span> <span class="ss">nums1: </span><span class="no">List</span><span class="p">[</span><span class="n">int</span><span class="p">],</span> <span class="ss">nums2: </span><span class="no">List</span><span class="p">[</span><span class="n">int</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="no">List</span><span class="p">[</span><span class="n">int</span><span class="p">]:</span>
+        <span class="n">result</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="k">for</span> <span class="n">i</span> <span class="k">in</span> <span class="ss">nums1:
+            </span><span class="k">if</span> <span class="n">i</span> <span class="k">in</span> <span class="ss">nums2:
+                </span><span class="n">result</span><span class="p">.</span><span class="nf">append</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
+                <span class="n">nums2</span><span class="p">.</span><span class="nf">remove</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
 
+        <span class="k">return</span> <span class="n">result</span></code></pre></figure>
 
-
-<span class="o">&lt;</span><span class="n">figure</span> <span class="k">class</span><span class="o">=</span><span class="s2">"highlight"</span><span class="o">&gt;&lt;</span><span class="n">pre</span><span class="o">&gt;&lt;</span><span class="n">code</span> <span class="k">class</span><span class="o">=</span><span class="s2">"language-ruby"</span> <span class="n">data</span><span class="o">-</span><span class="n">lang</span><span class="o">=</span><span class="s2">"ruby"</span><span class="o">&gt;&lt;</span><span class="n">span</span> <span class="k">class</span><span class="o">=</span><span class="s2">"n"</span><span class="o">&gt;</span><span class="n">array</span><span class="o">&lt;</span><span class="sr">/span&gt; &lt;span class="o"&gt;=&lt;/s</span><span class="n">pan</span><span class="o">&gt;</span> <span class="o">&lt;</span><span class="n">span</span> <span class="k">class</span><span class="o">=</span><span class="s2">"p"</span><span class="o">&gt;</span><span class="p">[</span><span class="o">&lt;</span><span class="sr">/span&gt;&lt;span class="mi"&gt;5&lt;/s</span><span class="n">pan</span><span class="o">&gt;&lt;</span><span class="n">span</span> <span class="k">class</span><span class="o">=</span><span class="s2">"p"</span><span class="o">&gt;</span><span class="p">,</span><span class="o">&lt;</span><span class="sr">/span&gt;&lt;span class="mi"&gt;1&lt;/s</span><span class="n">pan</span><span class="o">&gt;&lt;</span><span class="n">span</span> <span class="k">class</span><span class="o">=</span><span class="s2">"p"</span><span class="o">&gt;</span><span class="p">,</span><span class="o">&lt;</span><span class="sr">/span&gt;&lt;span class="mi"&gt;22&lt;/s</span><span class="n">pan</span><span class="o">&gt;&lt;</span><span class="n">span</span> <span class="k">class</span><span class="o">=</span><span class="s2">"p"</span><span class="o">&gt;</span><span class="p">,</span><span class="o">&lt;</span><span class="sr">/span&gt;&lt;span class="mi"&gt;25&lt;/s</span><span class="n">pan</span><span class="o">&gt;&lt;</span><span class="n">span</span> <span class="k">class</span><span class="o">=</span><span class="s2">"p"</span><span class="o">&gt;</span><span class="p">,</span><span class="o">&lt;</span><span class="sr">/span&gt;&lt;span class="mi"&gt;6&lt;/s</span><span class="n">pan</span><span class="o">&gt;&lt;</span><span class="n">span</span> <span class="k">class</span><span class="o">=</span><span class="s2">"p"</span><span class="o">&gt;</span><span class="p">,</span><span class="o">&lt;</span><span class="sr">/span&gt;&lt;span class="o"&gt;-&lt;/s</span><span class="n">pan</span><span class="o">&gt;&lt;</span><span class="n">span</span> <span class="k">class</span><span class="o">=</span><span class="s2">"mi"</span><span class="o">&gt;</span><span class="mi">1</span><span class="o">&lt;</span><span class="sr">/span&gt;&lt;span class="p"&gt;,&lt;/s</span><span class="n">pan</span><span class="o">&gt;&lt;</span><span class="n">span</span> <span class="k">class</span><span class="o">=</span><span class="s2">"mi"</span><span class="o">&gt;</span><span class="mi">8</span><span class="o">&lt;</span><span class="sr">/span&gt;&lt;span class="p"&gt;,&lt;/s</span><span class="n">pan</span><span class="o">&gt;&lt;</span><span class="n">span</span> <span class="k">class</span><span class="o">=</span><span class="s2">"mi"</span><span class="o">&gt;</span><span class="mi">10</span><span class="o">&lt;</span><span class="sr">/span&gt;&lt;span class="p"&gt;]&lt;/s</span><span class="n">pan</span><span class="o">&gt;</span>
-<span class="o">&lt;</span><span class="n">span</span> <span class="k">class</span><span class="o">=</span><span class="s2">"n"</span><span class="o">&gt;</span><span class="n">sequence</span><span class="o">&lt;</span><span class="sr">/span&gt; &lt;span class="o"&gt;=&lt;/s</span><span class="n">pan</span><span class="o">&gt;</span> <span class="o">&lt;</span><span class="n">span</span> <span class="k">class</span><span class="o">=</span><span class="s2">"p"</span><span class="o">&gt;</span><span class="p">[</span><span class="o">&lt;</span><span class="sr">/span&gt;&lt;span class="mi"&gt;1&lt;/s</span><span class="n">pan</span><span class="o">&gt;&lt;</span><span class="n">span</span> <span class="k">class</span><span class="o">=</span><span class="s2">"p"</span><span class="o">&gt;</span><span class="p">,</span><span class="o">&lt;</span><span class="sr">/span&gt;&lt;span class="mi"&gt;6&lt;/s</span><span class="n">pan</span><span class="o">&gt;&lt;</span><span class="n">span</span> <span class="k">class</span><span class="o">=</span><span class="s2">"p"</span><span class="o">&gt;</span><span class="p">,</span><span class="o">&lt;</span><span class="sr">/span&gt;&lt;span class="o"&gt;-&lt;/s</span><span class="n">pan</span><span class="o">&gt;&lt;</span><span class="n">span</span> <span class="k">class</span><span class="o">=</span><span class="s2">"mi"</span><span class="o">&gt;</span><span class="mi">1</span><span class="o">&lt;</span><span class="sr">/span&gt;&lt;span class="p"&gt;,&lt;/s</span><span class="n">pan</span><span class="o">&gt;&lt;</span><span class="n">span</span> <span class="k">class</span><span class="o">=</span><span class="s2">"mi"</span><span class="o">&gt;</span><span class="mi">10</span><span class="o">&lt;</span><span class="sr">/span&gt;&lt;span class="p"&gt;]&lt;/s</span><span class="n">pan</span><span class="o">&gt;&lt;</span><span class="sr">/code&gt;&lt;/</span><span class="n">pre</span><span class="o">&gt;&lt;</span><span class="sr">/figure&gt;
-
-
-def isValidSubsequence(array, sequence):
-  #Write your code There
-  seqIdx = 0
-
-  for num in array:
-    #restrict so that the seqIdx doesn't go out of bounds
-    if seqIdx &lt; len(sequence):
-    #check if the array element matches the sequence element
-      if num == sequence[seqIdx]:
-          #increment sequence index
-          seqIdx = seqIdx + 1
-
-   if seqIdx == len(sequence):
-      return True
-  else:
-      return False</span></code></pre></figure>
+<p><ins>Solution 2:</ins></p>
 
 <h1 id="code-explanation">Code Explanation:</h1>
 <p>So the best way to approach this is to create a sequence counter variable. In my case I called it seqIdx. The reason you want to do this is so that you can later validate that the second array is a subsequence of the first. After that I created a for loop that traverses the first array. While traversing, there are two nested if statements that test that the seqIdx variable isn’t greater than the length of the sequence, and then that if the number that the first array is currently at matches a number within the second array. The purpose of the first if statement is so that we don’t get an out of bounds error and then are unable to return a boolean. Lastly, the code tests if the seqIdx is the same length as the sequence and then returns true if they are and false if they aren’t.</p>
