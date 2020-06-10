@@ -109,7 +109,7 @@
 
       <div class="read-time">
         <small>
-          1 minute read
+          2 minute read
         </small>
       </div>
 
@@ -117,36 +117,38 @@
 
         
 
-        <span itemprop="articleBody"><p>I will be blogging this question soon.</p>
+        <span itemprop="articleBody"><p>Write a function that takes in a non-empty array of distinct integers and an integer representing a target sum. The function should find all triplets in the array that sum  up to the target sum and return a two dimensional array of all these triplets. The numbers in each triplet should be ordered in ascending order, and the triplets themselves should be ordered in ascending order with respect to the numbers they hold.</p>
 
-<p><strong>Example 1:</strong></p>
+<p>If no three numbers sum up to the target sum, the function should return an empty array.</p>
 
-<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="no">Input</span><span class="p">:</span> <span class="p">[</span><span class="s2">"h"</span><span class="p">,</span><span class="s2">"e"</span><span class="p">,</span><span class="s2">"l"</span><span class="p">,</span><span class="s2">"l"</span><span class="p">,</span><span class="s2">"o"</span><span class="p">]</span>
-<span class="no">Output</span><span class="p">:</span> <span class="p">[</span><span class="s2">"o"</span><span class="p">,</span><span class="s2">"l"</span><span class="p">,</span><span class="s2">"l"</span><span class="p">,</span><span class="s2">"e"</span><span class="p">,</span><span class="s2">"h"</span><span class="p">]</span></code></pre></figure>
+<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="k">def</span> <span class="nf">threeNumberSum</span><span class="p">(</span><span class="n">array</span><span class="p">,</span> <span class="n">targetSum</span><span class="p">):</span>
+    <span class="c1"># Write your code here.</span>
+	<span class="n">array</span><span class="p">.</span><span class="nf">sort</span><span class="p">()</span>
 
-<p><strong>Example 2:</strong></p>
+	<span class="n">threeNumSums</span> <span class="o">=</span> <span class="p">[]</span>
 
-<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="no">Input</span><span class="p">:</span> <span class="p">[</span><span class="s2">"H"</span><span class="p">,</span><span class="s2">"a"</span><span class="p">,</span><span class="s2">"n"</span><span class="p">,</span><span class="s2">"n"</span><span class="p">,</span><span class="s2">"a"</span><span class="p">,</span><span class="s2">"h"</span><span class="p">]</span>
-<span class="no">Output</span><span class="p">:</span> <span class="p">[</span><span class="s2">"h"</span><span class="p">,</span><span class="s2">"a"</span><span class="p">,</span><span class="s2">"n"</span><span class="p">,</span><span class="s2">"n"</span><span class="p">,</span><span class="s2">"a"</span><span class="p">,</span><span class="s2">"H"</span><span class="p">]</span></code></pre></figure>
+	<span class="k">for</span> <span class="n">i</span> <span class="k">in</span> <span class="n">range</span><span class="p">(</span><span class="n">len</span><span class="p">(</span><span class="n">array</span><span class="p">)</span><span class="o">-</span><span class="mi">2</span><span class="p">):</span>
+		<span class="n">left</span> <span class="o">=</span> <span class="n">i</span> <span class="o">+</span> <span class="mi">1</span>
+		<span class="n">right</span> <span class="o">=</span> <span class="n">len</span><span class="p">(</span><span class="n">array</span><span class="p">)</span> <span class="o">-</span><span class="mi">1</span>
+		<span class="k">while</span> <span class="n">left</span> <span class="o">&lt;</span> <span class="ss">right:
+			</span><span class="k">if</span> <span class="p">(</span><span class="n">array</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">+</span> <span class="n">array</span><span class="p">[</span><span class="n">left</span><span class="p">]</span> <span class="o">+</span> <span class="n">array</span><span class="p">[</span><span class="n">right</span><span class="p">])</span> <span class="o">==</span> <span class="ss">targetSum:
+				</span><span class="c1">#store them in an array</span>
+				<span class="n">threeNumSums</span><span class="p">.</span><span class="nf">append</span><span class="p">([</span><span class="n">array</span><span class="p">[</span><span class="n">i</span><span class="p">],</span> <span class="n">array</span><span class="p">[</span><span class="n">left</span><span class="p">],</span> <span class="n">array</span><span class="p">[</span><span class="n">right</span><span class="p">]])</span>
+				<span class="n">left</span> <span class="o">+=</span> <span class="mi">1</span>
+				<span class="n">right</span> <span class="o">-=</span> <span class="mi">1</span>
 
-<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="k">class</span> <span class="nc">Solution</span><span class="p">:</span>
-    <span class="k">def</span> <span class="nf">reverseString</span><span class="p">(</span><span class="nb">self</span><span class="p">,</span> <span class="ss">s: </span><span class="no">List</span><span class="p">[</span><span class="n">str</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="no">None</span><span class="p">:</span>
-        <span class="s2">"""
-        Do not return anything, modify s in-place instead.
-        """</span>
-        <span class="n">front</span> <span class="o">=</span> <span class="mi">0</span>
-        <span class="n">back</span> <span class="o">=</span> <span class="n">len</span><span class="p">(</span><span class="n">s</span><span class="p">)</span> <span class="o">-</span><span class="mi">1</span>
+			<span class="n">elif</span> <span class="p">(</span><span class="n">array</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">+</span> <span class="n">array</span><span class="p">[</span><span class="n">left</span><span class="p">]</span> <span class="o">+</span> <span class="n">array</span><span class="p">[</span><span class="n">right</span><span class="p">])</span> <span class="o">&lt;</span> <span class="ss">targetSum:
+				</span><span class="c1">#increment the left pointer</span>
+				<span class="n">left</span> <span class="o">+=</span> <span class="mi">1</span>
+			<span class="n">elif</span> <span class="p">(</span><span class="n">array</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">+</span> <span class="n">array</span><span class="p">[</span><span class="n">left</span><span class="p">]</span> <span class="o">+</span> <span class="n">array</span><span class="p">[</span><span class="n">right</span><span class="p">])</span> <span class="o">&gt;</span> <span class="ss">targetSum:
+				</span><span class="c1">#decrement the right pointer</span>
+				<span class="n">right</span> <span class="o">-=</span> <span class="mi">1</span>
 
-        <span class="k">while</span> <span class="n">front</span> <span class="o">&lt;</span> <span class="ss">back:
-            </span><span class="n">temp</span> <span class="o">=</span> <span class="n">s</span><span class="p">[</span><span class="n">front</span><span class="p">]</span>
-            <span class="n">s</span><span class="p">[</span><span class="n">front</span><span class="p">]</span> <span class="o">=</span> <span class="n">s</span><span class="p">[</span><span class="n">back</span><span class="p">]</span>
-            <span class="n">s</span><span class="p">[</span><span class="n">back</span><span class="p">]</span> <span class="o">=</span> <span class="n">temp</span>
-            <span class="n">front</span> <span class="o">+=</span> <span class="mi">1</span>
-            <span class="n">back</span> <span class="o">-=</span> <span class="mi">1</span></code></pre></figure>
+	<span class="k">return</span> <span class="n">threeNumSums</span>
+    <span class="n">pass</span></code></pre></figure>
 
 <h1 id="code-explanation">Code Explanation:</h1>
-<p>A quick way to approach this question involves remembering how to do the swap in selection sort and how to use two pointers when traversing a string like we did in palindrome check. We have two pointer, one at the front of the word and one at the back of the word. After that we loop both pointers until they are next to each other. While we are looping the pointers we incorporate the same swap method that we used in selection sort manually swapping every letter while also incrementing the front pointer and decrementing the back pointer.</p>
-
+<p>Alright lets keep this short.  SO whats happening is that the best way to see if we have a triplet that matches the target sum is to first sort the array. That way we can establish three pointer. An i, left pointer that starts at i + 1 and a right pointer that starts at the very last element. The pointer are named in the direction that they are going to move in. We then trigger the while loop and this engages until the pointers meet up at the same element in the array meaning that all possible types of combination have been attempted with the current i element. If the three pointers sum up to less than the target sum we know to move the left pointer. If the three pointers sum up to move than the target sum we know to move the right pointer to decrease the value of the summation of the three pointers. And if the three pointers add up the the target sum, we append them in a 2D array and then move both the left and right pointers in their respective directions to see if that i pointer still has any other potential matches in the array.</p>
 </span>
 
         

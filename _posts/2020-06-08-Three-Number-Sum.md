@@ -1,6 +1,6 @@
 ---
 layout:     post
-title:      Three Number Sum 
+title:      Three Number Sum
 date:       2020-06-08 8:30:00
 author:     Sebastian Moreno
 summary:    Medium Ranked Question
@@ -13,42 +13,40 @@ tags:
  - noire
 ---
 
-I will be blogging this question soon.
+Write a function that takes in a non-empty array of distinct integers and an integer representing a target sum. The function should find all triplets in the array that sum  up to the target sum and return a two dimensional array of all these triplets. The numbers in each triplet should be ordered in ascending order, and the triplets themselves should be ordered in ascending order with respect to the numbers they hold.
 
-**Example 1:**
-{% highlight ruby %}
-Input: ["h","e","l","l","o"]
-Output: ["o","l","l","e","h"]
-{% endhighlight %}
-
-
-**Example 2:**
-{% highlight ruby %}
-Input: ["H","a","n","n","a","h"]
-Output: ["h","a","n","n","a","H"]
-{% endhighlight %}
+If no three numbers sum up to the target sum, the function should return an empty array.
 
 
 {% highlight ruby %}
-class Solution:
-    def reverseString(self, s: List[str]) -> None:
-        """
-        Do not return anything, modify s in-place instead.
-        """
-        front = 0
-        back = len(s) -1
+def threeNumberSum(array, targetSum):
+    # Write your code here.
+	array.sort()
 
-        while front < back:
-            temp = s[front]
-            s[front] = s[back]
-            s[back] = temp
-            front += 1
-            back -= 1
+	threeNumSums = []
+
+	for i in range(len(array)-2):
+		left = i + 1
+		right = len(array) -1
+		while left < right:
+			if (array[i] + array[left] + array[right]) == targetSum:
+				#store them in an array
+				threeNumSums.append([array[i], array[left], array[right]])
+				left += 1
+				right -= 1
+
+			elif (array[i] + array[left] + array[right]) < targetSum:
+				#increment the left pointer
+				left += 1
+			elif (array[i] + array[left] + array[right]) > targetSum:
+				#decrement the right pointer
+				right -= 1
+
+	return threeNumSums
+    pass
 
 
 {% endhighlight %}
 
 # Code Explanation:
-A quick way to approach this question involves remembering how to do the swap in selection sort and how to use two pointers when traversing a string like we did in palindrome check. We have two pointer, one at the front of the word and one at the back of the word. After that we loop both pointers until they are next to each other. While we are looping the pointers we incorporate the same swap method that we used in selection sort manually swapping every letter while also incrementing the front pointer and decrementing the back pointer.
-
-[1]: https://leetcode.com/explore/interview/card/top-interview-questions-easy/127/strings/879/
+Alright lets keep this short.  SO whats happening is that the best way to see if we have a triplet that matches the target sum is to first sort the array. That way we can establish three pointer. An i, left pointer that starts at i + 1 and a right pointer that starts at the very last element. The pointer are named in the direction that they are going to move in. We then trigger the while loop and this engages until the pointers meet up at the same element in the array meaning that all possible types of combination have been attempted with the current i element. If the three pointers sum up to less than the target sum we know to move the left pointer. If the three pointers sum up to move than the target sum we know to move the right pointer to decrease the value of the summation of the three pointers. And if the three pointers add up the the target sum, we append them in a 2D array and then move both the left and right pointers in their respective directions to see if that i pointer still has any other potential matches in the array. 
